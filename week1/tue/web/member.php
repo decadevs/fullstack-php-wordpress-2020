@@ -53,15 +53,23 @@
         }
 
         .odd {
-            background: #2b591d;
+            background: #00bb55;
         }
         .even {
-            background: green;
+            background: lightgreen;
+        }
+
+        td {
+            text-align: center;
+            height: 35px;
         }
         
     </style>
 </head>
 <body>
+<div>
+    <a href="about.php">About</a>  
+</div>
 
 <h2>PHP - Form Assignment</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -86,10 +94,9 @@
 </form>
 
 <div class="container">
-    <a href="about.php">About</a>
     <table width="100%" border="<?php echo $border; ?>" cellpadding="0" cellspacing="0">
         <thead>
-            <tr>
+            <tr class="even">
                 <td>First Name</td>
                 <td>Last Name</td>
                 <td>Action</td>
@@ -99,7 +106,7 @@
         <?php
         $dbcontent = file_get_contents("./database.json");
         $members = json_decode($dbcontent, true);
-        $index = 0;
+        $index = 1;
         if ($members !== null) {
             foreach($members as $member) { ?>
                 <tr class="<?php echo $index % 2 == 0 ? 'even' : 'odd'; ?>">
