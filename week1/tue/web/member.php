@@ -1,6 +1,6 @@
 <?php
     $border = "0";
-    $width = "500";
+    $width = "800";
     $message = '';  
     $error = '';
     $firstname = $lastname = "";
@@ -41,7 +41,7 @@
     <style>
         .container {
             width: <?php echo $width . "px;" ?>
-            margin: 100px auto;
+            margin: 70px auto;
         }
 
         .text-danger {
@@ -64,36 +64,56 @@
             height: 35px;
         }
         
+        .form {
+            width: auto;
+            height: auto;
+            align-content: center;
+            background-color: #00bb55;
+            padding: 20px;
+        }
+
+        .input {
+            width: 70%;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .submitbtn {
+            align: center;
+            width: 20%;
+            height: 40px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
 <div>
     <a href="about.php">About</a>  
 </div>
-
-<h2>PHP - Form Assignment</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-<?php   
-    if(isset($error))  
-    {  
-        echo "$error <br>";  
-    }  
-    ?>  
-    First Name: <input type="text" name="firstname">
-    <br><br>
-    Last Name: <input type="text" name="lastname">
-    <br><br>
-    <input type="submit" name="submit" value="Submit"> 
-    <br>
-    <?php  
-        if(isset($message))  
-        {  
-            echo $message;  
-        }  
-        ?> 
-</form>
-
 <div class="container">
+    <div class="form">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <h2>PHP - Form Assignment</h2>
+            <?php   
+                if(isset($error))  
+                {  
+                    echo "$error <br>";  
+                }
+            ?>  
+            First Name: <input class="input" type="text" name="firstname">
+            <br><br>
+            Last Name: <input class="input" type="text" name="lastname">
+            <br><br>
+            <input class="submitbtn" type="submit" name="submit" value="Submit"> 
+            <br>
+            <?php  
+                if(isset($message))  
+                {  
+                    echo $message;  
+                }  
+            ?> 
+        </form>
+    </div>
     <table width="100%" border="<?php echo $border; ?>" cellpadding="0" cellspacing="0">
         <thead>
             <tr class="even">
