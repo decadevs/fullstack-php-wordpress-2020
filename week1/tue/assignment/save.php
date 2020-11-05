@@ -1,8 +1,5 @@
-    <?php
-        $errors = [];
-    ?>
-   
 <?php
+    $errors = [];
     if(isset($_POST["add"])){
         $firstname = htmlspecialchars($_POST["firstname"]);
         $lastname = htmlspecialchars($_POST["lastname"]);
@@ -41,4 +38,7 @@
         }
     }
     
+?>
+<?php
+
 ?>
