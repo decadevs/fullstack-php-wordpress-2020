@@ -1,5 +1,6 @@
 <?php
 
+$error="";
 $width = "400";
 
 if (isset($_POST["submit"])) {
