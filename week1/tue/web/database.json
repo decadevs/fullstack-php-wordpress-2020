@@ -1,10 +1,1 @@
-[
-	{ "firstname": "laju", "lastname": "eresanara" },
-	{ "firstname": "warami", "lastname": "eresanara" },
-	{ "firstname": "simi", "lastname": "akingba" },
-	{ "firstname": "seun", "lastname": "adako" },
-	{ "firstname": "seyi", "lastname": "Boss" },
-	{ "firstname": "Kemi", "lastname": "Eretan" },
-	{ "firstname": "seun ", "lastname": "shina" },
-	{ "firstname": "ifepo", "lastname": "toyo" }
-]
+[{"firstname":"laju","lastname":"eresanara"},{"firstname":"warami","lastname":"eresanara"},{"firstname":"simi","lastname":"akingba"},{"firstname":"seun","lastname":"adako"},{"firstname":"seyi","lastname":"Boss"},{"firstname":"Kemi","lastname":"Eretan"},{"firstname":"seun ","lastname":"shina"},{"firstname":"ifepo","lastname":"toyo"},{"firstname":"oyin","lastname":"sodiya"},{"firstname":"prince","lastname":"dickson"}]

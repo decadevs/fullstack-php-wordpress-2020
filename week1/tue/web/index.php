@@ -59,6 +59,7 @@ $lastPerson = $members[count($members)-1];
             </tr>
          <?php $index++; } ?>
         </tbody>
+        
     </table>
 
     <form action="">

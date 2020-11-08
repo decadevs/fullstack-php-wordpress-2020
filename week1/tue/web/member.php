@@ -2,10 +2,11 @@
 
 $error="";
 $width = "400";
+$database = "database.json";
 
-if (isset($_POST["submit"])) {
-  if(file_exists("database.json")) {
-    $dataInFile = file_get_contents("database.json");
+if (isset($_POST)) {
+  if(file_exists($database)) {
+    $dataInFile = file_get_contents($database);
     $arrayOfData = json_decode($dataInFile, true);
       $newData = [
         "firstname" =>  $_POST["firstname"],
@@ -13,7 +14,7 @@ if (isset($_POST["submit"])) {
       ];
     $arrayOfData[] = $newData;
     $result = json_encode($arrayOfData);
-      if (file_put_contents("database.json", $result)) {
+      if (file_put_contents($database, $result)) {
       $message = "<script type='text/javascript'>alert('Data successfully updated');</script>";
       }
   } 
@@ -72,7 +73,8 @@ if (isset($_POST["submit"])) {
           <input type="text" name="lastname" id="lastname" placeholder="Your last name..." autofocus required>
         </p>
         <p style="text-align: center;">
-          <input type="submit" name="submit" id="submit" value="Submit">
+          
+        <input type="submit" name="submit" id="submit" value="Submit">
         </p>
     <?php
         if(isset($message)) {
