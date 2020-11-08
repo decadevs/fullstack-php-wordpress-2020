@@ -1,62 +1,73 @@
-<?php 
-    // function greeting(){
-    //     echo "Welcome to Programming\n";
-    // }
-    // greeting();
-    // greeting();
-    // greeting();
-    // greeting();
-    // greeting();
+/**
+ * Functions
+ */
 
-    function add(int $a, int $b):int {
-        return $a + $b;
+ //https://thevaluable.dev/php-7-type-hinting-pitfalls/
+
+
+ function greeting() {
+    echo "Welcome to PHP";
+ }
+
+ // calling the function 
+ //greeting();
+
+
+ function add(int $a, int $b): int {
+
+    return $a + $b;
+
+ }
+
+
+$sum = add(6, 5);
+echo $sum;
+
+function multi(float $a, float $b) : float {
+    return $a * $b;
+}
+
+var_dump(multi(2, 2));
+
+$data = [1,2,3,4];
+$data2 = array_map(function($item) {
+    return $item * 2;
+}, $data);
+
+print_r($data2);
+
+
+function aj_array_map(callable $callback, array $items) : array {
+    $output = [];
+    foreach($items as $item) {
+        $output[] = $callback($item);
     }
-    $sum = add(2,5);
-    echo "\n";
-    echo $sum;
-    echo "\n";
 
-    function multiplier(float $a, float $b): float {
-        return $a * $b;
-    }
+    return $output;
 
-    var_dump(multiplier(2,3));
-    echo "\n";
+}
 
-    $data = [1,2,3,4,5];
-    $data2 =  array_map(function(int $item){
-        return $item * 2;
-    },$data);
-    print_r($data2);
-    echo "\n";
 
-    function aj_array_map(callable $callback, array $items){
-        $output = [];
-        foreach ($items as $item) {
-            $output[] = $callback($item);
-        }
-        return $output;
-    }
+$power =  function($item) {
+    return $item * $item;
+};
 
-    $square = function($item){
-        return $item * 2;
-    };
+$data3 = aj_array_map($power, $data);
 
-    $data3 = aj_array_map($square, $data);
+print_r($data3);
+
+
+
+
+
+
+function add2(int $base, int ...$data) {
+    $sum = 0;
+    foreach($data as $n)
+        $sum += $n;
+
+    return  $base + $sum;
     
-    print_r($data3);
-    echo "manual\n";
-    
-    // $data4 = aj_array_map($data3, $data);
-    
-    // print_r($data4);
-    // echo "\n";
+}
 
-    function add2(int ...$data){
-        $sum = 0;
-        foreach($data as $detail)
-            $sum += $n;
-        return $sum;
-    }
-
-    var_dump(add2(1,2,3,4,5));
+var_dump(add2(10,2,3,4,5));
