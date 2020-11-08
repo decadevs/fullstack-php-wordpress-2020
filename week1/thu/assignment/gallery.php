@@ -47,7 +47,6 @@
 
             var_dump($_FILES);
             $mimeTypes = ["image/jpeg","image/png","image/jpg","image/gif"];
-            // $whereToSave = "uploads";
             $fileName = $_FILES["photo"]["name"];
             $fileType = $_FILES["photo"]["type"];
             $fileTempStorage = $_FILES["photo"]["tmp_name"];
@@ -64,10 +63,6 @@
             $fileInfo = finfo_open(FILEINFO_MIME_TYPE);
             $mimeType = finfo_file($fileInfo,$fileTempStorage);
             
-            echo "<br/><br/>";
-            var_dump($mimeType);
-            echo "Lets see here...<br/><br/>";
-            
             if(!in_array($mimeType,$mimeTypes)){
                 throw new Exception('File format  unsupported');
             }
@@ -80,13 +75,11 @@
             if(!$isUploaded){
                 throw new Exception("Error in uploading to directory");
             }
-            //die("file uploaded successfully");
             
         } catch(Throwable $t){
             die($t->getMessage());
         }
          catch (Exception $e) {
-            // echo $e->getMessage();
             die($e->getMessage());
         }
     }
@@ -135,17 +128,6 @@
                 <?php endif ?>
                 <?php endforeach; ?>
             </section>
-
-            <!-- <section class="enlarged-photo-grid">
-            <?php //foreach($files as $file): ?>
-                    <?php //$extension = substr($file,-3); ?>
-                    <?php //if(in_array($extension,$allowed)): ?>
-                <figure class="enlarged-unique-img">
-                    <img src="<?php //echo $whereToSave."/$file" ?>" alt="<?php //echo $file ?>">
-                </figure>
-                <?php //endif ?>
-                <?php //endforeach; ?>
-            </section> -->
         </main>
         <footer>
            <p> &copy; Deyems 2020 </p> 
