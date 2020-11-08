@@ -41,8 +41,9 @@
     $whereToSave = "uploads";
     $allowed = ["jpg","jpeg","png","gif"];
     $files = scandir($whereToSave);
-
+    // var_dump($_FILES["photo"]);
     if($_SERVER["REQUEST_METHOD"] === "POST"){
+    // if(isset($_FILES["photo"])){
         try {
 
             var_dump($_FILES);
@@ -91,17 +92,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Uploading</title>
     <link rel="stylesheet" href="style.css">
-    <script src="mainscript.js" defer></script>
+
 </head>
 <body>
     <div class="wrapper">
+        <?php //var_dump($files); ?>
         <header>
             <h1>Galleria</h1>
             <h5>A simple way to share your photos with the public</h5>
         </header>
         <main>
             <section class="inp-grp">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="" method="post" class="forminput" enctype="multipart/form-data">
                     <div class="upload">
                         <label for="photo">Upload a new photo</label> <br/>
                         <input type="file" name="photo" placeholder="Select a new file" id="photo">
@@ -133,5 +135,6 @@
            <p> &copy; Deyems 2020 </p> 
         </footer>
     </div>
+    <script src="mainscript.js"></script>
 </body>
 </html>
