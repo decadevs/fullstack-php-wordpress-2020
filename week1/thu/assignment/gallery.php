@@ -97,91 +97,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Uploading</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="mainscript.js" defer></script>
 </head>
 <body>
-    <style>
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        header{
-            margin: auto;
-            text-align: center;
-        }
-        header > *{
-            margin: 15px 0;
-        }
-        .inp-grp{
-            margin: auto;
-        }
-        .inp-grp form{
-            display: flex;
-            align-items: flex-end;
-            padding: 10px;
-            width: 75%;
-            margin: auto;
-            box-shadow: 0 5px 8px rgb(220,220,220);
-        }
-        form>*{
-            /* border: 1px solid brown; */
-        }
-        form>div:first-child{
-            /* border: 1px solid brown; */
-            width: 70%;
-            margin-right: 30px;
-        }
-        input[type="file"]{
-            border: 1px solid grey;
-            width: 100%;
-            outline: none;
-        }
-        button[type="submit"]{
-            border: 2px solid white;
-            padding: 5px;
-            background-color: rgb(100,50,150);
-            cursor: pointer;
-            color: white;
-        }
-        .photo-grid{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-gap: 15px;
-            width: 75%;
-            margin: 30px auto;
-            padding: 15px;
-            box-shadow: 0 5px 8px rgb(220,220,220);
-        }
-        img{
-            width: 100%;
-            display: block;
-            height: 100%;
-        }
-        .enlarged-photo-grid{
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(10,10,10,0.5);
-            height: 100vh;
-            display: none;
-        }
-        .enlarged-unique-img{
-            width: 75%;
-            height: 80%;
-            margin: auto;
-            border: 2px solid green;
-        }
-        footer{
-            padding: 50px;
-        }
-        footer p{
-            text-align: center;
-        }
-    </style>
     <div class="wrapper">
         <header>
             <h1>Galleria</h1>
@@ -207,27 +126,30 @@
                 <figure class="unique-img">
                     <img src="<?php echo $whereToSave."/$file" ?>" alt="<?php echo $file ?>">
                 </figure>
+
+                <figure class="enlarged-unique-img">
+                    <div><button class="close-btn">x</button></div>
+                    <img src="<?php echo $whereToSave."/$file" ?>" alt="<?php echo $file ?>">
+                </figure>
+                
                 <?php endif ?>
                 <?php endforeach; ?>
             </section>
-            <section class="enlarged-photo-grid">
+
+            <!-- <section class="enlarged-photo-grid">
+            <?php //foreach($files as $file): ?>
+                    <?php //$extension = substr($file,-3); ?>
+                    <?php //if(in_array($extension,$allowed)): ?>
                 <figure class="enlarged-unique-img">
-                    <img src="<?php echo $whereToSave."/$file" ?>" alt="<?php echo $file ?>">
+                    <img src="<?php //echo $whereToSave."/$file" ?>" alt="<?php //echo $file ?>">
                 </figure>
-            </section>
+                <?php //endif ?>
+                <?php //endforeach; ?>
+            </section> -->
         </main>
         <footer>
            <p> &copy; Deyems 2020 </p> 
         </footer>
     </div>
 </body>
-<script>
-    let figures = document.querySelectorAll(".unique-img");
-    figures.forEach((figure) => {
-        figure.addEventListener("click", (e) => {
-            console.log("You tapped me");
-            console.log(e.target);
-        })
-    })
-</script>
 </html>
