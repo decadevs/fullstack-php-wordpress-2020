@@ -74,8 +74,7 @@ button[type="submit"]{
     width: 75%;
     height: 80%;
     margin: auto;
-    border: 2px solid green;
-    background-color: rgba(10,10,10,0.5);
+    background-color: rgba(10,10,10,0.8);
     height: 100vh;
     display: none;
 }
@@ -84,11 +83,13 @@ button[type="submit"]{
     background-color: skyblue;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     outline: none;
     cursor: pointer;
     font-size: 1rem;
-
+    right: 50px;
+    position: absolute;
+    right: 20px;
 }
 .show{
     display: block;
