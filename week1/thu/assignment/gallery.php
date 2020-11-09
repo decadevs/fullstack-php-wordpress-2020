@@ -41,20 +41,14 @@
     $whereToSave = "uploads";
     $allowed = ["jpg","jpeg","png","gif"];
     $files = scandir($whereToSave);
-    // var_dump($_FILES["photo"]);
     if($_SERVER["REQUEST_METHOD"] === "POST"){
-    // if(isset($_FILES["photo"])){
         try {
-
-            var_dump($_FILES);
             $mimeTypes = ["image/jpeg","image/png","image/jpg","image/gif"];
             $fileName = $_FILES["photo"]["name"];
             $fileType = $_FILES["photo"]["type"];
             $fileTempStorage = $_FILES["photo"]["tmp_name"];
             $errorStatus = $_FILES["photo"]["error"];
             $fileSize = $_FILES["photo"]["size"];
-            
-            
             $filelimit = 1000000; //1MB;
 
             if($errorStatus !== 0){
@@ -96,7 +90,6 @@
 </head>
 <body>
     <div class="wrapper">
-        <?php //var_dump($files); ?>
         <header>
             <h1>Galleria</h1>
             <h5>A simple way to share your photos with the public</h5>
