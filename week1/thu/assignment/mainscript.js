@@ -7,28 +7,25 @@ const formElement = document.querySelector(".forminput");
 
 figures.forEach((figure,idx) => {
     figure.addEventListener("click", (e) => {
-        console.log("You tapped me");
-        console.log(e.target.parentElement.nextElementSibling);
         e.target.parentElement.nextElementSibling.classList.add("show");
     });
     closeBtns[idx].addEventListener("click", (e) => {
         console.log(figure.nextElementSibling);
         figure.nextElementSibling.classList.remove("show");
     });
-
 });
 formElement.addEventListener("submit", (e) => {
     // console.log(e);
     e.preventDefault();
-    console.log(fileField.files[0]);
-    console.log(typeof fileField.files[0]);
-    console.log(fileField);
+    // console.log(fileField.files[0]);
+    // console.log(typeof fileField.files[0]);
+    // console.log(fileField);
     // console.log(formElement);
     
     const formData = new FormData(formElement);
     formData.append('photo', fileField.files[0]);
     // console.log(JSON.stringify(formData));
-    console.log(formData);
+    // console.log(formData);
     fetch("gallery.php",{
         method: 'POST',
         body: JSON.stringify(formData),
@@ -48,6 +45,3 @@ formElement.addEventListener("submit", (e) => {
         console.error('Error: ', err);
     });
 })
-// window.onload(e => {
-//     console.log(e);
-// })
