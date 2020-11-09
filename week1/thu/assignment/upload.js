@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    $("#submit").click(function () {
-
+    $("#submit").click(function (e) {
+        e.preventDefault();
         const formData = new FormData();
         const files = $('#photo')[0].files;
         
@@ -10,18 +10,26 @@ $(document).ready(function () {
             formData.append('photo', files[0]);
 
         $.ajax({
-              url: 'gallery.php',
+              url: 'upload.php',
               type: 'post',
               data: formData,
               contentType: false,
               processData: false,
             success: function (response) {
-                  alert('file uploaded successfully');
+                if (response == 1) {
+                    alert("File uploaded successfully");
+                    $("ul").html(`<li id='success'>File uploaded successfully</li>`)
+                }
+                else {
+                    
+                    alert(response)
+                    $("ul").html(`<li>${response}</li>`)
+                }
+                
+
                   
-            },
-            error: function (error) {
-                alert('unable to unpload file');
-            },
+            }
+            
         });
            
         }else{
