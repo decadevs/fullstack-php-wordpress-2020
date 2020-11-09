@@ -1,9 +1,5 @@
 <?php
 
-// echo "<pre>";
-// print_r($_FILES);
-// echo "</pre>";
-
 $errorMsg = '';
 $success = '';
 
@@ -14,25 +10,16 @@ if (isset($_FILES['photo'])) {
     $type = $_FILES['photo']['type'];
 
     if (!in_array($type, $validMimeTypes)) {
-        $errorMsg = "Invalid file format";
+        $errorMsg = "Invalid file format!";
     }
 
     if (!$errorMsg) {
         //Proceed with file upload
-
         $img_file_path = "./img";
 
         move_uploaded_file($_FILES['photo']['tmp_name'], "./img/$name");
         $success = "uploaded successfully";
     }
-
-
-    // die($type);
-
-    // echo "<pre />";
-    // print_r($_FILES);
-
-
 }
 
 ?>
@@ -55,12 +42,21 @@ if (isset($_FILES['photo'])) {
         </header>
 
         <div class="header-section">
-            <form action="" method="post" enctype="multipart/form-data">
-                <?php
-                echo $errorMsg;
-                echo $success;
-                ?>
-                <input type="file" name="photo">
+            <form id="upload-form" action="" method="post" enctype="multipart/form-data">
+
+                <span>
+                    <p class="error-msg">
+                        <?php
+                        echo $errorMsg;
+                        ?>
+                    </p>
+                    <p class="success-msg">
+                        <?php
+                        echo $success;
+                        ?>
+                    </p>
+                </span>
+                <input class="input-file" type="file" name="photo">
                 <button type="submit">Upload</button>
             </form>
         </div>
@@ -76,7 +72,7 @@ if (isset($_FILES['photo'])) {
                 foreach ($photos as $photo) {
                     if (!in_array($photo, $ignore)) {
                 ?>
-                        <img class="child" id="myImg" src="<?php echo $dirname . "/" . $photo; ?>" alt='photo'>
+                        <img class="child" id="target-layer" src="<?php echo $dirname . "/" . $photo; ?>" alt='photo'>
 
                 <?php
                     }
