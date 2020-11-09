@@ -7,7 +7,8 @@
 .showPhoto .imgDisplay{flex: 25%; max-width: 260px; display: flex; justify-content: center; align-items: center; margin: 10px 0;}
 .imgDisplay .contentwrapper{width: 96%; border: #cccccc thin solid; padding: 10px 0; border-radius: 5px}
 .imgDisplay .contentwrapper:hover{cursor: pointer}
+.contentwrapper .wrappersPix{text-align: center}
 .contentwrapper .wrappers{text-align: center}
-.wrappers img{max-width: 300px; max-height: 200px}
+.wrappersPix img{max-width: 300px; max-height: 200px}
 
 
