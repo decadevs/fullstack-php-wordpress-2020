@@ -22,7 +22,7 @@
  }
 
 
-$sum = add(6, 5);
+$sum = add('3dsds', 5);
 echo $sum;
 
 function multi(float $a, float $b) : float {
@@ -69,7 +69,7 @@ function add2(int $base, int ...$data) {
         $sum += $n;
 
     return  $base + $sum;
-    
+
 }
 
 var_dump(add2(10,2,3,4,5));
