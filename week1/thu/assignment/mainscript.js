@@ -44,4 +44,4 @@ formElement.addEventListener("submit", (e) => {
     .catch(err => {
         console.error('Error: ', err);
     });
-})
+});
