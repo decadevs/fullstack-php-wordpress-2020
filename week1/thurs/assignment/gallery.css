@@ -1,0 +1,85 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+} 
+
+.upload-container {
+  text-align: left;
+}
+
+.upload-mini-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px ;
+}
+
+.upload-label {
+  font-weight: bold;
+}
+
+.upload {
+  display: flex;
+}
+
+.upload-btn {
+  margin-left: 2px;
+}
+
+input[type=file], select {
+  width: 600px;
+  padding: 14px 20px;
+  margin: 8px 0px ;
+  margin-right: 50px; 
+  display: inline-block;
+  border: 2px solid #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+button {
+  width: 200px;
+  color: black;
+  background-color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.latest-photos {
+  font-weight: bold;
+  font-size: large;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #000;
+  width: 1500px;
+  margin-left: 50px;
+  flex-wrap: wrap;
+}
+
+.img-wrapper {
+  flex:0.;
+  margin: 20px;
+  padding: 10px;
+}
+
+.imgs {
+  width: 300px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  height: 200px;
+  margin:5px;
+}
+
