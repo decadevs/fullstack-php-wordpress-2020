@@ -59,21 +59,28 @@ if(isset($_FILES['photofile'])){
 <body>
 
 <div class="container">
-    <h1>Photo Gallery</h1>
-    <div class="message">
-        <?php
-        if(!empty($errorMsg)){echo '<div class="alert alert-danger" role="alert">'. nl2br($errorMsg).'</div>';}
-        if(empty($errorMsg) && !empty($success)){echo '<div class="alert alert-success" role="alert">'. $success.'</div>';}
-        ?>
-    </div>
-    <div>
-        <form action="" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="photofile">Upload your picture</label>
-                <input type="file" class="photo" id="photofile" name="photofile">
-            </div>
-            <button type="submit" name = "submit" class="btn btn-primary">Upload Picture</button>
-        </form>
+    <h1>Models Photo Gallery</h1>
+    <div class="holdMessage">
+
+        <div class="holdForm">
+            <form action="" method="post" enctype="multipart/form-data">
+                <fieldset>
+                <legend>Upload Picture</legend>
+                    <div class="form-group">
+                        <input type="file" class="photo" id="photofile" name="photofile">
+                    </div>
+                <button type="submit" name = "submit" class="btn btn-primary">Upload Picture</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="message">
+            <?php
+            if(!empty($errorMsg)){echo '<div class="alert alert-danger" role="alert">'. nl2br($errorMsg).'</div>';}
+            if(empty($errorMsg) && !empty($success)){echo '<div class="alert alert-success" role="alert">'. $success.'</div>';}
+            ?>
+        </div>
+
     </div>
 
     <div class="showPhoto">
@@ -101,7 +108,7 @@ if(isset($_FILES['photofile'])){
                             $characterIndex = strpos($modelInfo, '_');
                             $modelName = substr($modelInfo, $characterIndex + 1);
                             $count++;
-                            echo '<div class="imgDisplay"><div id="'.$modelName.'_'.$count.'" class="contentwrapper" data-toggle="modal" data-target="galleryModal"><div class="wrappersPix"><img src="'.PHOTO_DIR.$theImage.'" alt="'.str_replace("_", " ", $modelName).'"></div><div class="wrappers">'.str_replace("_", " ", $modelName).'</div></div></div>';
+                            echo '<div class="imgDisplay"><div id="'.$modelName.'_'.$count.'" class="contentwrapper" data-toggle="modal" data-target=""><div class="wrappersPix"><img src="'.PHOTO_DIR.$theImage.'" alt="'.str_replace("_", " ", $modelName).'"></div><div class="wrappers">'.str_replace("_", " ", $modelName).'</div></div></div>';
                         }
                     }
                 }
@@ -111,6 +118,29 @@ if(isset($_FILES['photofile'])){
     </div>
 
     <!--Modal goes in here-->
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Model Photo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="pixHolder">
+                <div class="modelPix"><img class="pix" src="" alt=""></div>
+                <div class="pixText"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 
