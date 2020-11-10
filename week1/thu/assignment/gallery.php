@@ -71,11 +71,12 @@
                 throw new Exception("Error in uploading to directory");
             }
             
-        } catch(Throwable $t){
+        }
+        catch (Exception $e) {
             die($t->getMessage());
         }
-         catch (Exception $e) {
-            die($e->getMessage());
+        catch(Throwable $t){
+            die($t->getMessage());
         }
     }
 ?>
