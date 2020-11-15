@@ -23,3 +23,4 @@
 
  var_dump(connect());
  var_dump(query("SELECT * FROM fake"));
+ 
