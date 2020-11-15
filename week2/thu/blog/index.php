@@ -8,11 +8,11 @@
 
     $posts = get_posts($con);
 
-    $data = array(
-        'name' => 'Olatunji',
-        'password' => 'password',
-        'email' => 'olatunji@gmail.com'
-    );
+    // $data = array(
+    //     'name' => 'Olatunji',
+    //     'password' => 'password',
+    //     'email' => 'olatunji@gmail.com'
+    // );
     // create_user($con, $data);
 
 ?>
@@ -31,9 +31,17 @@
 <body>
 
 <?php include APP_PATH . '/includes/header.php' ?>
-
+<section>
+        
+</section>
 
 <section class="container section">
+    <div>
+        <form action="">
+            <textarea class="text-post" name="text" id="text" cols="30" rows="10"></textarea>
+            <input type="submit" value="Publish Post" class="btn">
+        </form>
+    </div>
     <?php foreach($posts as $post): ?>
     <div class="post">
         <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
