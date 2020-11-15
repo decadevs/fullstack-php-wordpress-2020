@@ -10,11 +10,12 @@
 
     $post = get_post($con, $post_id);
 
+    $comments = get_comments($post_id);
 
-    if(!$post_id || !$post) {
-        header("Location: index.php");
-        exit;
-    }
+    // if(!$post_id || !$post) {
+    //     header("Location: index.php");
+    //     exit;
+    // }
 
 ?>
 
@@ -36,13 +37,27 @@
 
 <section class="container section">
     <div class="post">
-        <h1 class="post-title"><a href=""><?php __($post['title']) ?></a></h1>
+        <h1 class="post-title"><?php __($post['title']) ?></h1>
         <p class="post-content"><?php __($post['content']) ?></p>
    
         <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
-        </div>
+            <div>Published on <?php __($post['created_at']) ?> by @<?php 
+            $user_id = $post['user_id'];
+            $user = get_user($con, $user_id);
+            echo __($user['name']);
+            ?> </div>
+            <div>2 likes    <?php
+            $post_id = $post['id'];
+            
+            $comment_count = get_comment_count($con, $post_id);
+            if ($comment_count['count'] < 2) {
+                echo $comment_count['count'];
+                echo " comment";
+            }else{
+                echo $comment_count['count'];
+                echo " comments";
+            }
+            ?> </div>
     </div>
 
 </section>

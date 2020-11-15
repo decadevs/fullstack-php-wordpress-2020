@@ -125,7 +125,7 @@ function con() {
    return false;
 }
 
-   function get_user($con,  int $user_id) {
+function get_user($con,  int $user_id) {
 
     $sql  = 'SELECT * FROM users WHERE id =' . $user_id;
 
@@ -136,3 +136,15 @@ function con() {
     return false;
     
 }
+
+function get_comment_count($con, int $post_id) {
+
+    $sql = 'SELECT COUNT(*) as count FROM comments WHERE post_id =' . $post_id;
+
+    if ($result = mysqli_query($con, $sql)) {
+        return  mysqli_fetch_assoc($result);
+    }
+
+    return false;
+}
+
