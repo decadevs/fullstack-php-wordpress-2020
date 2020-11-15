@@ -8,6 +8,13 @@
 
     $posts = get_posts($con);
 
+    $data = array(
+        'name' => 'Olatunji',
+        'password' => 'password',
+        'email' => 'olatunji@gmail.com'
+    );
+    // create_user($con, $data);
+
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +40,12 @@
         <p class="post-content"><?php __($post['content']) ?></p>
    
         <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <div>Published on <?php __($post['created_at']) ?> by @<?php 
+            $user_id = $post['user_id'];
+            $user = get_user($con, $user_id);
+            echo __($user['name']);
+            ?> </div>
+            <div>2 likes    1 comment</div>
         </div>
     </div>
     <?php endforeach; ?>

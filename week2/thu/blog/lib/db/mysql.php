@@ -98,3 +98,41 @@ function con() {
 
     return 0;
    }
+
+   function create_user($con, array $data) {
+    if(!isset($data['created_at'])) {
+        $data['created_at'] = date('Y-m-d H:i:s');
+    }
+
+    $sql = 'INSERT INTO users (name, password, email, created_at)
+    VALUES (?,?,?,?)';
+
+    // Step1: Prepare
+   $statement = mysqli_prepare($con, $sql);
+
+   if($statement) {
+
+      // Step2: bind
+      mysqli_stmt_bind_param($statement, 'ssds', 
+      $data['name'], $data['password'], $data['email'], $data['created_at']
+       );
+
+       // Step3: execute
+       mysqli_stmt_execute($statement);
+
+   }
+
+   return false;
+}
+
+   function get_user($con,  int $user_id) {
+
+    $sql  = 'SELECT * FROM users WHERE id =' . $user_id;
+
+    if ($result = mysqli_query($con, $sql)) {
+        return  mysqli_fetch_assoc($result);
+    }
+
+    return false;
+    
+}
