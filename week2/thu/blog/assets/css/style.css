@@ -48,12 +48,12 @@ nav a:last-child{
     margin-right: 0;
 }
 
-.post{
+.post-area{
     margin-top: 70px;
 }
 
-.post:first-child{
-    margin-top: 0px;
+.post{
+    margin-top: 30px;
 }
 
 p {
@@ -79,4 +79,66 @@ p {
     margin-top: 20px;
     font-size: 12px;
     font-weight: bold;
+}
+
+.form-area form{
+    display: block; 
+    transition: all 1s;
+}
+form textarea, form input{
+    width: 100%;
+    min-height: 20vh; 
+    border: none; 
+    background: rgba(173, 216, 230, 0.09); 
+    padding: 5px 10px; 
+    border-radius: 5px 5px 0px 0px; 
+    border-bottom: 2px solid rgb(0,0,128); 
+    transition: all 0.5s;
+    margin-top: 15px;
+}
+
+form input{
+    min-height: auto;
+    border: 1px solid rgb(0,0,128);
+    border-radius: 0px;
+    line-height: 30px;
+    font-size: 18px;
+    background: transparent;
+}
+
+form textarea:active, form textarea:focus,
+form input:active, form input:focus{
+    outline: none;
+}
+form button[type='submit']{
+    display: block;
+    background: rgba(0,0,128, 0.8);
+    color: #fff; 
+    padding: 10px 10px; 
+    border: none; 
+    margin: 0 0 auto auto;
+    cursor: pointer; 
+    text-transform: uppercase; 
+    letter-spacing: 4px; 
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.25); 
+    transition: 1s all; 
+    font-size: 10px; 
+    border-radius: 5px;
+}
+form button[type='submit']:hover{
+    background: rgba(0,0,128, 0.6);
+}
+.post-comments{
+    margin-top: 30px;
+}
+
+.post-comment{
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(173, 216, 230, 0.07);
+}
+.comment-header{
+    display: flex;
+    justify-content: space-between;
 }
