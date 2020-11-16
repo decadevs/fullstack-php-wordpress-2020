@@ -1,4 +1,4 @@
-<header class="container">
+<header class="containers">
 
     <div>
         <h1><a href="index.php">XiReader</a></h1>
