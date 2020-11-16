@@ -24,7 +24,7 @@ function con() {
 
  function get_posts($con): array{
 
-    $sql = 'SELECT * FROM posts';
+    $sql = 'SELECT * FROM posts ORDER BY created_at DESC';
 
     $output = [];
 
@@ -57,7 +57,7 @@ function con() {
      if($statement) {
 
         // Step2: bind
-        mysqli_stmt_bind_param($statement, 'ssds', 
+        mysqli_stmt_bind_param($statement, 'ssis', 
         $data['title'], $data['content'], $data['user_id'], $data['created_at']
          );
 
@@ -113,7 +113,7 @@ function con() {
    if($statement) {
 
       // Step2: bind
-      mysqli_stmt_bind_param($statement, 'ssds', 
+      mysqli_stmt_bind_param($statement, 'ssss', 
       $data['name'], $data['password'], $data['email'], $data['created_at']
        );
 
@@ -148,3 +148,45 @@ function get_comment_count($con, int $post_id) {
     return false;
 }
 
+function create_comment($con, $data) {
+    if(!isset($data['created_at'])) {
+        $data['created_at'] = date('Y-m-d H:i:s');
+    }
+
+    $sql = 'INSERT INTO comments (post_id, comment, user_id, created_at)VALUES(?, ?, ?, ?)';
+
+    // Step1: Prepare
+   $statement = mysqli_prepare($con, $sql);
+
+   if($statement) {
+
+      // Step2: bind
+      mysqli_stmt_bind_param($statement, 'isis', 
+      $data['post_id'], $data['comment'], $data['user_id'], $data['created_at']
+       );
+
+       // Step3: execute
+       mysqli_stmt_execute($statement);
+
+   }
+
+   return false;
+}
+
+function get_comments($con, $post_id) {
+
+    $sql  = 'SELECT * FROM comments WHERE post_id =' . $post_id;
+
+    $output = [];
+
+    if($result = mysqli_query($con, $sql)) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $output[] = $row;
+        }
+    } else {
+        // Log or return error
+
+    }
+    
+    return $output;
+}

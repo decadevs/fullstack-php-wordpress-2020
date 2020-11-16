@@ -15,10 +15,17 @@ function hash_pwd($str): string {
 }
 
 function __($s) {
-    $banned = ['crazy', 'mad'];
+    $banned = ['crazy'];
     foreach($banned as $ban) {
         $s = str_ireplace($ban, '***', $s);
     }
     
     echo $s;
+}
+
+function clean($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }

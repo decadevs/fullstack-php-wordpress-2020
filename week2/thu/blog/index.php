@@ -17,21 +17,7 @@
         create_post($con, $post);
     }
 
-    function clean($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
     $posts = get_posts($con);
-
-    // $data = array(
-    //     'name' => 'Olatunji',
-    //     'password' => 'password',
-    //     'email' => 'olatunji@gmail.com'
-    // );
-    // create_user($con, $data);
 
 ?>
 
@@ -86,105 +72,5 @@
     <?php endforeach; ?>
 
 </section>
-<script>
-    $(document).ready(function () {
-        //  render pictures
-        // $.ajax({
-        //         url: "gal.php",
-        //         type: "GET",
-        //         dataType: 'JSON',
-        //         success: function(response){
-        //             let data = response[1].data;
-        //             data.forEach(picture => {
-        //                 if (picture !== "." && picture !== "..") {
-        //                     let image = `<img class="image" src="./gallery/${picture}" alt="image">`;
-        //                     $(".gallery").append(image);
-        //                 }
-        //             });
-        //         }
-        //     });
-
-        // // open a picture on a modal
-        // $('body').on('click','img',function(e){
-        //     let imageSrc = $(e.target).attr('src');
-        //     $('.modal_box').css("visibility", "visible");
-        //     $('.modal_box').append(`<img class='modal-image' src='${imageSrc}' alt='${imageSrc}'>`).fadeIn();
-
-        //     // lock scroll position
-        //     var scrollPosition = [
-        //     self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-        //     self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
-        //     ];
-        //     var html = jQuery('html');
-        //     html.data('scroll-position', scrollPosition);
-        //     html.data('previous-overflow', html.css('overflow'));
-        //     html.css('overflow', 'hidden');
-        //     window.scrollTo(scrollPosition[0], scrollPosition[1]);
-        // });
-
-        // // close an opened picture
-        // $('.close').on('click', function(){
-        //     $('.modal_box').css("visibility", "hidden").fadeOut();
-
-        //     // un-lock scroll position
-        //     var html = jQuery('html');
-        //     var scrollPosition = html.data('scroll-position');
-        //     html.css('overflow', html.data('previous-overflow'));
-        //     window.scrollTo(scrollPosition[0], scrollPosition[1])
-        // });
-
-        // Submit and render a picture
-        // $("#form").on('submit',(function(e) {
-        // e.preventDefault();
-        // $.ajax({
-        //     url: "index.php",
-        //     type: "POST",
-        //     data:  new FormData(this),
-        //     contentType: false,
-        //     cache: false,
-        //     processData:false,
-        //     success: function() {
-        //         $('form')[0].reset();
-        //         $.ajax({
-        //         url: "gal.php",
-        //         type: "GET",
-        //         dataType: 'JSON',
-        //         success: function(response){
-        //             let message = response[0].message;
-        //             if (message === "Invalid picture format") {
-        //                 $(".message").html(message).css("color", "red").delay(2000)
-        //                 .queue(function (next) { 
-        //                     $(this).html("");
-        //                     next(); 
-        //                 });
-        //             }else if (message === "Picture uploaded successfully") {
-        //                 $(".message").html(message).css("color", "green").delay(2000)
-        //                 .queue(function (next) { 
-        //                     $(this).html("");
-        //                     next(); 
-        //                 });
-        //             }else{
-        //                 $(".message").html(message).css("color", "red").delay(2000)
-        //                 .queue(function (next) { 
-        //                     $(this).html("");
-        //                     next(); 
-        //                 });
-        //             }
-
-        //             $(".gallery").empty();
-        //             let data = response[1].data;
-        //             data.forEach(picture => {
-        //                 if (picture !== "." && picture !== "..") {
-        //                     let image = `<img class="image" src="./gallery/${picture}" alt="image">`;
-        //                     $(".gallery").append(image);
-        //                 }
-        //             });
-        //         }
-        //     });
-        //         }
-        //     });
-        // }));
-    });
-    </script>
 </body>
 </html>
