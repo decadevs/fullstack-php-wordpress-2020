@@ -6,8 +6,13 @@
         die_with_error("Error connecting to Database Server");
     }
 
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])){
+        create_post($con, $_POST);
+    }
+ 
     $posts = get_posts($con);
-
+    $postCount = count_post($con);
+    echo $postCount;
 ?>
 
 <!DOCTYPE html>
@@ -27,19 +32,33 @@
 
 
 <section class="container section">
-    <?php foreach($posts as $post): ?>
-    <div class="post">
-        <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
-        <p class="post-content"><?php __($post['content']) ?></p>
-   
-        <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+    <div class="form-area">
+        <form action="" method="post">
+            <input type="text" name="title" id="" placeholder="post title">
+            <textarea name="content" placeholder="Whats on your mind? "></textarea>
+            <input type="hidden" name="user_id" value='1'>
+            <button type="submit">Post</button>
+        </form>
+    </div> 
+    <div class="post-area">
+        <?php __($postCount); $postCount > 1 ? __(" posts") : __(" post"); ?>
+        <?php foreach($posts as $post): ?>
+        <div class="post">
+            <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
+            <p class="post-content"><?php __($post['content']) ?></p>
+    
+            <div class="post-meta">
+                <div>Published on 12/01/2020 by @aj </div>
+                <div>2 likes    1k comment</div>
+            </div>
         </div>
+        <?php endforeach; ?>
     </div>
-    <?php endforeach; ?>
 
 </section>
-    
+
+<section class="login">
+
+</section>    
 </body>
 </html>
