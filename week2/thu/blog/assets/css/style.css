@@ -90,3 +90,41 @@ p {
     text-decoration: underline;
 }
 
+.comment {
+    margin-left: 10px;
+}
+
+.post-comment {
+    margin-bottom: 15px;
+}
+
+.comment-wrapper {
+    padding-left: 2em;
+    background-color: rgb(247, 247, 247);
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+
+#post-comment {
+    margin-top: 20px;
+    width: 79.4%;
+    height: 50px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: rgb(247, 247, 247);
+    margin-right: 5%;
+}
+
+.post-comment button {
+    width: 15%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(172, 129, 194);
+    color: #FFF;
+}
+
+.post-comment button:hover {
+    cursor: pointer;
+}
+
