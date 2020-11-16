@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
     
 <link rel="stylesheet" href="assets/css/style.css">
+<script></script>
 </head>
 <body>
 
@@ -34,8 +35,22 @@
    
         <div class="post-meta">
             <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <div>2 likes    <a href="">1k comment</a></div>
         </div>
+
+        <div>
+            <!-- TODO: display comments from database in this div -->
+        </div>
+
+        <form method="post" action="" class="post-comment">
+                <input type="text" name="post-comment" id="post-comment">
+                <button>Comment</button>
+        </form>
+
+        <div class="comments">
+            <div></div>
+        </div>
+
     </div>
     <?php endforeach; ?>
 

@@ -22,7 +22,7 @@ function con() {
  * Get posts
  */
 
- function get_posts($con): array{
+ function get_posts($con): array {
 
     $sql = 'SELECT * FROM posts';
 
@@ -69,11 +69,9 @@ function con() {
      return false;
   }
 
-
   /**
    * Get single post
    */
-
 
    function get_post($con,  int $post_id) {
 
