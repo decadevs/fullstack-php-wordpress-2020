@@ -66,7 +66,11 @@ $comments = get_comments($con);
                     <div class="post-meta comment-wrapper">
                         <div class="comment">
                             <p class="post-comment"><?php __($comment['comment']) ?></p>
-                            <div><?php echo __($comment['created_at']) ?></div>
+                            <?php 
+                                $time = strtotime($comment['created_at']);
+                                $myFormatForView = date("F j, Y, g:i a", $time);
+                            ?>
+                            <div><?php echo $myFormatForView ?></div>
                         </div>
                     </div>
             <?php endif;
@@ -74,7 +78,7 @@ $comments = get_comments($con);
         </div>
 
         <form method="post" action="" class="post-comment">
-            <input type="text" name="comment" id="post-comment">
+            <input type="text" name="comment" id="post-comment" placeholder="Comment on this post...">
             <button>Comment</button>
         </form>
 

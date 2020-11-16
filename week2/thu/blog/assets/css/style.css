@@ -1,25 +1,29 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     margin: 0;
 }
 
-section,header{
+section,
+header {
     padding: 20px;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
 .container {
@@ -28,31 +32,31 @@ header{
 
 }
 
-nav a{
-   text-decoration: none;
-   border: solid #CCC 1px;
-   padding: 5px 25px;
-   margin-right: 10px;
-   color: black;
-   border-radius: 5px;
+nav a {
+    text-decoration: none;
+    border: solid #CCC 1px;
+    padding: 5px 25px;
+    margin-right: 10px;
+    color: black;
+    border-radius: 5px;
 }
 
-nav a:hover{
+nav a:hover {
     background-color: black;
     color: #FFF;
 }
 
 
 
-nav a:last-child{
+nav a:last-child {
     margin-right: 0;
 }
 
-.post{
+.post {
     margin-top: 70px;
 }
 
-.post:first-child{
+.post:first-child {
     margin-top: 0px;
 }
 
@@ -62,18 +66,22 @@ p {
     font-weight: 300;
     font-size: 15px;
 }
-.post-title{
+
+.post-title {
     margin-bottom: 10px;
     font-weight: 600;
 }
-.post-title a{
+
+.post-title a {
     color: inherit;
     text-decoration: none;
 }
-.post-title a:hover{
+
+.post-title a:hover {
     text-decoration: underline;
 }
-.post-meta{
+
+.post-meta {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -128,3 +136,9 @@ p {
     cursor: pointer;
 }
 
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
