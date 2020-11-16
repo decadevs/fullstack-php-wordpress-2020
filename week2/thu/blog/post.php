@@ -16,6 +16,16 @@
         exit;
     }
 
+    $postComments = get_comments($con, $post_id);
+    
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])){
+       $comment = create_comment($con, $_POST);
+       if(!empty($comment)){
+           array_push($postComments, $comment);
+       }
+    }
+
+    $commentCount = count_comments($con, $post_id);
    
 ?>
 
@@ -42,8 +52,33 @@
    
         <div class="post-meta">
             <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <div>2 likes  
+                <?php __($commentCount); 
+                    $commentCount > 1 ? __(" comments") : __(" comment");
+                ?>
+            </div>
         </div>
+        <div class="form-area">
+            <form action="" method="post">
+                <textarea name="content"></textarea>
+                <input type="hidden" name="user_id" value='1'>
+                <input type="hidden" name="post_id" value='<?php __($post_id)?>'>
+                <button type="submit">Add Comment</button>
+            </form>
+        </div>
+        <?php if(!empty($postComments)): ?> 
+        <div class="post-comments">
+            <?php foreach ($postComments as $postComment): ?>    
+            <div class="post-comment">
+                <div class="comment-header">
+                    <h6><strong>John Doe</strong></h6>
+                    <h6><?php __($postComment['created_at']) ?></h6>
+                </div>
+                <p><?php __($postComment['content']) ?></p>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>   
     </div>
 
 </section>
