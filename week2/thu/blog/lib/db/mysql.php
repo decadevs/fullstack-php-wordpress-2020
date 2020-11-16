@@ -98,3 +98,108 @@ function con() {
 
     return 0;
    }
+
+/**
+ * Get comments
+ */
+
+ function get_comments($con, $post_id): array{
+
+    $sql = 'SELECT * FROM comments WHERE post_id = ?';
+
+    /* create a prepared statement */
+        $statement = mysqli_prepare($con, $sql);
+
+        if($statement) {
+            /* bind parameters for markers */
+            mysqli_stmt_bind_param($statement, 'd', $post_id);
+            
+            /* execute query */
+            mysqli_stmt_execute($statement);
+            
+            /* bind result variables */
+            mysqli_stmt_bind_result($statement, $comments);
+            
+            /* fetch value */
+            mysqli_stmt_fetch($statement);
+
+            /* close statement */
+            mysqli_stmt_close($statement);
+            
+            return $comments;
+        }
+}
+
+ /**
+  * Insert comment
+  */
+  function create_comment($con, array $data) {
+      if(!isset($data['created_at'])) {
+          $data['created_at'] = date('Y-m-d H:i:s');
+      }
+
+      $sql = 'INSERT INTO comments (content, user_id, created_at, post_id)
+      VALUES (?,?,?,?)';
+
+      // Step1: Prepare
+     $statement = mysqli_prepare($con, $sql);
+
+     if($statement) {
+
+        // Step2: bind
+        mysqli_stmt_bind_param($statement, 'sdsd', 
+         $data['content'], $data['user_id'], $data['created_at'],$data['post_id'],
+         );
+
+         // Step3: execute
+         mysqli_stmt_execute($statement);
+
+     }
+
+     return false;
+  }
+
+  function count_comments($con, int $post_id){
+
+    $sql = 'SELECT COUNT(*) FROM comments WHERE post_id = ?';
+        
+        /* create a prepared statement */
+        $statement = mysqli_prepare($con, $sql);
+
+        if($statement) {
+            /* bind parameters for markers */
+            mysqli_stmt_bind_param($statement, 'd', $post_id);
+  
+            /* execute query */
+            mysqli_stmt_execute($statement);
+            
+            /* bind result variables */
+            mysqli_stmt_bind_result($statement, $count);
+            
+            /* fetch value */
+            mysqli_stmt_fetch($statement);
+
+            /* close statement */
+            mysqli_stmt_close($statement);
+            
+            return $count;
+        }
+
+  }
+
+
+  /**
+   * Get user
+  */
+
+   function get_user($con,   $user_id) {
+
+        $sql  = 'SELECT * FROM users WHERE id =' . $user_id;
+
+        if ($result = mysqli_query($con, $sql)) {
+            return  mysqli_fetch_assoc($result);
+        }
+
+        return false;
+        
+   }

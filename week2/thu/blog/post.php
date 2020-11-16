@@ -10,12 +10,15 @@
 
     $post = get_post($con, $post_id);
 
+    $comments = get_comments($con, $post_id);
+    var_dump($comments);
+    
+    $commentCount = count_comments($con, $post_id);
 
-    if(!$post_id || !$post) {
-        header("Location: index.php");
-        exit;
-    }
-
+    // if(!$post_id || !$post) {
+    //     header("Location: index.php");
+    //     exit;
+    // }
    
 ?>
 
@@ -27,7 +30,7 @@
     <title><?php __($post['title']) ?></title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
-    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">   
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -36,16 +39,47 @@
 
 
 <section class="container section">
+    
     <div class="post">
-        <h1 class="post-title"><a href=""><?php __($post['title']) ?></a></h1>
+        <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
         <p class="post-content"><?php __($post['content']) ?></p>
    
         <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <div>Published on <?php __($post['created_at']) ?> by @ 
+            <?php 
+                $user_id = $post['user_id'];
+                $user = get_user($con, $user_id);
+                echo __($user['name']);?> </div>
+            <div>2 likes <?php __($commentCount) 
+            ?></div>
         </div>
     </div>
 
+    
+<?php foreach($posts as $post): ?>
+        <div class="comment">
+            <p class="post-content"><?php __($comment['comment']); ?></p>
+            
+            <div class="post-meta">
+                <div>Commented on <?php __($comment['created_at']); ?> by @<?php
+                    $user_id = $comment['user_id'];
+                    $user = get_user($con, $user_id);
+                    echo __($user['name']);
+                    ?> 
+                </div>
+                <div>2 likes </div>
+             </div>
+        </div>
+ <?php endforeach; ?>
+
+    <div>
+    <!-- comment form -->
+                <form class="clearfix" action="index.php" method="post" id="comment_form">
+                    <h4>Post a comment:</h4>
+                    <textarea name="comment_text" id="comment_text" class="form-control" cols="30" rows="3"></textarea>
+                    <button class="btn btn-primary btn-sm pull-right" id="submit_comment">Submit comment</button>
+                </form>
+    </div>
 </section>
     
 </body>

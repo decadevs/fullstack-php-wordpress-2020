@@ -13,3 +13,11 @@ CREATE TABLE posts(
     user_id INT(11) NOT NULL,
     created_at DATETIME NOT NULL
 );
+
+CREATE TABLE comments(
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    content VARCHAR(255) NOT NULL,
+    user_id INT(11) NOT NULL,
+    created_at DATETIME NOT NULL,
+    post_id INT(11) NOT NULL
+);
