@@ -107,3 +107,34 @@ function count_post($con, $post_id): int {
         }
         return false;
     }
+
+    function create_user($con, array $data){
+
+        $sql = 'INSERT INTO users (name, email, password) VALUES (?,?,?)';
+
+        // Step1: Prepare
+        $statement = mysqli_prepare($con, $sql);
+
+        if($statement) {
+
+            // Step2: bind
+            mysqli_stmt_bind_param($statement, 'sss',
+                $data['name'], $data['email'], $data['password']
+            );
+
+            // Step3: execute
+            mysqli_stmt_execute($statement);
+            return true;
+        }
+
+        return false;
+}
+
+//get email
+function get_email($con, string $user_email){
+    $sql = 'SELECT * FROM users WHERE email =' . '"'.$user_email . '"';
+    if($result = mysqli_query($con, $sql)){
+        return mysqli_fetch_assoc($result);
+    }
+    return false;
+}

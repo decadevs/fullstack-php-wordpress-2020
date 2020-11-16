@@ -22,3 +22,7 @@ function __($s) {
     
     echo $s;
 }
+
+function clean($str) : string{
+    return htmlspecialchars(strip_tags($str));
+}

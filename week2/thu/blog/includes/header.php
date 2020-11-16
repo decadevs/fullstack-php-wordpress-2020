@@ -6,7 +6,7 @@
     </div>
 
     <nav>
-        <a href="">Login</a>
-        <a href="">Join</a>
+        <a href="login.php">Login</a>
+        <a href="signup.php">Join</a>
     </nav>
 </header>
