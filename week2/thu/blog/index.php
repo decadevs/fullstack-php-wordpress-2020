@@ -49,7 +49,13 @@
     
             <div class="post-meta">
                 <div>Published on 12/01/2020 by @aj </div>
-                <div>2 likes    1k comment</div>
+                <div>2 likes  
+                     <?php 
+                        $countComment = count_comments($con, $post["id"]); 
+                        __($countComment);
+                        $countComment > 1 ? __(" Comments") :  __(" Comment");
+                     ?>
+                </div>
             </div>
         </div>
         <?php endforeach; ?>
