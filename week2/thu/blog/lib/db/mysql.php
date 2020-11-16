@@ -87,17 +87,17 @@ function con() {
         
    }
 
-   function count_post($con): int {
-       $sql = 'SELECT COUNT(*) as c FROM posts';
+function count_post($con, $post_id): int {
+    $sql = 'SELECT COUNT(*) as c FROM comments WHERE post_id =' . $post_id;
 
-        if ($result = mysqli_query($con, $sql)) {
-            $row = mysqli_fetch_assoc($result);
+    if ($result = mysqli_query($con, $sql)) {
+        $row = mysqli_fetch_assoc($result);
 
-            return intval($row['c']);
-        }
+        return intval($row['c']);
+    }
 
     return 0;
-   }
+}
 
     //get the author of the post
     function get_user($con, int $user_id){

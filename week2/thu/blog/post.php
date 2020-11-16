@@ -9,7 +9,7 @@
     $post_id = (isset($_GET['post_id'])) ? abs(intval($_GET['post_id'])) : 0;
 
     $post = get_post($con, $post_id);
-
+    $author = get_user($con, $post['user_id']);
 
     if(!$post_id || !$post) {
         header("Location: index.php");
@@ -18,34 +18,33 @@
 
    
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php __($post['title']) ?></title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
-    
-<link rel="stylesheet" href="assets/css/style.css">
-</head>
+<?php include APP_PATH . '/includes/htmlhead.php' ?>
 <body>
 
 <?php include APP_PATH . '/includes/header.php' ?>
 
 
-<section class="container section">
+<section class="containers section">
     <div class="post">
-        <h1 class="post-title"><a href=""><?php __($post['title']) ?></a></h1>
+        <h1 class="post-title"><?php __($post['title']) ?></h1>
         <p class="post-content"><?php __($post['content']) ?></p>
    
         <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <div>Published on <?php __($post['created_at'] . ' by ') . __($author['name'])?> </div>
+            <div>2 likes    <?php __(count_post($con, $post_id))?> comment</div>
         </div>
     </div>
 
+</section>
+
+<section class="containers section">
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="Create Post">Comment</label>
+            <textarea class="form-control" id="Create Post" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Comment</button>
+    </form>
 </section>
     
 </body>
