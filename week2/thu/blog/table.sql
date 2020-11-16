@@ -2,8 +2,8 @@ CREATE TABLE users(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    email VARCHAR(150) NOT NULL,
-    created_at DATETIME NOT NULL
+    email VARCHAR(150) NOT NULL UNIQUE,
+    created_at DATETIME NOT NULL DEFAULT  NOW()
 );
 
 CREATE TABLE posts(
@@ -11,5 +11,15 @@ CREATE TABLE posts(
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
     user_id INT(11) NOT NULL,
-    created_at DATETIME NOT NULL
+    created_at DATETIME NOT NULL DEFAULT NOW(),
+    CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+CREATE TABLE comments(
+	  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) NOT NULL,
+    post_id INT(11) NOT NULL,
+    message TEXT NOT NULL,
+    CONSTRAINT fk_userid FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
+    CONSTRAINT  fk_post_id FOREIGN  KEY(post_id) REFERENCES posts(id) ON DELETE CASCADE
+)

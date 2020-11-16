@@ -98,3 +98,12 @@ function con() {
 
     return 0;
    }
+
+    //get the author of the post
+    function get_user($con, int $user_id){
+        $sql = 'SELECT * FROM users WHERE id =' . $user_id;
+        if($result = mysqli_query($con, $sql)){
+            return mysqli_fetch_assoc($result);
+        }
+        return false;
+    }

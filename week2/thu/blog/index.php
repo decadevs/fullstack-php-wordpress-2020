@@ -27,14 +27,16 @@
 
 
 <section class="container section">
-    <?php foreach($posts as $post): ?>
+    <?php foreach($posts as $post):
+        $author = get_user($con, $post['user_id']);
+        ?>
     <div class="post">
         <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
         <p class="post-content"><?php __($post['content']) ?></p>
    
         <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <div>Published on <?php __($post['created_at'] . ' by '). __($author['name']) ?></div>
+            <div>2 likes    <?php __(count_post($con))?> comment</div>
         </div>
     </div>
     <?php endforeach; ?>
