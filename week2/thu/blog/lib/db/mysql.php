@@ -98,3 +98,72 @@ function con() {
 
     return 0;
    }
+
+
+   function create_comment($con, array $data, int $user_id, int $post_id) {
+        if(!isset($data['created_at'])) {
+            $data['created_at'] = date('Y-m-d H:i:s');
+        }
+
+        $sql = 'INSERT INTO comments (content, user_id, created_at, post_id)
+        VALUES (?,?,?,?)';
+
+        // Step1: Prepare
+        $statement = mysqli_prepare($con, $sql);
+
+        if($statement) {
+            // Step2: bind
+            mysqli_stmt_bind_param($statement, 'sdsd', 
+            $data['content'], $user_id, $data['created_at'], $post_id
+            );
+
+            // Step3: execute
+            mysqli_stmt_execute($statement);
+
+        }
+
+        return false;
+    }
+
+    function get_comments($con, int $post_id) {
+
+        $sql  = 'SELECT * FROM comments WHERE id =' . $post_id;
+        $output = [];
+
+        if ($result = mysqli_query($con, $sql)) {
+            while($row = mysqli_fetch_assoc($result)){
+                $output[] = $row;
+            }
+        }
+
+        return $output;
+        
+   }
+
+   function count_comments($con, int $post_id) {
+
+        $sql = 'SELECT COUNT(*) FROM comments WHERE post_id = ?';
+            
+            /* create a prepared statement */
+            $statement = mysqli_prepare($con, $sql);
+
+            if($statement) {
+                /* bind parameters for markers */
+                mysqli_stmt_bind_param($statement, 'd', $post_id);
+    
+                /* execute query */
+                mysqli_stmt_execute($statement);
+                
+                /* bind result variables */
+                mysqli_stmt_bind_result($statement, $count);
+                
+                /* fetch value */
+                mysqli_stmt_fetch($statement);
+
+                /* close statement */
+                mysqli_stmt_close($statement);
+                
+                return $count;
+            }
+        }
+  }
