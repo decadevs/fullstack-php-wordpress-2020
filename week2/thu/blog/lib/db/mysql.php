@@ -199,7 +199,7 @@ function con() {
                     return false;
         }
 
-        function authenticate($con, $email, $password){
+    function authenticate($con, $email, $password){
             
             $sql = "SELECT * FROM users WHERE email='".$email."'";
 

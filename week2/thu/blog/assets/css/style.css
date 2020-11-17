@@ -184,3 +184,10 @@ input:focus{
     text-align: center;
     color: #cc0707;
 }
+
+.cauthor{
+  font-size: 13px;
+  font-weight: 700;
+  color: #7a0505;
+  padding: 0 10px;
+}

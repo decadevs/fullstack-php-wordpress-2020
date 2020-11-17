@@ -80,6 +80,7 @@
     <div class="comment-info">
     <span class="date"><?php __(get_comment_date($comment['created_at'])); ?>  </span>
     <span class="time"><?php __(get_comment_time($comment['created_at'])); ?> </span>
+    <span class="cauthor"><?php __(getUser($con, $comment['user_id'])); ?> </span>
     </div>
 
     <?php endforeach ?>
