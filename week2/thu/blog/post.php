@@ -54,7 +54,7 @@ session_start();
 </section>
 
 <section class="containers section">
-    <form action="" method="post">
+    <form class="commentFrm" action="" method="post">
         <div class="form-group">
             <label for="Create Post">Add Comment</label>
             <textarea class="form-control" id="Create Post" name="comment" rows="3"></textarea>
