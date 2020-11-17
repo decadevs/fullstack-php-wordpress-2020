@@ -16,10 +16,10 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        var_dump($_POST);
-        $data = ['title'=> clean($_POST['title']), 'content'=> clean($_POST['content']), 'user_id' => clean($_POST['user_id'])];
+        $data = ['title'=> clean($_POST['title']), 'content'=> clean($_POST['content']), 'user_id' => clean($_SESSION['user_id'])];
 
         create_post($con, $data);
+        redirect('/');
     }
 
 ?>
@@ -32,10 +32,10 @@
 </section>
 <section class="container section">
     <form method="POST" action="new_post.php">
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="formGroupExampleInput">Username</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username" name="user_id" required>
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="formGroupExampleInput">Title</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Post Title" name="title" required>
