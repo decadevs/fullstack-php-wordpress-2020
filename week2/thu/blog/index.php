@@ -27,14 +27,21 @@
 
 
 <section class="container section">
-    <?php foreach($posts as $post): ?>
+    
+        <?php 
+            foreach($posts as $post):
+            $totalcomments = count_comment($con, $post['id']); 
+            $author = getUser($con, $post['user_id']);
+            $published_date = get_comment_date($post['created_at']);
+             
+            ?>
     <div class="post">
         <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
-        <p class="post-content"><?php __($post['content']) ?></p>
+        <p class="post-content"><?php __(substr($post['content'],0,100))?></p>
    
         <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <?php __("<div>Published on $published_date by @$author </div>") ?>
+            <div>2 likes    <?php __($totalcomments) ?> comment</div>
         </div>
     </div>
     <?php endforeach; ?>

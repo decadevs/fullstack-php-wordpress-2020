@@ -6,7 +6,15 @@
     </div>
 
     <nav>
-        <a href="">Login</a>
-        <a href="">Join</a>
+       <?php
+        if(isloggedin()):?>
+        <a href="/logout.php">Logout</a>
+        <a href="/new_post.php">Admin post</a>
+
+        <?php else: ?>
+         <a href="/login.php">Login</a>
+        <a href="/signup.php">Join</a>
+        <?php endif ?>
+
     </nav>
 </header>

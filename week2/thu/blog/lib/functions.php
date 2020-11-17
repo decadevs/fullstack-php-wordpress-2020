@@ -22,3 +22,27 @@ function __($s) {
     
     echo $s;
 }
+
+function redirect($path){
+
+    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
+
+    header("Location: $protocol://" .$_SERVER['HTTP_HOST'].$path);
+}
+
+function get_comment_date($time){
+    return date("M j, Y",strtotime($time));
+}
+
+function get_comment_time($time){
+    return date("g:i a",strtotime($time));
+}
+
+function isloggedin(){
+
+     if(isset($_SESSION['user'])){
+         return true;
+     }
+
+     return false;
+}
