@@ -32,10 +32,6 @@
 </section>
 <section class="container section">
     <form method="POST" action="new_post.php">
-        <!-- <div class="form-group">
-            <label for="formGroupExampleInput">Username</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username" name="user_id" required>
-        </div> -->
         <div class="form-group">
             <label for="formGroupExampleInput">Title</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Post Title" name="title" required>
