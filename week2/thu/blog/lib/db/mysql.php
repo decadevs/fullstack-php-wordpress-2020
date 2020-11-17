@@ -122,7 +122,7 @@ function con() {
 
    function get_comments($con): array {
 
-    $sql = 'SELECT * FROM comments';
+    $sql = 'SELECT * FROM comments ORDER BY created_at DESC';
 
     $output = [];
 
