@@ -7,8 +7,6 @@ if(!$con) {
     die_with_error("Error connecting to Database Server");
 }
 
-include APP_PATH . '/includes/htmlhead.php';
-
 if($_POST){
 
     $err = "";
@@ -18,7 +16,7 @@ if($_POST){
         $err .= "All fields are required\n";
     }
     elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        $err = "Invalid email address\n";
+        $err .= "Invalid email address\n";
     }
     elseif(isset($_POST['password']) && $_POST['password'] !== $_POST['confirm']){
         $err .= "Confirm password and password does not match\n";
@@ -41,6 +39,8 @@ if($_POST){
         }
     }
 }
+
+include APP_PATH . '/includes/htmlhead.php';
 
 ?>
 

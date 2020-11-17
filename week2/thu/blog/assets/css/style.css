@@ -80,3 +80,14 @@ p {
     font-size: 12px;
     font-weight: bold;
 }
+
+.commentHolder{
+    background-color: #F4F4F4; margin-top: 10px; padding: 5px 0;  border-radius: 5px;
+
+}
+
+.comment{background-color: #FFFFFF; margin: 5px auto; padding: 5px;
+    width: 95%; border-radius: 5px;
+    border: #f1f1f1 thin solid;
+}
+.commentName{color: #961734; font-size: 12px;}

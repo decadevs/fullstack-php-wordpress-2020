@@ -108,6 +108,7 @@ function count_post($con, $post_id): int {
         return false;
     }
 
+    //Create user
     function create_user($con, array $data){
 
         $sql = 'INSERT INTO users (name, email, password) VALUES (?,?,?)';
@@ -136,5 +137,49 @@ function get_email($con, string $user_email){
     if($result = mysqli_query($con, $sql)){
         return mysqli_fetch_assoc($result);
     }
+    return false;
+}
+
+function get_comments($con, int $id): array{
+
+    $sql = 'SELECT * FROM comments WHERE post_id=' . $id;
+
+    $output = [];
+
+    if($result = mysqli_query($con, $sql)) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $output[] = $row;
+        }
+    } else {
+        // Log or return error
+
+    }
+
+    return $output;
+}
+
+/**
+ * Insert comment
+ */
+function create_comment($con, array $data) {
+
+    $sql = 'INSERT INTO comments (user_id, post_id, message)
+      VALUES (?,?,?)';
+
+    // Step1: Prepare
+    $statement = mysqli_prepare($con, $sql);
+
+    if($statement) {
+
+        // Step2: bind
+        mysqli_stmt_bind_param($statement, 'dds',
+            $data['user_id'], $data['post_id'], $data['message']
+        );
+
+        // Step3: execute
+        mysqli_stmt_execute($statement);
+        return true;
+    }
+
     return false;
 }

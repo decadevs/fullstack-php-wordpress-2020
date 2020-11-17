@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
     require __DIR__ . '/settings.php';
     $con = con();
 
@@ -8,17 +9,32 @@
 
     $post_id = (isset($_GET['post_id'])) ? abs(intval($_GET['post_id'])) : 0;
 
+    //get post
     $post = get_post($con, $post_id);
+    //get user
     $author = get_user($con, $post['user_id']);
+    //get comments
+    $comments = get_comments($con, $post_id);
 
     if(!$post_id || !$post) {
         header("Location: index.php");
         exit;
     }
 
-   
+    //add comment if user login
+    if(isset($_SESSION['id']) && $_POST && !empty($_POST['comment'])){
+        $data['user_id'] = $_SESSION['id'];
+        $data['post_id'] = $post_id;
+        $data['message'] = clean($_POST['comment']);
+        $outcome = create_comment($con, $data);
+    }
+    elseif($_POST && !isset($_SESSION)){
+        $err .= 'Comment are for members only, login or sign up to add comment';
+    }
+
+    include APP_PATH . '/includes/htmlhead.php'
 ?>
-<?php include APP_PATH . '/includes/htmlhead.php' ?>
+
 <body>
 
 <?php include APP_PATH . '/includes/header.php' ?>
@@ -40,11 +56,25 @@
 <section class="containers section">
     <form action="" method="post">
         <div class="form-group">
-            <label for="Create Post">Comment</label>
-            <textarea class="form-control" id="Create Post" rows="3"></textarea>
+            <label for="Create Post">Add Comment</label>
+            <textarea class="form-control" id="Create Post" name="comment" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Create Comment</button>
     </form>
+</section>
+
+<section class="containers section">
+    <h5>Comment:</h5>
+    <div class="commentHolder">
+<?php foreach($comments as $comment){
+    $myName = get_user($con, $comment['user_id']);
+    ?>
+    <div class="comment">
+        <?php echo '<div class="commentName"><strong>comment by '.$myName['name'].'</strong></div>' ?>
+        <?php echo $comment['message'] ?>
+    </div>
+<?php } ?>
+    </div>
 </section>
     
 </body>
