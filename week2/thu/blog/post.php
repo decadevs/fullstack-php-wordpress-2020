@@ -18,6 +18,7 @@ if (!$post_id || !$post) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comment = $_POST['comment'];
+    date_default_timezone_set("Africa/Lagos");
     $created_at = date("Y-m-d H:i:s");
     $result = comment_on_post($con, $comment, 1, $created_at, $post_id);
 }
@@ -66,9 +67,9 @@ $comments = get_comments($con);
                     <div class="post-meta comment-wrapper">
                         <div class="comment">
                             <p class="post-comment"><?php __($comment['comment']) ?></p>
-                            <?php 
-                                $time = strtotime($comment['created_at']);
-                                $myFormatForView = date("F j, Y, g:i a", $time);
+                            <?php
+                            $time = strtotime($comment['created_at']);
+                            $myFormatForView = date("F j, Y, g:i a", $time);
                             ?>
                             <div><?php echo $myFormatForView ?></div>
                         </div>
