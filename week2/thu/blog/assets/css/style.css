@@ -2,10 +2,12 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    /* font-size: 62.5% */
 }
 
 body{
     font-family: 'Open Sans', sans-serif;
+    background-color: seashell;
 }
 
 h1,h2,h3{
@@ -14,12 +16,47 @@ h1,h2,h3{
 
 section,header{
     padding: 20px;
+    background-color: white;
+    
 }
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 3px solid seashell;
    
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+section {
+    box-shadow: 5px 4px 3px rgba(0, 0, 0, .4);
+}
+
+.section-button a {
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+#button{
+    border: solid #CCC 1px;
+}
+
+#button:hover {
+    background-color: black;
+    color: white !important;
+}
+
+#warning {
+    color: red;
 }
 
 .container {
@@ -28,13 +65,17 @@ header{
 
 }
 
+.form-head{
+    text-align: center;
+}
+
 nav a{
-   text-decoration: none;
-   border: solid #CCC 1px;
-   padding: 5px 25px;
-   margin-right: 10px;
-   color: black;
-   border-radius: 5px;
+    text-decoration: none;
+    border: solid #CCC 1px;
+    padding: 5px 25px;
+    margin-right: 10px;
+    color: black;
+    border-radius: 5px;
 }
 
 nav a:hover{
@@ -46,6 +87,19 @@ nav a:hover{
 
 nav a:last-child{
     margin-right: 0;
+}
+
+.comment{
+    margin-top: 20px;
+}
+
+.comment-box{
+    margin-top: 30px;
+    margin-bottom: 20px;;
+}
+
+#comment-label {
+    font-weight: bold;
 }
 
 .post{

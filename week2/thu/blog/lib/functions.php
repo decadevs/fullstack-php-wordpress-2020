@@ -22,3 +22,26 @@ function __($s) {
     
     echo $s;
 }
+
+/**
+ * prevent sql injection
+ */
+function clean($s) {
+    return htmlentities($s);
+}
+
+/**
+ * redirect
+ */
+function redirect($url) {
+    header("location: " . $url);
+}
+
+/**
+   * Get current time from created_at
+   */
+function get_current_date($time){
+    return date("M j, Y",strtotime($time));
+}
+
+

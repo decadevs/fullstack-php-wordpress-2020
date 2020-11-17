@@ -1,12 +1,25 @@
-<header class="container">
+<?php ?>
 
-    <div>
-        <h1><a href="index.php">XiReader</a></h1>
-        <span>Open, Know, Repeat</span>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XiReader</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="container">
 
-    <nav>
-        <a href="">Login</a>
-        <a href="">Join</a>
-    </nav>
-</header>
+        <div>
+            <h1><a href="index.php">XiReader</a></h1>
+            <span>Open, Know, Repeat</span>
+        </div>
+
+        <?php require APP_PATH . '/includes/nav.php' ?>
+
+    </header>

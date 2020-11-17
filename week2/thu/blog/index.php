@@ -1,5 +1,8 @@
 <?php 
     require __DIR__ . '/settings.php';
+
+    session_start();
+
     $con = con();
 
     if(!$con) {
@@ -10,20 +13,29 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XiReader</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
-    
-<link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
 
 <?php include APP_PATH . '/includes/header.php' ?>
+
+
+
+<?php if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']): ?>
+
+
+    <section class="container section-button" >
+        <div>
+        <a href="new_post.php">
+            <button type="button" class="btn btn-outline-*" id="button">
+                New post
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+            </button>
+            </a>
+        </div>
+    </section>
+
+<?php  endif; ?>
+
 
 
 <section class="container section">
@@ -33,13 +45,12 @@
         <p class="post-content"><?php __($post['content']) ?></p>
    
         <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <div>Published <?php __(get_current_date($post['created_at'])) ?> by <?php __(getUser($con, $post['user_id'])) ?></div>
+            <div>2 likes    <?php __(count_comment($con, $post['id'])) ?> comment</div>
         </div>
     </div>
     <?php endforeach; ?>
 
 </section>
-    
-</body>
-</html>
+
+<?php include APP_PATH . '/includes/footer.php' ?>
