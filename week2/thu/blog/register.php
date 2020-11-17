@@ -25,9 +25,9 @@
             array_push($errors, "The two passwords do not match");
         }
         if (count($errors) == 0) {
-            create_user($con, ['name'=>$name, 'password'=>$password_1, 'email'=>$email]);
-            $_SESSION['success']  = "New user successfully created!!";
-            $_SESSION['login_user'] = $name;
+            create_user($con, ['name'=>$name, 'password'=>hash_pwd($password_1), 'email'=>$email]);
+            session_regenerate_id('true');
+            $_SESSION['is_log_in'] = true;
             $_SESSION['id']=mysqli_insert_id($con);
 			header('location: post.php');
         }
@@ -50,11 +50,11 @@
         <?php echo display_error(); ?>
             <div class="input-group">
                 <label for="name">Name</label>
-                <input type="text" name="name" id ="name" value="<?php echo $name; ?>">
+                <input type="text" name="name" id ="name">
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" value="<?php echo $email; ?>">
+                <input type="email" name="email" id="email">
             </div>
             <div class="input-group">
                 <label for="password_1">Password</label>

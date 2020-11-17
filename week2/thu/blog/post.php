@@ -1,8 +1,11 @@
 <?php
-    session_start();
     require __DIR__ . '/settings.php';
-
-    echo $_SESSION['id'];
+    session_start();
+    if (!isLoggedIn()) {
+        $_SESSION['msg'] = "You must log in first";
+        header('location: login.php');
+    }
+    
     $con = con();
 
     if(!$con) {
@@ -42,6 +45,7 @@
 
 
         <section class="container section">
+            <p>You are logged in <a href="logout.php">logout</a></p>
             <div class="post">
                 <h1 class="post-title"><a href=""><?php __($post['title']) ?></a></h1>
                 <p class="post-content"><?php __($post['content']) ?></p>
@@ -63,9 +67,10 @@
             <div id="comments-wrapper">
             <div class="comment clearfix">
             <?php foreach($comments as $comment): ?>
+                
                 <div class="comment-details">
                     
-                    <span class="comment-name"><?php echo $_SESSION["login_user"]?></span>
+                    <span class="comment-name"><?php echo (get_username($con, $comment["user_id"]))['name']?></span>
                     
                     <span class="comment-date"><?php echo $comment["created_at"]?></span>
                     <p class="comment_content"><?php __($comment["comment"])?></p>

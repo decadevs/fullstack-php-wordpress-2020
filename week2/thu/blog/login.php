@@ -2,27 +2,28 @@
     session_start();
     require __DIR__ . '/settings.php';
     $con = con();
-
+    $error = "";
     if(!$con) {
         die_with_error("Error connecting to Database Server");
     }
     
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-        $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+        $password = hash_pwd(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
         $verified_user = get_user($con, $name, $password) ;
         
         if($verified_user!= false){
-            $_SESSION['login_user'] = $name;
+            session_regenerate_id('true');
+            $_SESSION['is_log_in'] = true;
             $_SESSION['id']=$verified_user['id'];
+        
             header("location: post.php");
-            echo $_SESSION['id'];
         
         }else{
-            echo "error";
+            $error = "Name and password do not match";
             
-            
-        }
+        } 
+        
     }
 
 ?>
@@ -41,6 +42,7 @@
             <h2>Login</h2>
         </div>
         <form method="post"  class="form">
+        <div class="error"><?php echo $error; ?></div>
             <div class="input-group">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" required>
@@ -52,6 +54,9 @@
             <div class="input-group">
                 <button type="submit" class="btn" name="register_btn">Login</button>
             </div>
+            <p>
+                Don't have an account? <a href="register.php">Register Here</a>
+            </p>
         </form>
     </body>
 </html>

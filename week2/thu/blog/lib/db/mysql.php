@@ -156,7 +156,23 @@ function get_user($con, $name, $password) {
     $sql  = "SELECT * FROM users WHERE name = '$name' AND password = '$password'";
 
     if ($result = mysqli_query($con, $sql)) {
-        return mysqli_fetch_assoc($result);;
+        return mysqli_fetch_assoc($result);
+
+    }
+
+    return false;
+    
+}
+
+function get_username($con, $post_id) {
+
+    $sql  = "SELECT users.name 
+    FROM comments 
+    INNER JOIN users ON comments.user_id = users.id
+    WHERE comments.user_id =".$post_id ;
+
+    if ($result = mysqli_query($con, $sql)) {
+        return mysqli_fetch_assoc($result);
 
     }
 

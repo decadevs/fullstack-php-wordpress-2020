@@ -35,7 +35,7 @@ function display_error() {
 }	
 function isLoggedIn()
 {
-	if (isset($_SESSION['user'])) {
+	if (isset($_SESSION['is_log_in'])) {
 		return true;
 	}else{
 		return false;
