@@ -24,6 +24,9 @@
     }
 
     $postComments = get_comments($con, $post_id);
+
+    $commentCount = count_comments($con, $post_id); 
+  
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +54,14 @@
    
         <div class="post-meta">
             <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+            <div>2 likes
+            
+                <?php if(($commentCount) < 2) {
+                    echo $commentCount . ' ' . "comment";
+                } else {
+                    echo $commentCount . ' ' . "comments";
+                } ?>            
+            </div>
         </div>
     </div>
 
@@ -67,7 +77,7 @@
                         <img src="http://placekitten.com/50/50" />
                     </div>
                     <div class="commentText">
-                        <p class=""><?php __($postComment['content']) ?></p> <span class="date sub-text"><?php __($postComment['created_at']) ?></span>
+                        <p class=""><?php __($postComment['content']) ?></p> <span class="date sub-text"><?php __(time_format($postComment['created_at'])) ?></span>
                     </div>
                 </li>
                 <?php endforeach; ?>

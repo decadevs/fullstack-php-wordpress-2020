@@ -13,7 +13,7 @@
         }
     }
     $posts = get_posts($con);
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +44,8 @@
         <div class="row">
             <div class="col-md-12">
                 <form method="post" role="form">
+                    <h4>Make a post:</h4>
+                   
                     <div class="form-group">
                         <input type="text" class="form-control" name="title" placeholder="post Title"/>
                     </div>
@@ -60,7 +62,9 @@
             </div>
         </div>
     </section>
-    <section class="container-css section">
+    
+    <section class="container-css section">    
+        <hr/>
         <?php foreach($posts as $post): ?>
         <div class="post">
             <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
@@ -68,7 +72,14 @@
     
             <div class="post-meta">
                 <div>Published on 12/01/2020 by @aj </div>
-                <div>2 likes    1k comment</div>
+                <div>2 likes 
+                <?php if(($commentCount = count_comments($con, $post["id"])) < 2) {
+                    echo $commentCount . ' ' . "comment";
+                } else {
+                    echo $commentCount . ' ' . "comments";
+                } ?>
+
+                </div>
             </div>
         </div>
         <?php endforeach; ?>

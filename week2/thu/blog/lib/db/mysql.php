@@ -125,45 +125,50 @@ function con() {
         return false;
     }
 
-    function get_comments($con, int $post_id) {
 
-        $sql  = 'SELECT * FROM comments WHERE id =' . $post_id;
-        $output = [];
+   function get_comments($con, $post_id): array{
 
-        if ($result = mysqli_query($con, $sql)) {
-            while($row = mysqli_fetch_assoc($result)){
-                $output[] = $row;
-            }
+    $sql  = 'SELECT * FROM comments WHERE post_id =' . $post_id;
+
+    $output = [];
+
+    if($result = mysqli_query($con, $sql)) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $output[] = $row;
         }
+    } else {
+        // Log or return error
 
-        return $output;
-        
-   }
+    }
+    
+    return $output;
+ }
+
 
    function count_comments($con, int $post_id) {
 
         $sql = 'SELECT COUNT(*) FROM comments WHERE post_id = ?';
             
-            /* create a prepared statement */
-            $statement = mysqli_prepare($con, $sql);
+        /* create a prepared statement */
+        $statement = mysqli_prepare($con, $sql);
 
-            if($statement) {
-                /* bind parameters for markers */
-                mysqli_stmt_bind_param($statement, 'd', $post_id);
-    
-                /* execute query */
-                mysqli_stmt_execute($statement);
-                
-                /* bind result variables */
-                mysqli_stmt_bind_result($statement, $count);
-                
-                /* fetch value */
-                mysqli_stmt_fetch($statement);
+        if($statement) {
+            /* bind parameters for markers */
+            mysqli_stmt_bind_param($statement, 'd', $post_id);
 
-                /* close statement */
-                mysqli_stmt_close($statement);
-                
-                return $count;
-            }
+            /* execute query */
+            mysqli_stmt_execute($statement);
+            
+            /* bind result variables */
+            mysqli_stmt_bind_result($statement, $count);
+            
+            /* fetch value */
+            mysqli_stmt_fetch($statement);
+
+            /* close statement */
+            mysqli_stmt_close($statement);
+            
+            return $count;
         }
+    
   }

@@ -22,3 +22,8 @@ function __($s) {
     
     echo $s;
 }
+
+function time_format($date): string {
+    $new_date = date('F dS, Y', strtotime($date));
+    return $new_date;
+}
