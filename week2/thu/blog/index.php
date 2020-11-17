@@ -1,5 +1,10 @@
 <?php
 require __DIR__ . '/settings.php';
+
+session_start();
+
+var_dump($_SESSION);
+
 $con = con();
 
 if (!$con) {

@@ -1,5 +1,8 @@
 <?php
 require __DIR__ . '/settings.php';
+
+session_start();
+
 $con = con();
 
 if (!$con) {
