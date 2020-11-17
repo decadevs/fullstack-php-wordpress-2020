@@ -20,9 +20,9 @@ function con() {
 
 /**
  * Get posts
- */
+*/
 
- function get_posts($con): array{
+function get_posts($con): array{
 
     $sql = 'SELECT * FROM posts ORDER BY created_at DESC';
 
@@ -34,72 +34,70 @@ function con() {
         }
     } else {
         // Log or return error
+        return false;
+    }
+
+    return $output;
+}
+
+/**
+ * Insert post
+*/
+function create_post($con, array $data) {
+    if(!isset($data['created_at'])) {
+        $data['created_at'] = date('Y-m-d H:i:s');
+    }
+
+    $sql = 'INSERT INTO posts (title, content, user_id, created_at)
+    VALUES (?,?,?,?)';
+
+    // Step1: Prepare
+    $statement = mysqli_prepare($con, $sql);
+
+    if($statement) {
+
+    // Step2: bind
+    mysqli_stmt_bind_param($statement, 'ssis', 
+    $data['title'], $data['content'], $data['user_id'], $data['created_at']
+        );
+
+        // Step3: execute
+        mysqli_stmt_execute($statement);
 
     }
+
+    return false;
+}
+
+
+/**
+ * Get single post
+*/
+function get_post($con,  int $post_id) {
+
+    $sql  = 'SELECT * FROM posts WHERE id =' . $post_id;
+
+    if ($result = mysqli_query($con, $sql)) {
+        return  mysqli_fetch_assoc($result);
+    }
+
+    return false;
     
-    return $output;
- }
+}
 
- /**
-  * Insert post
-  */
-  function create_post($con, array $data) {
-      if(!isset($data['created_at'])) {
-          $data['created_at'] = date('Y-m-d H:i:s');
-      }
+function count_post($con): int {
+    $sql = 'SELECT COUNT(*) as c FROM posts';
 
-      $sql = 'INSERT INTO posts (title, content, user_id, created_at)
-      VALUES (?,?,?,?)';
+    if ($result = mysqli_query($con, $sql)) {
+        $row = mysqli_fetch_assoc($result);
 
-      // Step1: Prepare
-     $statement = mysqli_prepare($con, $sql);
+        return intval($row['c']);
+    }
 
-     if($statement) {
+return 0;
+}
 
-        // Step2: bind
-        mysqli_stmt_bind_param($statement, 'ssis', 
-        $data['title'], $data['content'], $data['user_id'], $data['created_at']
-         );
-
-         // Step3: execute
-         mysqli_stmt_execute($statement);
-
-     }
-
-     return false;
-  }
-
-
-  /**
-   * Get single post
-   */
-
-
-   function get_post($con,  int $post_id) {
-
-        $sql  = 'SELECT * FROM posts WHERE id =' . $post_id;
-
-        if ($result = mysqli_query($con, $sql)) {
-            return  mysqli_fetch_assoc($result);
-        }
-
-        return false;
-        
-   }
-
-   function count_post($con): int {
-       $sql = 'SELECT COUNT(*) as c FROM posts';
-
-        if ($result = mysqli_query($con, $sql)) {
-            $row = mysqli_fetch_assoc($result);
-
-            return intval($row['c']);
-        }
-
-    return 0;
-   }
-
-   function create_user($con, array $data) {
+function create_user($con, array $data) {
     if(!isset($data['created_at'])) {
         $data['created_at'] = date('Y-m-d H:i:s');
     }
@@ -119,6 +117,7 @@ function con() {
 
        // Step3: execute
        mysqli_stmt_execute($statement);
+       return true;
 
    }
 
@@ -185,8 +184,33 @@ function get_comments($con, $post_id) {
         }
     } else {
         // Log or return error
-
+        return false;
     }
     
     return $output;
+}
+
+function user_valid($con, String $email) {
+
+    $sql  = 'SELECT * FROM users WHERE email = ?';
+
+    // Step1: Prepare
+    $statement = $con->prepare($sql);
+
+    if($statement) {
+
+        // Step2: bind
+        $statement->bind_param("s", $email);
+        
+        // Step3: execute
+        $statement->execute();
+
+        $result = $statement->get_result();
+
+        $data = $result->fetch_assoc();
+
+        return $data;
+    }
+
+    return false;
 }

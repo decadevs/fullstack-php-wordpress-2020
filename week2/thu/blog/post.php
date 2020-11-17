@@ -1,5 +1,7 @@
 <?php 
     require __DIR__ . '/settings.php';
+    session_start();
+
     $con = con();
 
     if(!$con) {
@@ -15,7 +17,7 @@
         $newComment = array(
             'post_id' => $post_id,
             'comment' => clean($_POST['comment']),
-            'user_id' => clean($_POST['user_id'])
+            'user_id' => $_SESSION['user_id']
         );
         create_comment($con, $newComment);
 

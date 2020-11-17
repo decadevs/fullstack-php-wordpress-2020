@@ -42,14 +42,12 @@ nav a:hover{
     color: #FFF;
 }
 
-
-
 nav a:last-child{
     margin-right: 0;
 }
 
 .post{
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .post:first-child{
@@ -139,4 +137,56 @@ p {
 
 .post-content {
     padding:  0px 10px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 400px;
+    background-color: cadetblue;
+}
+
+.login-input {
+    display: block;
+    width: 100%;
+    margin: 10px;
+    height: 50px;
+    padding: 0px 10px;
+    font-size: large;
+}
+
+.login-form {
+    display: block;
+    width: 50%;
+    align-self: center;
+}
+
+.login-btn {
+    text-decoration: none;
+    border: solid #CCC 1px;
+    padding: 5px 25px;
+    margin: 10px;
+    height: 50px;
+    color: black;
+    border-radius: 5px;
+    width: 100%;
+    font-size: large;
+}
+
+.login-btn:hover {
+    background-color: black;
+    color: #FFF;
+}
+
+.login-title {
+    text-align: center;
+}
+
+.message {
+    text-align: center;
+    color: red;
+    background-color: white;
+    margin: 20px 10px;
+    font-weight: bold;
 }

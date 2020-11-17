@@ -1,18 +1,23 @@
 <?php 
     require __DIR__ . '/settings.php';
+    session_start();
     $con = con();
 
     if(!$con) {
         die_with_error("Error connecting to Database Server");
     }
 
+    $isLogedIn = $_SESSION['user_islogedin'];
+    if (!$isLogedIn) { 
+        header("location: login.php");
+    }
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // The request is using the POST method
-        $errorMsg = '';
         $post = array(
             'title' => $_POST['title'],
             'content' => $_POST['content'],
-            'user_id' => 1
+            'user_id' => $_SESSION['user_id']
         );
         create_post($con, $post);
     }
@@ -37,6 +42,8 @@
 <?php include APP_PATH . '/includes/header.php' ?>
 
 <section class="container section">
+    <?php
+    if ($_SESSION['user_name'] === "Olatunji") { ?>
     <div>
         <form id="form" action="index.php" method="post" enctype="multipart/form-data">
             <textarea class="post-title" placeholder="enter post title here..." name="title" id="title" cols="30" rows="10"></textarea>
@@ -44,6 +51,7 @@
             <input type="submit" value="Publish Post" class="btn">
         </form>
     </div>
+    <?php } ?>
     <?php foreach($posts as $post): ?>
     <div class="post">
         <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
