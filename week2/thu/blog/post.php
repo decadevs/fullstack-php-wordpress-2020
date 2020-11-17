@@ -7,7 +7,26 @@ session_start();
         die_with_error("Error connecting to Database Server");
     }
 
+    //Logout button
+    if (array_key_exists('logout', $_POST)) {
+        // empty the $_SESSION array
+        $_SESSION = array();
+        // invalidate the session cookie
+        if (isset($_COOKIE[session_name()])) {
+            setcookie(session_name(), '', time()-86400, '/');
+        }
+        // end session
+        session_destroy();
+        header('Location: index.php');
+        exit;
+    }
+
     $post_id = (isset($_GET['post_id'])) ? abs(intval($_GET['post_id'])) : 0;
+
+    if($post_id ===0 || !is_numeric($post_id)){
+        header('Location: index.php');
+        exit;
+    }
 
     //get post
     $post = get_post($con, $post_id);
@@ -16,20 +35,26 @@ session_start();
     //get comments
     $comments = get_comments($con, $post_id);
 
+    $err = "";
+    $data = [];
+
     if(!$post_id || !$post) {
         header("Location: index.php");
         exit;
     }
 
     //add comment if user login
-    if(isset($_SESSION['id']) && $_POST && !empty($_POST['comment'])){
+    if(isset($_SESSION['id']) && array_key_exists('submit', $_POST) && !empty($_POST['comment'])){
         $data['user_id'] = $_SESSION['id'];
         $data['post_id'] = $post_id;
         $data['message'] = clean($_POST['comment']);
         $outcome = create_comment($con, $data);
     }
-    elseif($_POST && !isset($_SESSION)){
+    elseif(array_key_exists('submit', $_POST) && !isset($_SESSION['id'])){
         $err .= 'Comment are for members only, login or sign up to add comment';
+    }
+    elseif(array_key_exists('submit', $_POST) && empty($_POST['comment'])){
+        $err .= 'Kindly enter your comment';
     }
 
     include APP_PATH . '/includes/htmlhead.php'
@@ -54,12 +79,17 @@ session_start();
 </section>
 
 <section class="containers section">
+    <?php
+        if(!empty($err)){
+            echo '<div class="alert alert-danger" role="alert">'.nl2br($err).'</div>';
+        }
+    ?>
     <form class="commentFrm" action="" method="post">
         <div class="form-group">
             <label for="Create Post">Add Comment</label>
             <textarea class="form-control" id="Create Post" name="comment" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Create Comment</button>
+        <button type="submit" name="submit" class="btn btn-primary">Create Comment</button>
     </form>
 </section>
 

@@ -1,4 +1,5 @@
-<?php 
+<?php
+    session_start();
     require __DIR__ . '/settings.php';
     $con = con();
 
