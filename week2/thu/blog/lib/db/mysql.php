@@ -12,6 +12,7 @@ function con() {
     
     $con = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     if(!$con) {
+        die( "error dey");
         return false;
     }
 
@@ -98,3 +99,85 @@ function con() {
 
     return 0;
    }
+
+   function get_comment($con, $post_id): array{
+
+    $sql = 'SELECT * FROM comments WHERE post_id='.$post_id;
+
+    $output = [];
+
+    if($result = mysqli_query($con, $sql)) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $output[] = $row;
+        }
+    } else {
+        // Log or return error
+
+    }
+    
+    return $output;
+ }
+
+ function create_comment($con, array $data) {
+    if($_SERVER["REQUEST_METHOD"]== "POST"){
+        $sql = 'INSERT INTO comments (post_id, comment, user_id)
+        VALUES (?,?,?)';
+    $statement = mysqli_prepare($con, $sql);
+
+   
+    if($statement) {
+
+      mysqli_stmt_bind_param($statement, 'dsd', 
+      $data['post_id'], $data['comment'], $data['user_id']
+       );
+       mysqli_stmt_execute($statement);
+       
+    }
+
+   }
+
+   return false;
+}
+
+function count_comments($con, $post_id): int {
+    $sql = 'SELECT COUNT(*) as cont FROM comments WHERE post_id='.$post_id;
+
+     if ($result = mysqli_query($con, $sql)) {
+         $row = mysqli_fetch_assoc($result);
+
+         return intval($row['cont']);
+     }
+
+ return 0;
+}
+
+function get_user($con, $name, $password) {
+
+    $sql  = "SELECT * FROM users WHERE name = '$name' AND password = '$password'";
+
+    if ($result = mysqli_query($con, $sql)) {
+        return mysqli_fetch_assoc($result);;
+
+    }
+
+    return false;
+    
+}
+
+function create_user($con, array $data) {
+    if($_SERVER["REQUEST_METHOD"]== "POST"){
+        $sql = 'INSERT INTO users (name, password, email)
+        VALUES (?,?,?)';
+    $statement = mysqli_prepare($con, $sql);
+    if($statement) {
+      mysqli_stmt_bind_param($statement, 'sss', 
+       $data['name'], $data['password'], $data['email']
+       );
+       mysqli_stmt_execute($statement);
+       
+    }
+
+   }
+
+   return false;
+}

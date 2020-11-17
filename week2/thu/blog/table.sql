@@ -3,7 +3,7 @@ CREATE TABLE users(
     name VARCHAR(150) NOT NULL,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(150) NOT NULL,
-    created_at DATETIME NOT NULL
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE posts(
@@ -11,5 +11,16 @@ CREATE TABLE posts(
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
     user_id INT(11) NOT NULL,
-    created_at DATETIME NOT NULL
+    created_at DATETIME NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+CREATE TABLE comments(
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    post_id INT(11) NOT NULL,
+    comment TEXT NOT NULL,
+    user_id INT(11) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES posts(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+)
