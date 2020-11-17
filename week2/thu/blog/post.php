@@ -29,7 +29,6 @@
             $user_id = (int)$_SESSION['user_id'];
 
             $data = ["comment"=>$comment, "post_id"=>$post_id, "user_id"=>$user_id];
-            var_dump($data);
 
             create_comment($con, $data);  
         }
