@@ -18,10 +18,7 @@
     
     $post_id = (isset($_GET['post_id'])) ? abs(intval($_GET['post_id'])) : 0;
 
-    $posts = get_posts($con);
-
-    // $comments = get_comments($con, $post_id);
-    $commentCount = count_comments($con, $post_id);
+    $posts = get_posts_with_comment_count($con);
        
 ?>
 
@@ -49,12 +46,17 @@
         <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
         <p class="post-content"><?php __($post['content']) ?></p>
    
-        <div class="post-meta">
+         <div class="post-meta">
             <div>Published on <?php __($post['created_at']) ?> by @ 
-            <?php $user_id = $post['user_id'];
-            $user = get_user($con, $user_id);
-            echo __($user['name']);?> </div>
-            <div>2 likes <?php __($commentCount) ?></div>
+            <?php
+                echo __($post['name']);?> </div>
+            <div>2 likes 
+            <?php if(($post['comments_count']) < 2) {
+                echo $post['comments_count'] . ' ' . "comment";
+            } else {
+                echo $post['comments_count'] . ' ' . "comments";
+            } ?>
+            </div>
         </div>
     </div>
 

@@ -10,16 +10,21 @@
 
     $post = get_post($con, $post_id);
 
-    $comments = get_comments($con, $post_id);
-    var_dump($comments);
     
-    $commentCount = count_comments($con, $post_id);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $content = $_POST['content'];
+        $created_at = date("Y-m-d H:i:s");
+        $result = create_comment($con, $content, 1, $created_at, $post_id);
+    } 
+    
+    if(!$post_id || !$post) {
+        header("Location: index.php");
+        exit;
+    }
+    
+    $comments = get_comments($con, $post_id);
 
-    // if(!$post_id || !$post) {
-    //     header("Location: index.php");
-    //     exit;
-    // }
-   
+    $commentCount = count_comments($con, $post_id);  
 ?>
 
 <!DOCTYPE html>
@@ -41,27 +46,32 @@
 <section class="container section">
     
     <div class="post">
+        
         <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
         <p class="post-content"><?php __($post['content']) ?></p>
-   
+
         <div class="post-meta">
             <div>Published on <?php __($post['created_at']) ?> by @ 
             <?php 
                 $user_id = $post['user_id'];
                 $user = get_user($con, $user_id);
                 echo __($user['name']);?> </div>
-            <div>2 likes <?php __($commentCount) 
-            ?></div>
+            <div>2 likes 
+            <?php if(($commentCount) < 2) {
+                echo $commentCount . ' ' . "comment";
+            } else {
+                echo $commentCount . ' ' . "comments";
+            } ?>
+            </div>
         </div>
     </div>
 
-    
-<?php foreach($posts as $post): ?>
+<?php foreach($comments as $comment): ?>
         <div class="comment">
-            <p class="post-content"><?php __($comment['comment']); ?></p>
+            <p class="post-content"><?php __($comment['content']); ?></p>
             
             <div class="post-meta">
-                <div>Commented on <?php __($comment['created_at']); ?> by @<?php
+                <div>Commented on <?php __($comment['created_at']); ?> by @ <?php
                     $user_id = $comment['user_id'];
                     $user = get_user($con, $user_id);
                     echo __($user['name']);
@@ -74,9 +84,9 @@
 
     <div>
     <!-- comment form -->
-                <form class="clearfix" action="index.php" method="post" id="comment_form">
+                <form class="clearfix" action="" method="post" id="comment_form">
                     <h4>Post a comment:</h4>
-                    <textarea name="comment_text" id="comment_text" class="form-control" cols="30" rows="3"></textarea>
+                    <textarea name="content" id="content" class="form-control" cols="30" rows="3"></textarea>
                     <button class="btn btn-primary btn-sm pull-right" id="submit_comment">Submit comment</button>
                 </form>
     </div>
