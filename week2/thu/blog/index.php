@@ -6,7 +6,7 @@
         die_with_error("Error connecting to Database Server");
     }
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])){
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isValid($_POST['content'], $_POST['title'])){
         create_post($con, $_POST);
     }
  
