@@ -6,7 +6,12 @@
     </div>
 
     <nav>
-        <a href="">Login</a>
+        <!-- Button trigger modal -->
+        <a href="" data-toggle="modal" data-target="#loginModal">Login</a>
+        <!-- Button trigger modal
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+            Launch demo modal
+        </button> -->
         <a href="">Join</a>
     </nav>
 </header>
