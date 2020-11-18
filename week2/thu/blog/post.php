@@ -18,11 +18,9 @@
 
     $postComments = get_comments($con, $post_id);
     
-    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])){
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isValid($_POST['content'])){
        $comment = create_comment($con, $_POST);
-       if(!empty($comment)){
-           array_push($postComments, $comment);
-       }
+        array_push($postComments, $comment);
     }
 
     $commentCount = count_comments($con, $post_id);
