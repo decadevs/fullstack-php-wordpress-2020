@@ -1,45 +1,38 @@
-<?php 
-    require __DIR__ . '/settings.php';
+<?php
+    require __DIR__."/session_start.php";
+    require __DIR__.'/settings.php';
     $con = con();
-
-    if(!$con) {
-        die_with_error("Error connecting to Database Server");
+    if(!$con){
+        die_with_error("Error connecting to database");
     }
-
     $posts = get_posts($con);
-
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XiReader</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
-    
-<link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-<?php include APP_PATH . '/includes/header.php' ?>
-
-
-<section class="container section">
-    <?php foreach($posts as $post): ?>
-    <div class="post">
-        <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
-        <p class="post-content"><?php __($post['content']) ?></p>
-   
-        <div class="post-meta">
-            <div>Published on 12/01/2020 by @aj </div>
-            <div>2 likes    1k comment</div>
+    <?php require APP_INCLUDE_PATH. '/header.php' ?>
+    <section class="container section">
+        <?php foreach($posts as $post): ?>
+            <?php $comments = get_comments($con, $post['id']);
+                if($comments){
+                    $no_of_comments = count($comments);
+                }else {
+                    $no_of_comments = 0;
+                } 
+            ?>
+        <div class="post">
+            <h1 class="post-title">
+                <?php if(isLoggedIn()): ?>
+                    <a href="post.php?post_id=<?php __($post['id']); ?>">
+                        <?php __($post['title']); ?>
+                    </a>
+                <?php else: ?>
+                    <a href="/"><?php __($post['title']); ?> </a>
+                <?php endif; ?>
+            </h1>                
+            <p class="post-content"> <?php __($post['content']); ?>
+            </p>
         </div>
-    </div>
-    <?php endforeach; ?>
-
-</section>
-    
+        <?php require APP_INCLUDE_PATH. '/postmeta.php'; ?>
+        <?php endforeach; ?>
+    </section>
 </body>
 </html>
