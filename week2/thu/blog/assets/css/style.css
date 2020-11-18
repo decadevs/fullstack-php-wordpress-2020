@@ -46,11 +46,60 @@ nav a:hover {
     color: #FFF;
 }
 
-
-
 nav a:last-child {
     margin-right: 0;
 }
+
+
+nav button {
+    text-decoration: none;
+    border: solid #CCC 1px;
+    padding: 10px 30px;
+    margin-right: 10px;
+    color: black;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+nav button:hover {
+    background-color: black;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+
+nav button:last-child {
+    margin-right: 0;
+}
+
+
+
+
+nav form button {
+    text-decoration: none;
+    border: solid #CCC 1px;
+    padding: 10px 30px;
+    margin-right: 10px;
+    color: black;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+nav form button:hover {
+    background-color: black;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+
+nav form button:last-child {
+    margin-right: 0;
+}
+
+
+
 
 .post {
     margin-top: 70px;
@@ -141,4 +190,99 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+/* Modal Styles Starts */
+
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    position: relative;
+    background-color: #FFF;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.form-entry{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.auth-form button {
+    width: 25%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(172, 129, 194);
+    color: #FFF;
+    cursor: pointer;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.form-entry{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.modal h2 {
+    margin-top: 15px;
+}
+
+.form-entry input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* margin-top: -20px; */
+}
+
+/* Modal Styles End */
+
+.error-msg {
+    margin-top: 10px;
+    color: firebrick;
 }

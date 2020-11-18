@@ -3,12 +3,18 @@ require __DIR__ . '/settings.php';
 
 session_start();
 
-var_dump($_SESSION);
-
 $con = con();
 
 if (!$con) {
     die_with_error("Error connecting to Database Server");
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+    include APP_PATH . '/includes/login.php';
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && count($_POST) == 0) {
+    include APP_PATH . '/includes/logout.php';
 }
 
 $posts = get_posts($con);
@@ -32,6 +38,25 @@ $posts = get_posts($con);
 
     <?php include APP_PATH . '/includes/header.php' ?>
 
+    <!-- Modal Start -->
+    <div class="modal-bg">
+        <div class="modal">
+            <h2>Login</h2>
+            <form action="" method="post" class="auth-form">
+                <div class="form-entry">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-entry">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <button>Enter</button>
+            </form>
+            <span class="modal-close">X</span>
+        </div>
+    </div>
+    <!-- Modal End -->
 
     <section class="container section">
         <?php foreach ($posts as $post) : ?>

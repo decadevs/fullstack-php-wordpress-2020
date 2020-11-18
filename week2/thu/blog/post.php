@@ -19,15 +19,32 @@ if (!$post_id || !$post) {
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+/* Request to handle post comment form by checking if the length of the post array is equal to 1, 
+since there's only 1 field (comment) that is sent with this post request */
+if ($_SERVER["REQUEST_METHOD"] == "POST" && count($_POST) == 1) {
+    // echo "<pre>";
+    // var_dump($_SERVER);
+    // echo "==================================================";
+    // var_dump($_POST);
+    // echo "</pre>";
     $comment = $_POST['comment'];
     date_default_timezone_set("Africa/Lagos");
     $created_at = date("Y-m-d H:i:s");
     $result = comment_on_post($con, $comment, 1, $created_at, $post_id);
 }
 
-$comments = get_comments($con);
+/* Request to handle login form by checking if the email attribute is set in the post array */
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+    include APP_PATH . '/includes/login.php';
+}
 
+/* Request to handle logout comment form by checking if the length of the post array is equal to 0, 
+since there's no attribute that is sent with this post request */
+if ($_SERVER["REQUEST_METHOD"] == "POST" && count($_POST) == 0) {
+    include APP_PATH . '/includes/logout.php';
+}
+
+$comments = get_comments($con);
 
 ?>
 
@@ -47,6 +64,26 @@ $comments = get_comments($con);
 <body>
 
     <?php include APP_PATH . '/includes/header.php' ?>
+
+    <!-- Modal Start -->
+    <div class="modal-bg">
+        <div class="modal">
+            <h2>Login</h2>
+            <form action="" method="post" class="auth-form">
+                <div class="form-entry">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-entry">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <button>Enter</button>
+            </form>
+            <span class="modal-close">X</span>
+        </div>
+    </div>
+    <!-- Modal End -->
 
 
     <section class="container section">
@@ -82,12 +119,13 @@ $comments = get_comments($con);
         </div>
 
         <form method="post" action="" class="post-comment">
-            <input type="text" name="comment" id="post-comment" placeholder="Comment on this post...">
+            <input type="text" name="comment" id="post-comment" placeholder="Comment on this post..." required>
             <button>Comment</button>
         </form>
 
     </section>
 
+    <script src="assets/script/app.js"></script>
 </body>
 
 </html>

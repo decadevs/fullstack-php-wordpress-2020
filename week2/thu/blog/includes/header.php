@@ -7,12 +7,20 @@
 
     <?php if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']) : ?>
         <nav>
-            <a href="auths/logout.php">Logout</a>
+            <form action="" method="post">
+                <button>Logout</button>
+            </form>
         </nav>
+
     <?php else : ?>
         <nav>
-            <a href="auths/login.php">Login</a>
-            <a href="">Join</a>
+            <button class="login-modal">Login</button>
+            <button class="login-modal">Join</button>
+            <?php if (!empty($error)) : ?>
+                <p class="error-msg"> <?= $error ?></p>
+            <?php endif; ?>
+            <!-- <a href="">Login</a>
+            <a href="">Join</a> -->
         </nav>
     <?php endif ?>
 </header>
