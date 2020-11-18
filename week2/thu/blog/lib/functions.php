@@ -26,6 +26,6 @@ function __($s) {
 /**
  * validate post
  */
-function isValidPost($title, $content):bool {
+function isValid($title, $content):bool {
     return !empty($title) && !empty($content);
 }
