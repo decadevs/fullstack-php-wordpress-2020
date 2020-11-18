@@ -25,90 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .login {
-  width: 400px;
-  margin: 16px auto;
-  font-size: 16px;
-}
-
-/* Reset top and bottom margins from certain elements */
-.login-header,
-.login p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* The triangle form is achieved by a CSS hack */
-.login-triangle {
-  width: 0;
-  margin-right: auto;
-  margin-left: auto;
-  border: 12px solid transparent;
-  border-bottom-color: #28d;
-}
-
-.login-header {
-  background: #28d;
-  padding: 20px;
-  font-size: 1.4em;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.login-container {
-  background: #ebebeb;
-  padding: 12px;
-}
-
-/* Every row inside .login-container is defined with p tags */
-.login p {
-  padding: 12px;
-}
-
-.login input {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  padding: 16px;
-  outline: 0;
-  font-family: inherit;
-  font-size: 0.95em;
-}
-
-.login input[type="email"],
-.login input[type="password"] {
-  background: #fff;
-  border-color: #bbb;
-  color: #555;
-}
-
-/* Text fields' focus effect */
-.login input[type="email"]:focus,
-.login input[type="password"]:focus {
-  border-color: #888;
-}
-
-.login input.login-control {
-  background: #28d;
-  border-color: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-
-.login input.login-control:hover {
-  background: #17c;
-}
-
-/* Buttons' focus effect */
-.login input.login-control:focus {
-  border-color: #05a;
-}
-    </style>
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
 
@@ -159,10 +76,9 @@
                 <p><input type="email" placeholder="Email"></p>
                 <p><input type="password" placeholder="Password"></p>
                 <p><input class="login-control" type="submit" value="Log in"></p>
-                <p><input class="login-control bg-danger" type="button" value="Cancel"  data-dismiss="modal"></p>
+                <p><input class="login-control" type="button" value="Cancel"  data-dismiss="modal"></p>
             </form>
           </div>
-
       </div>
     </div>
   </div>
