@@ -4,6 +4,11 @@
 
     $con = con();
 
+    $isLogedIn = $_SESSION['user_islogedin'];
+    if (!$isLogedIn) { 
+        header("location: login.php");
+    }
+
     if(!$con) {
         die_with_error("Error connecting to Database Server");
     }

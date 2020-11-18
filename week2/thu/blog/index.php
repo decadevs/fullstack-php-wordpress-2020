@@ -8,9 +8,6 @@
     }
 
     $isLogedIn = $_SESSION['user_islogedin'];
-    if (!$isLogedIn) { 
-        header("location: login.php");
-    }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // The request is using the POST method
@@ -43,7 +40,7 @@
 
 <section class="container section">
     <?php
-    if ($_SESSION['user_name'] === "Olatunji") { ?>
+    if ($_SESSION['user_email'] === "Oye@gmail.com" && $isLogedIn) { ?>
     <div>
         <form id="form" action="index.php" method="post" enctype="multipart/form-data">
             <textarea class="post-title" placeholder="enter post title here..." name="title" id="title" cols="30" rows="10"></textarea>
