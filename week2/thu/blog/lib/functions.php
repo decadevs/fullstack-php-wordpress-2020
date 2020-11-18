@@ -22,3 +22,10 @@ function __($s) {
     
     echo $s;
 }
+
+/**
+ * validate post
+ */
+function isValidPost($title, $content):bool {
+    return !empty($title) && !empty($content);
+}
