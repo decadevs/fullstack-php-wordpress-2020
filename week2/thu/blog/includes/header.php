@@ -10,14 +10,19 @@
             <form action="" method="post">
                 <button>Logout</button>
             </form>
+            <?php $name = get_loggedin_username($con, $_SESSION['current_user']); ?>
+            <p class="display-username"><?php echo $name[0]["name"]; ?></p>
         </nav>
 
     <?php else : ?>
         <nav>
-            <button class="login-modal">Login</button>
-            <button class="login-modal">Join</button>
+            <button id="login-modal">Login</button>
+            <button id="join-modal">Join</button>
             <?php if (!empty($error)) : ?>
                 <p class="error-msg"> <?= $error ?></p>
+            <?php endif; ?>
+            <?php if (!empty($successMsg)) : ?>
+                <p class="register-success-msg"> <?= $successMsg ?></p>
             <?php endif; ?>
             <!-- <a href="">Login</a>
             <a href="">Join</a> -->

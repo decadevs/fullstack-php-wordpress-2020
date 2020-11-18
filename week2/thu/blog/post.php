@@ -1,5 +1,7 @@
 <?php
 require __DIR__ . '/settings.php';
+include APP_PATH . '/includes/auth.php';
+
 
 session_start();
 
@@ -22,19 +24,24 @@ if (!$post_id || !$post) {
 /* Request to handle post comment form by checking if the length of the post array is equal to 1, 
 since there's only 1 field (comment) that is sent with this post request */
 if ($_SERVER["REQUEST_METHOD"] == "POST" && count($_POST) == 1) {
-    // echo "<pre>";
-    // var_dump($_SERVER);
-    // echo "==================================================";
-    // var_dump($_POST);
-    // echo "</pre>";
     $comment = $_POST['comment'];
     date_default_timezone_set("Africa/Lagos");
     $created_at = date("Y-m-d H:i:s");
-    $result = comment_on_post($con, $comment, 1, $created_at, $post_id);
+    $user_id = get_loggedin_username($con, $_SESSION['current_user'])[0]['id'];
+    $result = comment_on_post($con, $comment, $user_id, $created_at, $post_id);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && count($_POST) == 3) {
+    include APP_PATH . '/includes/register.php';
 }
 
 /* Request to handle login form by checking if the email attribute is set in the post array */
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+/* This will register the user and login the user atonce */
+// if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+//     include APP_PATH . '/includes/login.php';
+// }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && count($_POST) == 2) {
     include APP_PATH . '/includes/login.php';
 }
 
@@ -65,27 +72,9 @@ $comments = get_comments($con);
 
     <?php include APP_PATH . '/includes/header.php' ?>
 
-    <!-- Modal Start -->
-    <div class="modal-bg">
-        <div class="modal">
-            <h2>Login</h2>
-            <form action="" method="post" class="auth-form">
-                <div class="form-entry">
-                    <label for="email">Email: </label>
-                    <input type="email" name="email">
-                </div>
-                <div class="form-entry">
-                    <label for="password">Password: </label>
-                    <input type="password" name="password" id="password">
-                </div>
-                <button>Enter</button>
-            </form>
-            <span class="modal-close">X</span>
-        </div>
-    </div>
-    <!-- Modal End -->
+    <?php include APP_PATH . '/includes/modal.php' ?>
 
-
+    
     <section class="container section">
         <div class="post">
             <h1 class="post-title"><a href=""><?php __($post['title']) ?></a></h1>
@@ -118,10 +107,12 @@ $comments = get_comments($con);
             endforeach; ?>
         </div>
 
-        <form method="post" action="" class="post-comment">
-            <input type="text" name="comment" id="post-comment" placeholder="Comment on this post..." required>
-            <button>Comment</button>
-        </form>
+        <?php if (isLoggedIn()) : ?>
+            <form method="post" action="" class="post-comment">
+                <input type="text" name="comment" id="post-comment" placeholder="Comment on this post..." required>
+                <button>Comment</button>
+            </form>
+        <?php endif; ?>
 
     </section>
 
