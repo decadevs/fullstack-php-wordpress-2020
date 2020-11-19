@@ -11,6 +11,8 @@
     //Logout button
     if (array_key_exists('logout', $_POST)) {
         logout();
+        header('Location: index.php');
+        exit;
     }
 
     $con = con();
