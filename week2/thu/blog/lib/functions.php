@@ -1,6 +1,5 @@
 <?php
-if(!defined('__INCLUDED__')) die('You can not run this file');
-
+if(!defined('__INCLUDED__')){ die('You can not run this file');}
 
 function die_with_error($errorMessage) {
     require_once APP_PATH . '/500.php';
@@ -26,6 +25,6 @@ function __($s) {
 /**
  * validate post
  */
-function isValid($content, $title = "dummytitle"):bool {
-    return !empty($title) && !empty($content);
+function isValid($field1, $field2 = "dummy", $field3 = "dummy"): bool {
+    return !empty($field1) && !empty($field2) && !empty($field3);
 }

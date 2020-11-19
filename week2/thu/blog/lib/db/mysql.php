@@ -1,7 +1,7 @@
 <?php 
-if(!defined('__INCLUDED__')) die('You can not run this file');
+if(!defined('__INCLUDED__')) {die('You can not run this file');}
 
-
+const DATE_FORMAT = 'Y-m-d H:i:s';
 
 /**
  * Connect to mysql
@@ -17,6 +17,61 @@ function con() {
 
     return $con;
 }
+
+/**
+  * Create new user
+  */
+function create_user($con, $username, $email, $password) {
+    
+    $created_at = date(DATE_FORMAT);
+
+    $sql = 'INSERT INTO users (name, email, password, created_at)
+    VALUES (?,?,?,?);';
+
+    // Step1: Prepare
+   $statement = mysqli_prepare($con, $sql);
+
+   if($statement) {
+
+      // Step2: bind
+      mysqli_stmt_bind_param($statement, 'ssss', 
+        $username, $email, $password, $created_at
+       );
+
+       // Step3: execute
+      if(mysqli_stmt_execute($statement)){
+          return mysqli_stmt_insert_id($statement);
+      }
+
+   }
+
+   return false;
+}
+
+/**
+ * Get user
+ */
+function get_user($con, $usernameOrEmail) {
+
+    $QUERY = 'SELECT * FROM users WHERE name=? OR email=?;';
+
+    $statement = mysqli_prepare($con, $QUERY);
+
+    if(!$statement) {
+        echo mysqli_error($con);
+    } 
+
+    mysqli_stmt_bind_param($statement, "ss", $usernameOrEmail, $usernameOrEmail); //bind the prepared statement parameter
+    
+    if(mysqli_execute($statement)){
+
+        $result = mysqli_stmt_get_result($statement);
+        return mysqli_fetch_assoc($result);
+
+    } 
+    
+    return null;
+ }
 
 /**
  * Get posts
@@ -45,7 +100,7 @@ function con() {
   */
   function create_post($con, array $data) {
       if(!isset($data['created_at'])) {
-          $data['created_at'] = date('Y-m-d H:i:s');
+          $data['created_at'] = date(DATE_FORMAT);
       }
 
       $sql = 'INSERT INTO posts (title, content, user_id, created_at)
@@ -130,7 +185,7 @@ function con() {
   */
 function create_comment($con, array $data) {
     if(!isset($data['created_at'])) {
-        $data['created_at'] = date('Y-m-d H:i:s');
+        $data['created_at'] = date(DATE_FORMAT);
     }
 
     $sql = 'INSERT INTO comments (content, user_id, post_id, created_at)
