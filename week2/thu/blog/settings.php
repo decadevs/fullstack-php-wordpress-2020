@@ -10,8 +10,8 @@ define('APP_LIB_PATH', __DIR__ . '/lib/');
  * Database config
  */
 define('DB_HOST', 'localhost');
-define('DB_PASS', 'Ayo84maja`');
-define('DB_USER', 'momo');
+define('DB_PASS', '');
+define('DB_USER', 'root');
 define('DB_NAME', 'blog_db');
 
 define('APP_KEY', '02mls0924oi230032092309oi230923');
