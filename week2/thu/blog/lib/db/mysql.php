@@ -44,12 +44,12 @@ function con() {
   * Insert post
   */
   function create_post($con, array $data) {
-      if(!isset($data['created_at'])) {
-          $data['created_at'] = date('Y-m-d H:i:s');
-      }
+//      if(!isset($data['created_at'])) {
+//          $data['created_at'] = date('Y-m-d H:i:s');
+//      }
 
-      $sql = 'INSERT INTO posts (title, content, user_id, created_at)
-      VALUES (?,?,?,?)';
+      $sql = 'INSERT INTO posts (title, content, user_id)
+      VALUES (?,?,?)';
 
       // Step1: Prepare
      $statement = mysqli_prepare($con, $sql);
@@ -57,13 +57,13 @@ function con() {
      if($statement) {
 
         // Step2: bind
-        mysqli_stmt_bind_param($statement, 'ssds', 
-        $data['title'], $data['content'], $data['user_id'], $data['created_at']
+        mysqli_stmt_bind_param($statement, 'ssd',
+        $data['title'], $data['content'], $data['user_id']
          );
 
          // Step3: execute
          mysqli_stmt_execute($statement);
-
+        return true;
      }
 
      return false;
