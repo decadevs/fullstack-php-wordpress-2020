@@ -11,7 +11,8 @@ $darkgrey: #2E384D!default;
 $lightpurple: #F9FAFF!default;
 $white: #FFFFFF!default;
 $blue: #4c8eeb !default;
-$lightblue: #DDE9FB !default;
+$lightblue: rgb(221, 233, 251) !default;
+$lightgrey: #cccccc!default;
 
 
 //// States
@@ -37,5 +38,6 @@ $colors: (
 	warning: $warning,
 	success: $success,
 	disabled: $disabled,
-	lightblue: $lightblue
+	lightblue: $lightblue,
+	lightgrey: $lightgrey,
 ) !default;
