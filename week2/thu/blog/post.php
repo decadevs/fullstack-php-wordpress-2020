@@ -9,24 +9,10 @@ session_start();
 
     //Logout button
     if (array_key_exists('logout', $_POST)) {
-        // empty the $_SESSION array
-        $_SESSION = array();
-        // invalidate the session cookie
-        if (isset($_COOKIE[session_name()])) {
-            setcookie(session_name(), '', time()-86400, '/');
-        }
-        // end session
-        session_destroy();
-        header('Location: index.php');
-        exit;
+        logout();
     }
 
     $post_id = (isset($_GET['post_id'])) ? abs(intval($_GET['post_id'])) : 0;
-
-    if($post_id ===0 || !is_numeric($post_id)){
-        header('Location: index.php');
-        exit;
-    }
 
     //get post
     $post = get_post($con, $post_id);
@@ -35,8 +21,7 @@ session_start();
     //get comments
     $comments = get_comments($con, $post_id);
 
-    $err = "";
-    $data = [];
+
 
     if(!$post_id || !$post) {
         header("Location: index.php");
@@ -44,6 +29,8 @@ session_start();
     }
 
     //add comment if user login
+    $err = "";
+    $data = [];
     if(isset($_SESSION['id']) && array_key_exists('submit', $_POST) && !empty($_POST['comment'])){
         $data['user_id'] = $_SESSION['id'];
         $data['post_id'] = $post_id;

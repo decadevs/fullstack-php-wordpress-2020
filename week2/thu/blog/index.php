@@ -1,6 +1,12 @@
 <?php
     session_start();
     require __DIR__ . '/settings.php';
+
+    //Logout button
+    if (array_key_exists('logout', $_POST)) {
+        logout();
+    }
+
     $con = con();
 
     if(!$con) {

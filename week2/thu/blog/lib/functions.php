@@ -26,3 +26,16 @@ function __($s) {
 function clean($str) : string{
     return htmlspecialchars(strip_tags($str));
 }
+
+function logout(){
+    // empty the $_SESSION array
+    $_SESSION = array();
+    // invalidate the session cookie
+    if (isset($_COOKIE[session_name()])) {
+        setcookie(session_name(), '', time()-86400, '/');
+    }
+    // end session
+    session_destroy();
+    header('Location: index.php');
+    exit;
+}

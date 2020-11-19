@@ -14,7 +14,7 @@
         <?php }
             else{
         ?>
-            <form>
+            <form action="" method="post">
                 <a href="createPost.php" class="btn btn-primary">Create Post</a>
                 <button type="submit" name="logout" class="btn btn-primary">Logout</button>
             </form>
