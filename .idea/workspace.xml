@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d000647a-da70-4660-9f35-fd91208e97a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week2/thu/blog/createPost.php" afterPath="$PROJECT_DIR$/week2/thu/blog/createPost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week2/thu/blog/lib/functions.php" afterPath="$PROJECT_DIR$/week2/thu/blog/lib/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week2/thu/blog/login.php" afterPath="$PROJECT_DIR$/week2/thu/blog/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fullstack-php-wordpress-2020.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +34,8 @@
       <file leaf-file-name="post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -45,7 +44,7 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
+            <state vertical-scroll-proportion="0.0">
               <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
               <folding />
             </state>
@@ -55,7 +54,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
+            <state vertical-scroll-proportion="0.0">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <marker date="1605790209058" expanded="true" signature="1141:1187" placeholder="..." />
@@ -67,7 +66,7 @@
       <file leaf-file-name="createPost.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/createPost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
@@ -77,8 +76,8 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59952325">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.007151371">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -87,7 +86,7 @@
       <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/settings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
               <folding />
             </state>
@@ -97,7 +96,7 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/lib/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.192308">
+            <state vertical-scroll-proportion="0.0">
               <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
               <folding />
             </state>
@@ -123,11 +122,11 @@
         <option value="$PROJECT_DIR$/week2/thu/blog/settings.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/signUp.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/includes/header.php" />
-        <option value="$PROJECT_DIR$/week2/thu/blog/post.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/index.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/lib/functions.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/createPost.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/login.php" />
+        <option value="$PROJECT_DIR$/week2/thu/blog/post.php" />
       </list>
     </option>
   </component>
@@ -171,6 +170,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -188,10 +188,6 @@
               <option name="myItemId" value="fullstack-php-wordpress-2020" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -203,161 +199,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="week2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullstack-php-wordpress-2020" />
+              <option name="myItemId" value="week1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -413,7 +260,7 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14812835" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1513369" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -461,7 +308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -487,7 +333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -495,24 +340,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -552,7 +380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,7 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -586,24 +412,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding>
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -645,7 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,24 +461,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding>
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -693,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,24 +491,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-          <folding>
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,24 +537,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -824,24 +579,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3130755">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,24 +632,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3462247">
           <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-          <folding>
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605767780699" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -920,39 +640,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.56537753">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/thu/blog/post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/week2/thu/blog/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/thu/blog/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <marker date="1605790209058" expanded="true" signature="1141:1187" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/week2/thu/blog/createPost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
@@ -960,7 +661,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/week2/thu/blog/lib/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.192308">
+        <state vertical-scroll-proportion="0.0">
           <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
           <folding />
         </state>
@@ -968,16 +669,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/week2/thu/blog/settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/thu/blog/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1605790209058" expanded="true" signature="1141:1187" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/thu/blog/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/week2/thu/blog/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59952325">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.007151371">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding />
         </state>
       </provider>

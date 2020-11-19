@@ -32,7 +32,7 @@ session_start();
                 $err .= "Email or password incorrect\n";
             }
         }
-        
+
     }
 
     include APP_PATH . '/includes/htmlhead.php'
