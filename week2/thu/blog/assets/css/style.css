@@ -98,3 +98,10 @@ section h5{color: #961734; font-weight: bold}
 .commentName{color: #961734; font-size: 12px;}
 
 .commentFrm label{color: #961734; font-weight: bold}
+
+a.readmore{
+    font-size: 10px; background-color: #961734; padding: 3px; border-radius: 5px;
+    color: #FFFFFF;
+}
+
+a.readmore:hover{color: #FFFFFF}

@@ -24,7 +24,7 @@ function con() {
 
  function get_posts($con): array{
 
-    $sql = 'SELECT * FROM posts';
+    $sql = 'SELECT * FROM posts ORDER BY created_at DESC';
 
     $output = [];
 

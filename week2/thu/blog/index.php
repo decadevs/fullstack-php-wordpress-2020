@@ -8,6 +8,7 @@
     }
 
     $posts = get_posts($con);
+    $subCount = 300;
 
     include APP_PATH . '/includes/htmlhead.php'
 
@@ -20,11 +21,15 @@
 <section class="containers section">
     <?php foreach($posts as $post):
         $author = get_user($con, $post['user_id']);
+        //length of content
+        $contentCount = strlen($post['content']);
+        $subString = substr($post['content'], 0, $subCount);
+        $content = substr($subString, 0, strrpos($subString, ' '));
         ?>
     <div class="post">
         <h1 class="post-title"><a href="post.php?post_id=<?php __($post['id']) ?>"><?php __($post['title']) ?></a></h1>
-        <p class="post-content"><?php __($post['content']) ?></p>
-   
+        <p class="post-content"><?php $subCount < $contentCount ? __($content. '... ') : __($content. ' ') ?><a href="post.php?post_id=<?php __($post['id']) ?>" class="readmore">Read more</a></p>
+
         <div class="post-meta">
             <div>Published on <?php __($post['created_at'] . ' by '). __($author['name']) ?></div>
             <div>2 likes    <?php __(count_post($con, $post['id']))?> comment</div>

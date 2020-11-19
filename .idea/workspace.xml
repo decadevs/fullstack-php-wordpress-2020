@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d000647a-da70-4660-9f35-fd91208e97a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week2/thu/blog/createPost.php" afterPath="$PROJECT_DIR$/week2/thu/blog/createPost.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week2/thu/blog/index.php" afterPath="$PROJECT_DIR$/week2/thu/blog/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week2/thu/blog/lib/db/mysql.php" afterPath="$PROJECT_DIR$/week2/thu/blog/lib/db/mysql.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week2/thu/blog/assets/css/style.css" afterPath="$PROJECT_DIR$/week2/thu/blog/assets/css/style.css" />
     </list>
     <ignored path="fullstack-php-wordpress-2020.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,20 +35,8 @@
       <file leaf-file-name="post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3076925">
+            <state vertical-scroll-proportion="2.7307692">
               <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-              <folding>
-                <marker date="1605607527430" expanded="true" signature="1726:1753" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week2/thu/blog/includes/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -64,26 +52,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.26923">
-              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createPost.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/week2/thu/blog/createPost.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59475565">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6078665">
+              <caret line="30" column="161" selection-start-line="30" selection-start-column="161" selection-end-line="30" selection-end-column="161" />
               <folding>
-                <marker date="1605766883205" expanded="true" signature="911:941" placeholder="..." />
-                <marker date="1605766883205" expanded="true" signature="1334:1886" placeholder="..." />
-                <marker date="1605766883205" expanded="true" signature="1371:1552" placeholder="..." />
-                <marker date="1605766883205" expanded="true" signature="1590:1773" placeholder="..." />
+                <marker date="1605772518982" expanded="true" signature="1049:1095" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -112,24 +87,25 @@
       <file leaf-file-name="mysql.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/thu/blog/lib/db/mysql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.9615383">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
               <folding>
-                <marker date="1605740580530" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
-                <marker date="1605740580530" expanded="true" signature="803:867" placeholder="INSERT INTO ..." />
-                <marker date="1605740580530" expanded="true" signature="1330:1360" placeholder="SELECT * FRO..posts..." />
-                <marker date="1605740580530" expanded="true" signature="1577:1627" placeholder="SELECT COUNT..comments..." />
-                <marker date="1605740580530" expanded="true" signature="1883:1913" placeholder="SELECT * FRO..users..." />
-                <marker date="1605740580530" expanded="true" signature="2142:2198" placeholder="INSERT INTO ..." />
-                <marker date="1605740580530" expanded="true" signature="2672:2705" placeholder="SELECT * FRO..users..." />
-                <marker date="1605740580530" expanded="true" signature="2672:2709" placeholder="SELECT * FRO..users..." />
-                <marker date="1605740580530" expanded="true" signature="2672:2711" placeholder="SELECT * FRO..users..." />
-                <marker date="1605740580530" expanded="true" signature="2672:2712" placeholder="SELECT * FRO..users..." />
-                <marker date="1605740580530" expanded="true" signature="2672:2724" placeholder="SELECT * FRO..users..." />
-                <marker date="1605740580530" expanded="true" signature="2672:2729" placeholder="SELECT * FRO..users..." />
-                <marker date="1605740580530" expanded="true" signature="2672:2730" placeholder="SELECT * FRO..users..." />
-                <marker date="1605740580530" expanded="true" signature="2905:2942" placeholder="SELECT * FRO..comments..." />
-                <marker date="1605740580530" expanded="true" signature="3267:3336" placeholder="INSERT INTO ..." />
+                <marker date="1605767780699" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
+                <marker date="1605767780699" expanded="true" signature="352:396" placeholder="SELECT * FRO..posts..." />
+                <marker date="1605767780699" expanded="true" signature="828:892" placeholder="INSERT INTO ..." />
+                <marker date="1605767780699" expanded="true" signature="1355:1385" placeholder="SELECT * FRO..posts..." />
+                <marker date="1605767780699" expanded="true" signature="1602:1652" placeholder="SELECT COUNT..comments..." />
+                <marker date="1605767780699" expanded="true" signature="1908:1938" placeholder="SELECT * FRO..users..." />
+                <marker date="1605767780699" expanded="true" signature="2167:2223" placeholder="INSERT INTO ..." />
+                <marker date="1605767780699" expanded="true" signature="2697:2730" placeholder="SELECT * FRO..users..." />
+                <marker date="1605767780699" expanded="true" signature="2697:2734" placeholder="SELECT * FRO..users..." />
+                <marker date="1605767780699" expanded="true" signature="2697:2736" placeholder="SELECT * FRO..users..." />
+                <marker date="1605767780699" expanded="true" signature="2697:2737" placeholder="SELECT * FRO..users..." />
+                <marker date="1605767780699" expanded="true" signature="2697:2749" placeholder="SELECT * FRO..users..." />
+                <marker date="1605767780699" expanded="true" signature="2697:2754" placeholder="SELECT * FRO..users..." />
+                <marker date="1605767780699" expanded="true" signature="2697:2755" placeholder="SELECT * FRO..users..." />
+                <marker date="1605767780699" expanded="true" signature="2930:2967" placeholder="SELECT * FRO..comments..." />
+                <marker date="1605767780699" expanded="true" signature="3292:3361" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -153,12 +129,12 @@
         <option value="$PROJECT_DIR$/week2/thu/blog/lib/functions.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/signUp.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/login.php" />
-        <option value="$PROJECT_DIR$/week2/thu/blog/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/week2/thu/blog/index.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/includes/header.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/post.php" />
-        <option value="$PROJECT_DIR$/week2/thu/blog/lib/db/mysql.php" />
         <option value="$PROJECT_DIR$/week2/thu/blog/createPost.php" />
+        <option value="$PROJECT_DIR$/week2/thu/blog/lib/db/mysql.php" />
+        <option value="$PROJECT_DIR$/week2/thu/blog/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/week2/thu/blog/index.php" />
       </list>
     </option>
   </component>
@@ -385,7 +361,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14652406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -428,9 +404,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1605607527430" expanded="true" signature="1726:1753" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -454,7 +428,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1605772518982" expanded="true" signature="1049:1095" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -479,21 +455,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
           <folding>
-            <marker date="1605740580530" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="803:867" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="1330:1360" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="1577:1627" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605740580530" expanded="true" signature="1883:1913" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2142:2198" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2705" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2709" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2711" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2712" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2724" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2729" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2730" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2905:2942" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605740580530" expanded="true" signature="3267:3336" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="352:396" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="828:892" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="1355:1385" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="1602:1652" placeholder="SELECT COUNT..comments..." />
+            <marker date="1605767780699" expanded="true" signature="1908:1938" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2167:2223" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2730" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2734" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2736" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2737" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2749" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2754" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2755" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2930:2967" placeholder="SELECT * FRO..comments..." />
+            <marker date="1605767780699" expanded="true" signature="3292:3361" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -502,9 +479,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1605607527430" expanded="true" signature="1726:1753" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -520,7 +495,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-          <folding />
+          <folding>
+            <marker date="1605772518982" expanded="true" signature="1049:1095" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -545,21 +522,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
           <folding>
-            <marker date="1605740580530" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="803:867" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="1330:1360" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="1577:1627" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605740580530" expanded="true" signature="1883:1913" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2142:2198" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2705" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2709" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2711" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2712" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2724" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2729" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2730" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2905:2942" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605740580530" expanded="true" signature="3267:3336" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="352:396" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="828:892" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="1355:1385" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="1602:1652" placeholder="SELECT COUNT..comments..." />
+            <marker date="1605767780699" expanded="true" signature="1908:1938" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2167:2223" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2730" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2734" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2736" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2737" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2749" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2754" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2755" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2930:2967" placeholder="SELECT * FRO..comments..." />
+            <marker date="1605767780699" expanded="true" signature="3292:3361" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -568,9 +546,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="92" selection-start-line="72" selection-start-column="92" selection-end-line="72" selection-end-column="92" />
-          <folding>
-            <marker date="1605607527430" expanded="true" signature="1726:1753" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -595,21 +571,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
           <folding>
-            <marker date="1605740580530" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="803:867" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="1330:1360" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="1577:1627" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605740580530" expanded="true" signature="1883:1913" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2142:2198" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2705" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2709" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2711" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2712" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2724" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2729" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2730" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2905:2942" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605740580530" expanded="true" signature="3267:3336" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="352:396" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="828:892" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="1355:1385" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="1602:1652" placeholder="SELECT COUNT..comments..." />
+            <marker date="1605767780699" expanded="true" signature="1908:1938" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2167:2223" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2730" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2734" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2736" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2737" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2749" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2754" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2755" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2930:2967" placeholder="SELECT * FRO..comments..." />
+            <marker date="1605767780699" expanded="true" signature="3292:3361" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -658,21 +635,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
-            <marker date="1605740580530" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="803:867" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="1330:1360" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="1577:1627" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605740580530" expanded="true" signature="1883:1913" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2142:2198" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2705" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2709" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2711" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2712" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2724" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2729" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2730" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2905:2942" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605740580530" expanded="true" signature="3267:3336" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="352:396" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="828:892" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="1355:1385" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="1602:1652" placeholder="SELECT COUNT..comments..." />
+            <marker date="1605767780699" expanded="true" signature="1908:1938" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2167:2223" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2730" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2734" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2736" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2737" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2749" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2754" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2755" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2930:2967" placeholder="SELECT * FRO..comments..." />
+            <marker date="1605767780699" expanded="true" signature="3292:3361" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -681,7 +659,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding />
+          <folding>
+            <marker date="1605772518982" expanded="true" signature="1049:1095" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -689,9 +669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <marker date="1605607527430" expanded="true" signature="1726:1753" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -716,21 +694,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
-            <marker date="1605740580530" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="803:867" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="1330:1360" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="1577:1627" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605740580530" expanded="true" signature="1883:1913" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2142:2198" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2705" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2709" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2711" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2712" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2724" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2729" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2730" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2905:2942" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605740580530" expanded="true" signature="3267:3336" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="352:396" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="828:892" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="1355:1385" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="1602:1652" placeholder="SELECT COUNT..comments..." />
+            <marker date="1605767780699" expanded="true" signature="1908:1938" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2167:2223" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2730" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2734" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2736" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2737" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2749" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2754" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2755" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2930:2967" placeholder="SELECT * FRO..comments..." />
+            <marker date="1605767780699" expanded="true" signature="3292:3361" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -739,7 +718,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1605772518982" expanded="true" signature="1049:1095" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -796,22 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/thu/blog/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/thu/blog/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.26923">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/week2/thu/blog/includes/htmlhead.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5384617">
@@ -828,49 +793,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/thu/blog/post.php">
+    <entry file="file://$PROJECT_DIR$/week2/thu/blog/createPost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3076925">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state vertical-scroll-proportion="-19.192308">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <marker date="1605607527430" expanded="true" signature="1726:1753" placeholder="..." />
+            <marker date="1605766883205" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1605766883205" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1605766883205" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1605766883205" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/week2/thu/blog/lib/db/mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.9615383">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
           <folding>
-            <marker date="1605740580530" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="803:867" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="1330:1360" placeholder="SELECT * FRO..posts..." />
-            <marker date="1605740580530" expanded="true" signature="1577:1627" placeholder="SELECT COUNT..comments..." />
-            <marker date="1605740580530" expanded="true" signature="1883:1913" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2142:2198" placeholder="INSERT INTO ..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2705" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2709" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2711" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2712" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2724" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2729" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2672:2730" placeholder="SELECT * FRO..users..." />
-            <marker date="1605740580530" expanded="true" signature="2905:2942" placeholder="SELECT * FRO..comments..." />
-            <marker date="1605740580530" expanded="true" signature="3267:3336" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="352:371" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="352:396" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="828:892" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="1355:1385" placeholder="SELECT * FRO..posts..." />
+            <marker date="1605767780699" expanded="true" signature="1602:1652" placeholder="SELECT COUNT..comments..." />
+            <marker date="1605767780699" expanded="true" signature="1908:1938" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2167:2223" placeholder="INSERT INTO ..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2730" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2734" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2736" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2737" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2749" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2754" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2697:2755" placeholder="SELECT * FRO..users..." />
+            <marker date="1605767780699" expanded="true" signature="2930:2967" placeholder="SELECT * FRO..comments..." />
+            <marker date="1605767780699" expanded="true" signature="3292:3361" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/thu/blog/createPost.php">
+    <entry file="file://$PROJECT_DIR$/week2/thu/blog/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59475565">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9017341">
+          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/thu/blog/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.7307692">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/thu/blog/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6078665">
+          <caret line="30" column="161" selection-start-line="30" selection-start-column="161" selection-end-line="30" selection-end-column="161" />
           <folding>
-            <marker date="1605766883205" expanded="true" signature="911:941" placeholder="..." />
-            <marker date="1605766883205" expanded="true" signature="1334:1886" placeholder="..." />
-            <marker date="1605766883205" expanded="true" signature="1371:1552" placeholder="..." />
-            <marker date="1605766883205" expanded="true" signature="1590:1773" placeholder="..." />
+            <marker date="1605772518982" expanded="true" signature="1049:1095" placeholder="..." />
           </folding>
         </state>
       </provider>
