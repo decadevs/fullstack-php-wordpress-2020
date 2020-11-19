@@ -34,6 +34,13 @@
 
 <?php include APP_PATH . '/includes/header.php' ?>
 
+    <header class="container">
+
+        <nav>
+        <a href="./logout.php">Logout</a>
+        <a href="./index.php">Home</a>
+        </nav>
+    </header>
 
 <section class="container section">
     <div class="post">
