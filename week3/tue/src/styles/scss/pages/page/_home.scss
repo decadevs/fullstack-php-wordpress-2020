@@ -5,7 +5,7 @@
   display: block;
   background-color: $primary;
   max-width: 3.75rem;
-  height: 100%;
+  min-height: 100vh;
   flex: 1;
 }
 .dashboard--authors {
@@ -56,6 +56,8 @@
     background-color: $lightpurple;
     flex: 1;
     padding: 0 1.1rem;
+    padding-bottom: 4rem;
+    // border: 1px solid red;
 }
 .table--container--header{
     @extend .d-flex;
@@ -68,44 +70,188 @@
    padding-right: 2rem;
 }
 
-.table--head{
-    background-color: $lightblue;
-    display: block;
-    padding: 1.5rem 3.37rem 1.5rem 4rem;
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
-}
-.table--body{
-    padding: 0 1.5rem;
-    background-color: $white;
+.table-wrapper{
+  // border: 1px solid red;
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: scroll;
+  vertical-align: middle;
 }
 
-.table-row{
-    border-bottom: 1px solid $lightblue;
-    padding: 1.5rem 0;
-    padding-right: 2.5rem;
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
+.table-header{
+  background-color: $lightblue;
+  // border-collapse: collapse;
 }
 
-.author--image{
-    height: 1.2rem;
-    width: 1.2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: $primary;
-    margin-right: 0.4rem;
-  }
-  .author--index{
-      margin-right: 1.2rem;
-  }
-  .row--item{
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
-  }
-  .hide-bottom{
-      border-bottom: none;
-  }
+.table-header-row{
+  padding: 1.2rem;
+  // border: 5px solid tomato;
+}
+
+.tab-body-cover{
+  border: 1px solid green;
+  padding: 0 20px;
+}
+
+.table-body{
+  // border: 1px solid yellow;
+  padding: 0 1.1rem;
+  background: $white;
+  box-shadow: 0px 2px 10px rgba(76, 141, 235, 0.10077);
+}
+.table-body-row{
+  padding: 0.6rem;
+  // border-bottom: 1px solid green;
+  border-bottom: 1px solid #DDE9FB;
+  vertical-align: middle;
+  width: 90%;
+  margin: auto;
+}
+
+.table-body-row:last-of-type{
+  border-bottom: none;
+  // border-bottom: 2px solid tomato;
+}
+
+.table-head-data{
+  padding: 1.3rem 0;
+}
+.table-data{
+  padding: 15px 0;
+  font-size: 1rem;
+}
+
+.tab-index{
+  padding: 4px;
+  // border: 1px solid red;
+  text-align: center;
+}
+
+.table-avatar{
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: $primary;
+}
+.navigation-bar{
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+  // border: 1px solid;
+  width: 100%;
+  margin: 0.8rem auto;
+  margin-top: 2rem;
+}
+
+.pagination{
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+  width: 30%;
+}
+
+.page-link{
+  width: 3rem;
+  background-color: $white;
+  padding: 1.3rem;
+  color: $primary;
+  border-radius: 5px;
+}
+
+.active{
+  background-color: $primary;
+  color: $white;
+}
+
+.arrow-btn{
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+
+/*MODAL LOADER CSS*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+  border-bottom: 1px solid $lightblue;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.inp-grp{
+  // border: 1px solid green;
+  margin: 8px 0;
+}
+
+.inp-grp input{
+  max-width: 700px !important;
+  // border: 2px solid red;
+  background: rgba(0, 204, 240, 0.02);
+  border: 1px solid rgba(24, 20, 38, 0.0992133);
+  border-radius: 4px;
+}
+
+.auth-btn{
+  width: 100%;
+  margin-top: 1rem;
+}
+
