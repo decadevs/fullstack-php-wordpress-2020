@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+    --gen-purple-bg: #4C60EB;
+    --gen-btn-hover-bg: #1e30a3;
+    --gen-text-color: #405169;
+    --gen-light-text-color: rgba(64, 81, 105, 0.5);
+    --inp-grp-bg-color: rgba(76, 141, 235, 0.10077);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Styles NOt Genral Starts here*/
+body {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+}
+
+.wrapper{
+    background: #F9FAFF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper{
+    background: #ffffff;
+    padding: 2rem 3.6rem;
+    width: 27rem;
+    min-height: 33.5rem;
+}
+
+.form-layout{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin: auto;
+}
+
+.form-layout figure{
+    width: 100%;
+    margin: 1.2rem 0;
+}
+
+.logo{
+    border-radius: 50%;
+    width: 5rem;
+    margin: auto;
+    text-align: center;
+    padding: 1.8rem 1.5rem;
+    background: var(--gen-purple-bg);
+    color: #fff;
+}
+
+.form-layout-head{
+    margin-bottom: 1.5rem;
+}
+
+.form-layout-head h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-size: 2.1rem;
+    line-height: 2rem;
+}
+
+.form-layout-head span{
+    color: var(--gen-light-text-color);
+    display: block;
+    margin: 0.5625rem 0;
+}
+
+.inp-grp{
+    width: 100%;
+}
+
+.inp-grp label{
+    display: block;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 1.125px;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+
+.inp-grp input{
+    width: 100%;
+    height: 2.56rem;
+    background: var(--inp-grp-bg-color);
+    border: 1px solid rgba(76, 141, 235, 0.10077);
+    border-radius: 0.3125rem;
+    padding: 0.3125rem 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+}
+
+.forgot-password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(64, 81, 105, 0.5);
+    margin-top: 0.2rem;
+}
+
+.forgot-password a{
+    color: rgba(64, 81, 105, 0.5);
+    text-align: right;
+}
+
+.sub-grp{
+    margin: 1.125rem 0;
+}
+
+button{
+    width: 100%;
+    height: 3.125rem;
+    color: #fff;
+    background: var(--gen-purple-bg);
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    line-height: 1.3125rem;
+}
+
+button:hover{
+    background-color: var(--gen-btn-hover-bg);
+}
+
+.form-footer{
+    margin: auto;
+    color: #B0BAC9;
+    font-size: 0.9375rem;
+}
+
+.signup{
+    color: #4C60EB;
+}
