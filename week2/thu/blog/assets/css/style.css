@@ -324,4 +324,5 @@ input[type=text] {
 .display-username {
     margin-top: 10px;
     font-weight: bold;
+    color: rgb(124, 28, 131);
 }
