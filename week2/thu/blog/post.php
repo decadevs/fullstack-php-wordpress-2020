@@ -18,10 +18,6 @@ session_start();
     $post = get_post($con, $post_id);
     //get user
     $author = get_user($con, $post['user_id']);
-    //get comments
-    $comments = get_comments($con, $post_id);
-
-
 
     if(!$post_id || !$post) {
         header("Location: index.php");
@@ -43,6 +39,9 @@ session_start();
     elseif(array_key_exists('submit', $_POST) && empty($_POST['comment'])){
         $err .= 'Kindly enter your comment';
     }
+
+    //get comments
+    $comments = get_comments($con, $post_id);
 
     include APP_PATH . '/includes/htmlhead.php'
 ?>
