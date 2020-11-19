@@ -1,0 +1,116 @@
+.container{
+    background-color: #F9FAFF;
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    color: #405169;
+    
+    
+    
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    width: 20.44rem;
+    height: 33.5rem;
+    padding: 4rem;
+    padding-top: 2rem;
+    background-color:white;
+    
+    
+}
+.logo{
+    width: 4.438rem;
+    height: 4.438rem;
+    background: #4C60EB;
+    border-radius: 4.813rem;
+    margin: 1rem auto;
+    display: flex;
+    
+
+}
+.logo span{
+    color: #FFF;
+    margin: auto;
+    width: 35px;
+    height: 18px;
+    font-style: normal;
+    font-size: 15px;
+    
+}
+h2{
+    height: 12px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 32px;
+    
+    
+}
+h6{
+    width: 320px;
+    height: 22px;
+    font-size: 15px;
+    line-height: 22px;
+    opacity: 0.5; 
+   
+}
+
+.form-group{
+    margin-bottom:3.2px;
+}
+
+.form-group label{
+    display: inline-block;
+    margin-bottom: .5rem;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+}
+
+.form-control{
+    display: block;
+    background: rgba(76, 141, 235, 0.10077);
+    border: 1px solid rgba(76, 141, 235, 0.10077);
+    box-sizing: border-box;
+    border-radius: 5px;
+    width:100%;
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: 6px 12px;
+}
+.form-group small {
+    text-align: right;
+    display: block;
+    color: rgba(64, 81, 105, 0.5);;
+    margin-top:3px;
+    
+}
+.btn{
+    background: #4C60EB;
+    border: 0px;
+    border-radius: 4px;
+    color: #FFF;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sign-up-text span{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+    color: #B0BAC9;
+
+}
+.sign-up-text a{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #4C60EB;
+}
