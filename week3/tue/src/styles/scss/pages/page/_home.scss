@@ -147,8 +147,6 @@
     font-weight: bold;
   }
 
-  .image-wrapper{margin: 20px 0 10px 0;}
-
   .form-group{
     @extend .d-flex;
     @extend .flex-column;
@@ -174,4 +172,15 @@
     width: 300px !important; margin-top: 10px;
     height: 40px; border-radius: 5px !important;
     padding: 10px 24px !important;
+  }
+
+  .author-img{
+    height: 2.75rem;
+    width: 2.75rem;
+    border-radius: 50%; overflow: hidden;
+    margin-top: 20px; margin-bottom: 10px;
+  }
+  .author-img img{
+    max-width: 55px; max-height: 55px;
+    display: block; margin: auto;
   }
