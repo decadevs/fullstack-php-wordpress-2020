@@ -70,10 +70,9 @@
 
 .table--head{
     background-color: $lightblue;
-    display: block;
     padding: 1.5rem 3.37rem 1.5rem 4rem;
     @extend .d-flex;
-    @extend .align-items-center;
+    @extend .align-items-start;
     @extend .justify-content-between;
 }
 .table--body{
@@ -86,7 +85,7 @@
     padding: 1.5rem 0;
     padding-right: 2.5rem;
     @extend .d-flex;
-    @extend .align-items-center;
+    @extend .align-items-start;
     @extend .justify-content-between;
 }
 
@@ -97,14 +96,16 @@
     display: inline-block;
     background-color: $primary;
     margin-right: 0.4rem;
+    background-image: url("/week3/tue/assets/images/Rectangle 11.svg");
+    background-repeat: no-repeat;
   }
   .author--index{
       margin-right: 1.2rem;
   }
   .row--item{
     @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
+    @extend .align-items-start;
+    min-width: 15rem;
   }
   .hide-bottom{
       border-bottom: none;
@@ -147,6 +148,7 @@
     opacity: 0;
     background-color: white;
     padding: 0rem 2rem;
+    padding-bottom: 1rem;
     border-radius: 10px;
   }
 
@@ -168,15 +170,60 @@
   }
 
   .modal-input {
-    color: $lightblue;
+    color: $black;
     height: 50px;
     width: 100%;
     margin-bottom: 20px;
     border: 1px solid lightgrey;
     border-radius: 4px;
     background-color: $lightblue;
+    padding: 0px 15px;
   }
 
-  // label {
-    
-  // }
+  .btn-primary {
+    background-color:#4c60eb;
+    color:#fff;
+    width: 100%!important;
+    border-radius: 5px!important;
+}
+
+.author-pic {
+  margin: 40px 0px 20px 0px;
+  background-blend-mode: normal;
+}
+
+.add-image {
+  position: relative;
+  top: 0px;
+  left: -28px;
+}
+
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+  // display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+  z-index: 1;
+}
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity: 0;
+	opacity: 0;
+	z-index: 2;
+	// filter: alpha(opacity: 0);
+}
+
+.logout {
+  position: relative;
+  top: 29rem!important;
+}
+
+.close {
+  cursor: pointer;
+}

@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
 </head>
 <body class="d-flex">
@@ -13,17 +15,22 @@
             </span>
             <span class="menu-item">
                 <a href="/">
-                    <img src="assets/images/home.svg" alt="">
+                    <img src="assets/images/home.svg" alt="home">
                 </a>
             </span>
             <span class="menu-item">
                 <a href="/">
-                    <img src="assets/images/home.svg" alt="">
+                    <img src="assets/images/people 1.svg" alt="authors">
                 </a>
             </span>
             <span class="menu-item">
                 <a href="/">
-                    <img src="assets/images/home.svg" alt="">
+                    <img src="assets/images/Vector-2.svg" alt="settings">
+                </a>
+            </span>
+            <span class="menu-item logout">
+                <a href="/">
+                    <img src="assets/images/log-out 1.svg" alt="log-out">
                 </a>
             </span>
         </div>
@@ -34,7 +41,7 @@
             <div>
                 <input type="text" class="search--area" placeholder="Search for author">
             </div>
-            <div class="avatar"></div>
+            <img src="assets/images/Oval.svg" alt="User-Image">
         </div>
         <div class="table--container">
             <div class="table--container--header">
@@ -50,17 +57,28 @@
                     <div class="modal-top">
                         <h3>Add Author</h3>
                         <label for="click">
-                            <a class="close">X</a>
+                            <a class="close"><img src="./assets/images/Path.png" alt="Close-image"></a>
                         </label>
                     </div>
                     <div>
                         <form action="">
+                            <div class="author-pic">
+                                <img src="./assets/images/Ellipse 1.svg" alt="Image">
+                                <img class="add-image" src="./assets/images/Group 7236.svg" alt="add-image"/>
+                                <div class="fileinputs">
+                                    
+                                    <div class="fakefile">
+                                        
+                                    </div>
+                                </div>
+                            </div>
                             <label for="name">Full Name</label>
                             <input type="text" name="name" id="name" class="modal-input" placeholder="Full name">
                             <label for="email">Email Address</label>
                             <input type="email" name="email" id="email" class="modal-input" placeholder="Email Address">
                             <label for="tel">Phone Number</label>
                             <input type="tel" name="tel" id="tel" class="modal-input" placeholder="Phone Number">
+                            <input type="submit" value="Add Author" class="btn-primary">
                         </form>
                     </div>
                 </div>
@@ -70,13 +88,13 @@
                 <span > 
                     Author’s Details
                 </span>
-                <span > 
+                <span class="row--item"> 
                     Email address
                 </span>
-                <span > 
+                <span class="row--item"> 
                     Phone number
                 </span>
-                <span > 
+                <span class="row--item"> 
                     No. of Posts
                 </span>
                 <span > 
@@ -85,7 +103,7 @@
             </div>
             <div class="table--body">
                 <div class="table-row">
-                    <span class="row--item">
+                    <span >
                         <span class="author--index">1</span>
                        <div class="author--image"></div>
                         Jenny Wilson
@@ -99,13 +117,13 @@
                     <span class="row--item">
                         120 Posts
                     </span>
-                    <span class="row--item">
+                    <span >
                         3.4k Reach                    
                     </span>
                 </div>
                 <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
+                    <span >
+                        <span class="author--index">2</span>
                        <div class="author--image"></div>
                         Jenny Wilson
                     </span>
@@ -118,13 +136,13 @@
                     <span class="row--item">
                         120 Posts
                     </span>
-                    <span class="row--item">
+                    <span >
                         3.4k Reach                    
                     </span>
                 </div>
                 <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
+                    <span >
+                        <span class="author--index">3</span>
                        <div class="author--image"></div>
                         Jenny Wilson
                     </span>
@@ -137,13 +155,13 @@
                     <span class="row--item">
                         120 Posts
                     </span>
-                    <span class="row--item">
+                    <span >
                         3.4k Reach                    
                     </span>
                 </div>
                 <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
+                    <span >
+                        <span class="author--index">4</span>
                        <div class="author--image"></div>
                         Jenny Wilson
                     </span>
@@ -156,13 +174,13 @@
                     <span class="row--item">
                         120 Posts
                     </span>
-                    <span class="row--item">
+                    <span >
                         3.4k Reach                    
                     </span>
                 </div>
                 <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
+                    <span >
+                        <span class="author--index">5</span>
                        <div class="author--image"></div>
                         Jenny Wilson
                     </span>
@@ -175,13 +193,13 @@
                     <span class="row--item">
                         120 Posts
                     </span>
-                    <span class="row--item">
+                    <span >
                         3.4k Reach                    
                     </span>
                 </div>
                 <div class="table-row hide-bottom">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
+                    <span >
+                        <span class="author--index">6</span>
                        <div class="author--image"></div>
                         Jenny Wilson
                     </span>
@@ -194,7 +212,7 @@
                     <span class="row--item">
                         120 Posts
                     </span>
-                    <span class="row--item">
+                    <span >
                         3.4k Reach                    
                     </span>
                 </div>
@@ -202,5 +220,6 @@
             
         </div>
     </div>
+    <script src="./home.js"></script>
 </body>
 </html>
