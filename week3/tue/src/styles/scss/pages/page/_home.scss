@@ -163,7 +163,7 @@
   @extend .d-flex;
   @extend .align-items-center;
   @extend .justify-content-between;
-  width: 30%;
+  width: 50%;
 }
 
 .page-link{
@@ -172,6 +172,7 @@
   padding: 1.3rem;
   color: $primary;
   border-radius: 5px;
+  margin: 0 8px;
 }
 
 .active{
