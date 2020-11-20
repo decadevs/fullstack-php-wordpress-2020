@@ -1,0 +1,134 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body,html{
+    font-family: 'Rubik';
+    height: 100%;
+}
+
+body{
+    font-size: 16px;
+    color: #405169;
+    font-weight: 300;
+}
+
+
+.container--signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DDE9FB;
+}
+
+.my-form{
+    width: 380px;
+    background-color: #ffffff;
+    padding: 3rem;
+    padding-top: 2rem ;
+}
+
+.signup--logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin: auto;
+    background-color: #4C60EB;
+}
+
+.signup--logo span{
+    color:#fff;
+
+}
+
+.signup--form-tile{
+    margin-top: 1.4rem;
+    margin-bottom: 0;
+    color: #2E384D;
+    font: 2.2rem Rubik;
+    font-weight: normal;
+}
+
+.signup-subtitle{
+    margin-bottom: 3rem;
+    color: #405169;
+    opacity: 0.5;
+    font-size: .9375rem;
+    font-weight: normal;
+}
+
+.form-group{
+    margin-bottom: 0.2rem;
+
+}
+
+label{
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: .85rem;
+    letter-spacing: 1.125px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-group small {
+    text-align: right;
+    display: block;
+    color: #405169;
+    opacity: 0.5;
+    margin-top:0.2rem;
+}
+
+.form-control{
+    display: block;
+    width: 100%;
+    padding: .385rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2E384D;
+    background: #DDE9FB;
+    border: 1px solid #DDE9FB;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn{
+    background-color: #4C60EB;
+    color: #ffffff;
+    border-radius: 0.25rem;
+    font: .9375rem Rubik;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.sign-btn {
+    margin-top: 1rem;
+    width: 100% !important;
+    border-radius: 0.25rem !important;
+    padding: .80rem .75rem;
+    border: 0;
+}
+.sign-up-text{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    opacity: 1;
+    text-align: center;
+    
+}
+
+.sign-up-text span{
+        opacity: 0.5;
+}
+
+
+.sign-up-text a{
+        text-decoration: none;
+        color: #4C60EB;
+}

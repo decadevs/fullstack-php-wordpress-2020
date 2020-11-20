@@ -12,6 +12,8 @@ $lightpurple: #F9FAFF!default;
 $white: #FFFFFF!default;
 $blue: #4c8eeb !default;
 $lightblue: #DDE9FB !default;
+$overlaycolor: #c5c5c5 !default;
+$bordercolor: rgba(24, 20, 38, 0.0992133) !default;
 
 
 //// States
@@ -37,5 +39,6 @@ $colors: (
 	warning: $warning,
 	success: $success,
 	disabled: $disabled,
-	lightblue: $lightblue
+	lightblue: $lightblue,
+	overlaycolor: $overlaycolor
 ) !default;

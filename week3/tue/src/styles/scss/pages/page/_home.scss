@@ -2,10 +2,11 @@
   @extend .d-flex;
   @extend .flex-column;
   @extend .align-items-center;
+  @extend .justify-content-between;
   display: block;
   background-color: $primary;
   max-width: 3.75rem;
-  height: 100%;
+  height: 100vh;
   flex: 1;
 }
 .dashboard--authors {
@@ -28,6 +29,11 @@
 .menu-item {
   margin-bottom: 2rem;
 }
+
+.signout{
+  padding-bottom: 6rem;
+}
+
 .search--area {
   background: $white;
   border: 1px solid rgba(76, 141, 235, 0.186481);
@@ -71,20 +77,27 @@
 .table--head{
     background-color: $lightblue;
     display: block;
-    padding: 1.5rem 3.37rem 1.5rem 4rem;
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
+    padding: 1.5rem 3.37rem 1.5rem 2rem;
+    font-size: 1rem;
+    @extend .fw-700;
+
 }
+
 .table--body{
-    padding: 0 1.5rem;
     background-color: $white;
 }
 
 .table-row{
     border-bottom: 1px solid $lightblue;
-    padding: 1.5rem 0;
-    padding-right: 2.5rem;
+    display: block;
+    padding: 1.5rem 3.37rem 1.5rem 2rem;
+    font-size: .9rem;
+
+}
+
+.row--container{
+    display: block;
+    margin-left: 0;
     @extend .d-flex;
     @extend .align-items-center;
     @extend .justify-content-between;
@@ -99,13 +112,155 @@
     margin-right: 0.4rem;
   }
   .author--index{
-      margin-right: 1.2rem;
+      margin-right: -2rem;
+      // border: solid red 1px;
   }
   .row--item{
     @extend .d-flex;
     @extend .align-items-center;
-    @extend .justify-content-between;
+    @extend .justify-content-start;
+    width: 12.5rem;
+    text-align: justify;
   }
+
+
   .hide-bottom{
       border-bottom: none;
+  }
+
+  .modal{
+    @extend .p-absolute;
+    @include c-absolute-div;
+    display: none;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    z-index: 1;
+    background-color: transparent;
+  
+  }
+
+  .modal-overlay{
+    @extend .p-absolute;
+    @include c-absolute-div;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    background-color:$overlaycolor;
+    opacity: 0.5;
+    visibility: hidden;
+  }
+
+  .container-modal-form{
+    @extend .p-absolute;
+    max-width: 31.25rem;
+    width: 31.25rem;
+    border-radius: 0.325rem;
+    background-color: $white;
+    z-index: 99999;
+  }
+
+  .modal-form{
+    padding: 1rem 1.5rem;
+    position: relative;
+  }
+
+  .form--title{
+    padding: 1rem;
+    border-bottom: 1px solid $lightblue;
+    font-size: 1.5rem;
+    @extend .fw-600;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-between;
+
+    .close{
+      cursor: pointer;
+    }
+  }
+
+  .author--avatar{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 1.5rem 0;
+    @extend .p-relative;
+
+    .camera{
+      width: .9375rem;
+      height: .9375rem;
+      @extend .p-absolute;
+      top: 60;
+      right: 4;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      fill: $primary;
+    }
+    
+
+  }
+
+  .author-control{
+    padding: 1rem 0 0 0;
+    line-height: 1;
+    font-size: .85rem !important;
+    font-weight: 600 !important;
+  }
+
+  .author-form{
+    border: solid 1px $bordercolor;
+  }
+
+  /* pagination styles */
+  .pagination{
+    @extend .flex-row-reverse;
+  }
+  
+  .paginate{
+    @extend .align-items-center;
+    @extend .justify-content-between;
+    padding: .8rem;
+
+    .active{
+      color: $white;
+      background-color: $primary;
+    }
+
+    .arrow img{
+       width: 0.651875rem;
+       height: 1.171875rem;
+    }
+  }
+
+  .page{
+    width: 3rem;
+    height: 3rem;
+    background: $white;
+    margin: 0 .4rem;
+    border: 1px solid rgba(76, 141, 235, 0.10077);
+    box-sizing: border-box;
+    border-radius: .3125rem;
+    font-size: 1rem;
+    cursor: pointer;
+    @extend .fw-600;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+
+  }
+
+    /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
   }

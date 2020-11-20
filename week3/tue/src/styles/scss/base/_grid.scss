@@ -158,3 +158,16 @@ html {
 		}
 	}
 }
+
+//position
+
+.p-absolute {position: absolute;}
+.p-relative {position: relative;}
+.p-fixed {position: fixed;}
+
+@mixin c-absolute-div {
+	top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+} 
