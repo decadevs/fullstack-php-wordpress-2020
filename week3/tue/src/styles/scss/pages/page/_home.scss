@@ -2,12 +2,28 @@
   @extend .d-flex;
   @extend .flex-column;
   @extend .align-items-center;
+  @extend .justify-content-between;
   display: block;
   background-color: $primary;
   max-width: 3.75rem;
   min-height: 100vh;
   flex: 1;
+  border: 1px solid green;
+  padding-bottom: 65px;
 }
+
+
+.signoout-item a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signout-item-img{
+  display: block;
+  margin-right: 6px;
+}
+
 .dashboard--authors {
   flex: 1;
   @extend .d-flex;
@@ -191,9 +207,9 @@
   position: relative;
   background-color: #fefefe;
   margin: auto;
-  padding: 0;
+  padding: 0 30px;
   border: 1px solid #888;
-  width: 60%;
+  width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
