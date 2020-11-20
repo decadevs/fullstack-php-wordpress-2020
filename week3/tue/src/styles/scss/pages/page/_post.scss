@@ -1,0 +1,164 @@
+
+//Google Font
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,300&display=swap');
+
+/*General Styling for Input type of seaarch*/
+input[type="search"]{
+    background: $white url("../../images/searchicon.svg") no-repeat left;
+    background-size: 20px;
+    padding: 0 30px;
+    background-position-x: 0.4rem;
+}
+
+.post-table--container--header{
+    // border: 1px solid red;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    margin-bottom: 12px;
+}
+
+.post-dashboard-user-name p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #405169;
+}
+
+.post-back-link{
+    // border: 1px solid red;
+    @extend .d-flex;
+    margin-top: 30px;
+}
+
+.post-back-link a{
+    @extend .align-items-center;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px 0;
+}
+
+.post-back-link span{
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.post-search-bar{
+    // border: 1px solid red;
+    // flex: 1.5;
+    width: 60%;
+}
+
+.post-search-bar input{
+    max-width: 100%;
+}
+
+.select-filter-label{
+    // border: 1px solid yellow;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 19px;
+    color: #181426;
+    margin-right: 0.5rem;
+}
+
+.post-filter-options{
+    // flex: 1;
+    width: 30%;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+    // border: 1px solid red;
+}
+
+
+
+/*SELECT STYLING*/
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    width: 65%;
+    border: 1px solid rgba(76, 141, 235, 0.10077);
+    border-radius: 5px;
+    background-color: $white;
+    // font-family: Arial;
+}
+
+.post-selector-filter{
+max-width: 80%;
+border: 1px solid green;
+}
+
+.custom-select select {
+display: none; /*hide original SELECT element: */
+
+}
+
+.select-selected {
+background-color: $white;
+color: rgba(38, 35, 50, 0.585856);
+// color: red;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+position: absolute;
+content: "";
+top: 14px;
+right: 10px;
+width: 0;
+height: 0;
+border: 6px solid transparent;
+border-color: rgba(38, 35, 50, 0.585856) transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+border-color: transparent transparent rgba(38, 35, 50, 0.585856) transparent;
+top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+// color: #ffffff;
+color: rgba(38, 35, 50, 0.585856);
+padding: 12px 16px;
+border: 1px solid;
+// 1px solid #DDE9FB;
+border-color: transparent transparent #DDE9FB transparent;
+cursor: pointer;
+width: 80%;
+margin: auto;
+}
+
+
+
+/*Remove border-bottom from select guy*/
+.select-selected:first-of-type{
+    // border: 2px solid red;
+    border: none;
+}
+
+/*SELECT DROP DOWN*/
+.select-items div:last-child{
+    border: none;
+}
+
+/* Style items (options): */
+/*DROP DOWN CONTAINER*/
+.select-items {
+position: absolute;
+border: 1px solid rgba(76, 141, 235, 0.10077);
+background-color: $white;
+top: 125%;
+left: 0;
+right: 0;
+z-index: 99;
+box-shadow: 0px 4px 4px rgba(76, 141, 235, 0.08);
+border-radius: 5px;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+display: none;
+}
