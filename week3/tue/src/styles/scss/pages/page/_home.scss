@@ -264,3 +264,7 @@
     from {transform: scale(0)}
     to {transform: scale(1)}
   }
+
+  input[type ="file"]{
+    display: none !important;
+  }
