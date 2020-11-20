@@ -15,7 +15,6 @@ btn.addEventListener("click", (e) => {
 
 // When the user clicks on <span> (x), close the modal
 span.addEventListener("click", (e) => {
-    console.log(e.target);
     modal.style.display = "none";
 });
 
