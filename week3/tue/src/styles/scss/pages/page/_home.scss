@@ -11,7 +11,6 @@
   padding-bottom: 65px;
 }
 
-
 .signoout-item a{
   @extend .d-flex;
   @extend .justify-content-between;
@@ -28,6 +27,7 @@
   @extend .d-flex;
   @extend .flex-column;
 }
+
 .logo-white {
   @extend .signin--logo;
   height: 2.75rem;
@@ -35,14 +35,17 @@
   background-color: $white;
   margin: 1.6125rem 0;
 }
+
 .menu {
   @extend .d-flex;
   @extend .flex-column;
   @extend .align-items-center;
 }
+
 .menu-item {
   margin-bottom: 2rem;
 }
+
 .search--area {
   background: $white;
   border: 1px solid rgba(76, 141, 235, 0.186481);
@@ -61,32 +64,34 @@
   background-color: red;
   border-radius: 50%;
 }
+
 .searchbar{
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
-    padding: 1.6125rem 1.1rem;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+  padding: 1.6125rem 1.1rem;
 }
+
 .table--container{
-    background-color: $lightpurple;
-    flex: 1;
-    padding: 0 1.1rem;
-    padding-bottom: 4rem;
-    // border: 1px solid red;
+  background-color: $lightpurple;
+  flex: 1;
+  padding: 0 1.1rem;
+  padding-bottom: 4rem;
 }
+
 .table--container--header{
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-between;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
 }
+
 .btn-table{
-   border-radius: 0.25rem; 
-   padding-left: 2rem;
-   padding-right: 2rem;
+  border-radius: 0.25rem; 
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .table-wrapper{
-  // border: 1px solid red;
   width: 100%;
   border-collapse: collapse;
   overflow-x: scroll;
@@ -95,12 +100,10 @@
 
 .table-header{
   background-color: $lightblue;
-  // border-collapse: collapse;
 }
 
 .table-header-row{
   padding: 1.2rem;
-  // border: 5px solid tomato;
 }
 
 .tab-body-cover{
@@ -109,14 +112,13 @@
 }
 
 .table-body{
-  // border: 1px solid yellow;
   padding: 0 1.1rem;
   background: $white;
   box-shadow: 0px 2px 10px rgba(76, 141, 235, 0.10077);
 }
+
 .table-body-row{
   padding: 0.6rem;
-  // border-bottom: 1px solid green;
   border-bottom: 1px solid #DDE9FB;
   vertical-align: middle;
   width: 90%;
@@ -125,7 +127,6 @@
 
 .table-body-row:last-of-type{
   border-bottom: none;
-  // border-bottom: 2px solid tomato;
 }
 
 .table-head-data{
@@ -138,7 +139,6 @@
 
 .tab-index{
   padding: 4px;
-  // border: 1px solid red;
   text-align: center;
 }
 
@@ -149,11 +149,11 @@
   height: 40px;
   background-color: $primary;
 }
+
 .navigation-bar{
   @extend .d-flex;
   @extend .align-items-center;
   @extend .justify-content-between;
-  // border: 1px solid;
   width: 100%;
   margin: 0.8rem auto;
   margin-top: 2rem;
@@ -208,7 +208,6 @@
   background-color: $white;
   margin: auto;
   padding: 0 30px;
-  // border: 1px solid #888;
   border-radius: 10px;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -232,7 +231,6 @@
 /* The Close Button */
 .close {
   color: #ccc;
-  // float: right;
   font-size: 28px;
   font-weight: bold;
 }
@@ -261,13 +259,11 @@
 }
 
 .inp-grp{
-  // border: 1px solid green;
   margin: 8px 0;
 }
 
 .inp-grp input{
   max-width: 700px !important;
-  // border: 2px solid red;
   background: rgba(0, 204, 240, 0.02);
   border: 1px solid rgba(24, 20, 38, 0.0992133);
   border-radius: 4px;
@@ -277,4 +273,3 @@
   width: 100%;
   margin-top: 1rem;
 }
-
