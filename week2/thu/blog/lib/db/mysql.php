@@ -97,7 +97,6 @@ function con() {
         }
 
     return 0;
-<<<<<<< HEAD
    }
 
 /**
@@ -247,6 +246,3 @@ function con() {
     
     return $output;
  }
-=======
-   }
->>>>>>> 345b5f962581a174e1c96a07d08b7b3999b1c537

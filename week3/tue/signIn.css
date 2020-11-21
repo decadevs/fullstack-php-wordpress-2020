@@ -1,0 +1,126 @@
+.container--signin {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f9faff;
+}
+
+.signin--form-tile {
+	margin-bottom: 0;
+	color: #405169;
+	font-size: 2.125rem;
+	font-family: Rubik;
+	font-weight: 300;
+}
+
+.signin-subtitle {
+	margin-top: 0.5em;
+	color: #405169;
+	opacity: 0.5;
+	font-size: 0.9375rem;
+	font-family: Rubik;
+	font-weight: 300;
+}
+
+.my-form {
+	margin-top: 10%;
+	background-color: white;
+	padding: 4rem;
+	padding-top: 2rem;
+	width: 20%;
+}
+
+.form-group {
+	margin-bottom: 0.2rem;
+	padding-right: 1.25rem;
+	font-family: Rubik;
+}
+
+.form-group label {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	letter-spacing: 1.125px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 400;
+	color: #405169;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #405169;
+	background: rgba(76, 141, 235, 0.10077);
+	border: 1px solid rgba(76, 141, 235, 0.10077);
+	background-clip: padding-box;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group small {
+	text-align: right;
+	display: block;
+	color: #405169;
+	opacity: 0.5;
+	margin-top: 0.2rem;
+	margin-right: -1.25rem;
+	font-family: Rubik;
+	font-style: normal;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+.sign-btn {
+	margin-top: 2rem;
+	margin-bottom: 0.2rem;
+	margin-left: 0.3125rem;
+	margin-right: 0.8125rem;
+
+	padding-right: 20px;
+	width: 100%;
+	height: 3.125rem;
+
+	border-radius: 0.25rem;
+	background-color: #4c60eb;
+	color: #ffffff;
+	border: #4c60eb;
+}
+
+.sign-up-text {
+	display: block;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	opacity: 1;
+	text-align: center;
+	font-size: 15px;
+	font-family: Rubik;
+	font-weight: 300;
+}
+
+.sign-up-text span {
+	opacity: 0.5;
+}
+
+.signin--logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50%;
+	margin: auto;
+	background-color: #4c60eb;
+	color: #ffffff;
+	font-family: Rubik;
+	font-weight: 300;
+}
+
+input {
+	font-family: Rubik;
+	font-weight: 300;
+	font-size: 15px;
+}
