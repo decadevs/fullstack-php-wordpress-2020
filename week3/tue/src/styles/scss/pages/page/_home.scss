@@ -205,10 +205,11 @@
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: $white;
   margin: auto;
   padding: 0 30px;
-  border: 1px solid #888;
+  // border: 1px solid #888;
+  border-radius: 10px;
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
@@ -231,7 +232,7 @@
 /* The Close Button */
 .close {
   color: #ccc;
-  float: right;
+  // float: right;
   font-size: 28px;
   font-weight: bold;
 }
@@ -244,9 +245,15 @@
 }
 
 .modal-header {
+  @extend .d-flex;
+  @extend .justify-content-between;
+  @extend .align-items-center;
   padding: 2px 16px;
   color: white;
   border-bottom: 1px solid $lightblue;
+  h2{
+    color: $darkest;
+  }
 }
 
 .modal-body {
