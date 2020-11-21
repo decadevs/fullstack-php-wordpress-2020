@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="dashboard-sidebar">
+            <div class="menu">
+                <span class="logo-white"> </span>
+                <span class="menu-item">
+                    <a href="/">
+                        <img src="assets/images/home.svg" alt="" />
+                    </a>
+                </span>
+                <span class="menu-item">
+                    <a href="/">
+                        <img src="assets/images/people.svg" alt="" />
+                    </a>
+                </span>
+                <span class="menu-item">
+                    <a href="/">
+                        <img src="assets/images/settings.svg" alt="" />
+                    </a>
+                </span>
+            </div>
+            <div class="signout">
+                <a href="/">
+                    <img src="assets/images/logout.svg" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="dashboard--authors">
+            <div class="searchbar">
+                <div>
+                    <input type="text" class="search--area" placeholder="Search for author" />
+                </div>
+                <div class="avatar"> </div>
+            </div>
+
+
+            <div class="table--container">
+
+                <div class="author--post-info">
+                    <div class="go--back"><a href=""><img src="assets/images/back.svg" alt="" /> Go back</a></div>
+                    <div class="author--name"> Jenny Wilson</div>
+                    <div class="author--post"> Jenny Wilson’ Post </div>
+                </div>
+
+                <div class="table--container--header search--section">
+                    <label for="search" class="search--label">
+                        <input type="text" id="search" class="search" name="search" placeholder=" Search for posts" />
+                    </label>
+<!-- 
+                    <div class="form-group">
+                        <label for="search" class="select--label"> Filter By:</label>
+                        <select name="filter">
+                            <option>Select filter</option>
+                            <option value="Date Posted">Date Posted</option>
+                            <option value="No. of View">No. of View</option>
+                            <option value="No. of Shares">No. of Shares</option>
+                        </select>
+
+                    </div> -->
+
+
+
+<!--SELECT DROP DOWN-->
+
+<div class="cont_select_center">
+<label for="search" class="select--label"> Filter By:</label>
+    <!-- Custom select structure -->
+    <div class="select_mate" data-mate-select="active">
+        <select name="" onchange="" onclick="return false;" id="">
+            <option value="">Select filter </option>
+            <option value="Date Posted">Date Posted</option>
+            <option value="No. of View">No. of View</option>
+            <option value="No. of Shares">No. of Shares</option>
+        </select>
+        <p class="selecionado_opcion" onclick="open_select(this)"></p><span onclick="open_select(this)"
+            class="icon_select_mate"><svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.000138283 6.59999V3.61428L4.71442 -5.24521e-06L9.42871 3.61428V6.59999L4.71442 2.98571L0.000138283 6.59999Z"
+                    fill="#4C60EB" />
+            </svg>
+        </span>
+        <div class="cont_list_select_mate">
+            <ul class="cont_select_int"> </ul>
+        </div>
+    </div>
+    <!-- Custom select structure -->
+
+
+</div>
+ <!-- END OF SELECT DROP DOWN   -->
+
+ </div>
+
+                <div class="table--head">
+                    <div class="row--container">
+                        <span class="author--index hidden">1</span>
+                        <span class="post-title"> Post Title </span>
+                        <span class="row--item"> Date Posted </span>
+                        <span class="row--item"> No. of View </span>
+                        <span class="row--item"> No. of Shares </span>
+                    </div>
+                </div>
+                <div class="table--body">
+                    <div class="table-row">
+                        <div class="row--container">
+                            <span class="author--index">1</span>
+                            <span class="post-title">
+                                I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                            </span>
+                            <span class="row--item">October 17, 2020 </span>
+                            <span class="row--item"> 120 Views </span>
+                            <span class="row--item"> 20 Shares </span>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row--container">
+                            <span class="author--index">2</span>
+                            <span class="post-title">
+                                I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                            </span>
+                            <span class="row--item">October 17, 2020 </span>
+                            <span class="row--item"> 120 Views </span>
+                            <span class="row--item"> 20 Shares </span>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row--container">
+                            <span class="author--index">3</span>
+                            <span class="post-title">
+                                I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                            </span>
+                            <span class="row--item">October 17, 2020 </span>
+                            <span class="row--item"> 120 Views </span>
+                            <span class="row--item"> 20 Shares </span>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row--container">
+                            <span class="author--index">4</span>
+                            <span class="post-title">
+                                I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                            </span>
+                            <span class="row--item">October 17, 2020 </span>
+                            <span class="row--item"> 120 Views </span>
+                            <span class="row--item"> 20 Shares </span>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row--container">
+                            <span class="author--index">5</span>
+                            <span class="post-title">
+                                I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                            </span>
+                            <span class="row--item">October 17, 2020 </span>
+                            <span class="row--item"> 120 Views </span>
+                            <span class="row--item"> 20 Shares </span>
+                        </div>
+                    </div>
+                    <div class="table-row hide-bottom">
+                        <div class="row--container">
+                            <span class="author--index">6</span>
+                            <span class="post-title">
+                                I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                            </span>
+                            <span class="row--item">October 17, 2020 </span>
+                            <span class="row--item"> 120 Views </span>
+                            <span class="row--item"> 20 Shares </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--pagination part of the page-->
+                <div class="pagination d-flex">
+                    <div class="paginate d-flex">
+                        <div class="page arrow"><img src="assets/images/previous.svg" alt="" /></div>
+                        <div class="page">1</div>
+                        <div class="page active">2</div>
+                        <div class="page">3</div>
+                        <div class="page">4</div>
+                        <div class="page">...</div>
+                        <div class="page arrow"><img src="assets/images/next.svg" alt="" /></div>
+                    </div>
+                </div>
+                <!--End of pagination-->
+
+            </div>
+        </div>
+
+
+    </div>
+
+<script src="assets/js/select.js"></script>
+</body>
+
+</html>

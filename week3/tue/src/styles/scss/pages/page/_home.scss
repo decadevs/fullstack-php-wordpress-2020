@@ -5,8 +5,9 @@
   @extend .justify-content-between;
   display: block;
   background-color: $primary;
+  width: 3.75rem;
   max-width: 3.75rem;
-  height: 100vh;
+  min-height: 100vh;
   flex: 1;
 }
 .dashboard--authors {
@@ -112,13 +113,14 @@
     margin-right: 0.4rem;
   }
   .author--index{
-      margin-right: -2rem;
-      // border: solid red 1px;
+    width: .9rem;
+    padding: 0 .2rem 0 .5rem;
   }
   .row--item{
     @extend .d-flex;
     @extend .align-items-center;
     @extend .justify-content-start;
+    max-width: 12.5rem;
     width: 12.5rem;
     text-align: justify;
   }
@@ -160,6 +162,7 @@
   }
 
   .modal-form{
+    max-width: 31.25rem;
     padding: 1rem 1.5rem;
     position: relative;
   }
@@ -247,6 +250,10 @@
     @extend .align-items-center;
     @extend .justify-content-center;
 
+    &:hover{
+      background-color: $primary;
+      color: $white;
+    }
   }
 
     /* Add Zoom Animation */

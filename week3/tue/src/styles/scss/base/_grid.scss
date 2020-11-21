@@ -34,7 +34,7 @@ $grid-breakpoints: (
 @at-root {
 	@-ms-viewport { width: device-width; }
 }
-body {margin: 0;}
+body {margin: 0; }
 html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -171,3 +171,9 @@ html {
     right: 0;
     left: 0;
 } 
+
+//visibility
+
+.hidden{
+	visibility: hidden;
+}
