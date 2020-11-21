@@ -122,3 +122,34 @@
     margin: 2rem 0;
     width: 100%;
 }
+
+.list-websites{
+    // border: 1px solid red;
+    padding: 0 2rem;
+    // border: 1px solid skyblue;
+}
+
+/*List of Websites in a table*/
+
+.form-del{
+    text-align: right;
+}
+
+.del-btn{
+    background-color: transparent;
+    border: none;
+    color: #262332;
+}
+
+.token-wrapper{
+    background: $lightblue;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    padding: 0rem 1rem;
+    padding-right: 0.5rem;
+    border-radius: 5px;
+}
+
+.inp-grp button{
+    border-radius: 4px;
+}
