@@ -152,34 +152,33 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Add Author</h2>
+            <div class="modal-header">
+                <h2>Add Author</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <figure>
+                    <img src="assets/images/author.svg" alt="author-avatar">
+                </figure>
+                <form action="" method="post">
+                    <div class="inp-grp">
+                        <label for="fullname">Full name</label>
+                        <input type="text" name="fullname" placeholder="Full name" id="fullname">
+                    </div>
+                    <div class="inp-grp">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" placeholder="Email Address" id="email">
+                    </div>
+                    <div class="inp-grp">
+                        <label for="phone-number">Phone number</label>
+                        <input type="number" name="phoneNumber" placeholder="Phone Number" id="phone-number">
+                    </div>
+                    <div class="inp-grp">
+                        <button name="add-author" class="auth-btn" type="submit">Add Author</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="modal-body">
-            <figure>
-                <img src="assets/images/author.svg" alt="author-avatar">
-            </figure>
-            <form action="" method="post">
-                <div class="inp-grp">
-                    <label for="fullname">Full name</label>
-                    <input type="text" name="fullname" placeholder="Full name" id="fullname">
-                </div>
-                <div class="inp-grp">
-                    <label for="email">Email Address</label>
-                    <input type="email" name="email" placeholder="Email Address" id="email">
-                </div>
-                <div class="inp-grp">
-                    <label for="phone-number">Phone number</label>
-                    <input type="number" name="phoneNumber" placeholder="Phone Number" id="phone-number">
-                </div>
-                <div class="inp-grp">
-                    <button name="add-author" class="auth-btn" type="submit">Add Author</button>
-                </div>
-            </form>
-        </div>
-        
-    </div>
     
     </div>
 </body>
