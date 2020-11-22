@@ -28,23 +28,45 @@
   @extend .align-items-center;
 }
 .menu-item {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .signout{
   padding-bottom: 6rem;
 }
+.search--author--label{
+  @extend .p-relative;
+
+&::before{
+
+    content: "";
+    @extend .p-absolute;
+    left: 10;
+    top: 3;
+    bottom: 0;
+    width: 1.25rem;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3crect width='16' height='16' fill='url(%23pattern0)'/%3e%3cdefs%3e%3cpattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'%3e%3cuse xlink:href='%23image0' transform='scale(0.0625)'/%3e%3c/pattern%3e%3cimage id='image0' width='16' height='16' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAc5JREFUOBGdk89LG1EQx2fmZdPQsIdSil1yVSxUAsWIQXuwGCj4B+ipFxEPhd6K5z2X3grFFq+C0LMHaUDaCilFexCFVryaNXoRY9LoZt90R5owhq6ge3lf5jvzeT9mFkF9T159fdBo2QIg5RDAYYAQmA4yBre2F8ePVGpXxnkAvu/TcnVyBME+QhN9j1KtYP/d1OngwoaLDfZs2xYNmb2ZvvEfvo+2Wx2LS8DA/LdRRHvf8WrlXX/6QieIHp7fdOrcKhG1T359mKhon/rjY8vOLmc//69Ykrc+FkIXM2ULODA0V+67AqD4zuRQRZK00avFNwCVc0oXtEfyYJzFQAeTNBkbIGJO+2TBOr/fPK3rYJLeff/sjOO2aJ8IKByc3XB1MEnnX69lMeKm9gksV9Gwp4NJOmq6HiAfa58yqdSmZVuUVmmjV0/466nwIhxLc/un9kgmzDhmr85npSSIFB8emklCrO0slWoa8G8SmVaCL6PWmn7HMRVztx5sv33eyL9Yy0bptBcijUlxGziX4TurO0vFLuQS0CHKkEifpVXMNh5O+CN3lmPLzo9frj88D2lKQ64AOqDr1l7IjQEC70DMPfPpVgCByJ+aL1SbfwFwecBvylqp1gAAAABJRU5ErkJggg=='/%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+
+    }
+
 
 .search--area {
   background: $white;
   border: 1px solid rgba(76, 141, 235, 0.186481);
   box-sizing: border-box;
   border-radius: 5px;
-  padding: 0.375rem 0.75rem;
+  padding: .3rem 1.7rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.8;
   color: $darkgrey;
-  width: 20.25rem;
+  width: 20.25rem ;
+
+      &:focus{
+        outline: none;
+    }
+}
+
 }
 
 .avatar{
@@ -57,7 +79,7 @@
     @extend .d-flex;
     @extend .align-items-center;
     @extend .justify-content-between;
-    padding: 1.6125rem 1.1rem;
+    padding: .5rem 1.1rem;
 }
 .table--container{
     background-color: $lightpurple;

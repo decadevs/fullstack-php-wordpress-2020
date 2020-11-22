@@ -1,0 +1,177 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/styles/scss/main.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="d-flex">
+      <div class="dashboard-sidebar">
+        <div class="menu">
+          <span class="logo-white"> </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="assets/images/home.svg" alt="" />
+            </a>
+          </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="assets/images/people.svg" alt="" />
+            </a>
+          </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="assets/images/settings.svg" alt="" />
+            </a>
+          </span>
+        </div>
+        <div class="signout">
+          <a href="/">
+            <img src="assets/images/logout.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="dashboard--authors">
+        <div class="searchbar">
+          <div>
+            <label for="search" class="search--author--label">
+              <input
+                type="text"
+                class="search--area"
+                placeholder="Search for author"
+              />
+            </label>
+          </div>
+          <div class="avatar"></div>
+        </div>
+
+        <div class="table--container">
+          <div class="table--container--header">
+            <h2 class="settings-title">Settings</h2>
+          </div>
+
+          <div class="settings--body">
+            <div class="nav">
+              <div class="nav-item">
+                <img src="assets/images/profile-icon.svg" />
+                <a href="/"
+                  ><div class="nav-text active">Profile Settings</div></a
+                >
+              </div>
+
+              <div class="nav-item">
+                <img src="assets/images/security.svg" />
+                <a href="/"> <div class="nav-text">Security</div></a>
+              </div>
+
+              <div class="nav-item">
+                <img src="assets/images/connect.svg" />
+                <a href="/"><div class="nav-text">Connect Website</div></a>
+              </div>
+
+              <div class="nav-item">
+                <img src="assets/images/token.svg" />
+                <a href="/"> <div class="nav-text">Get Token</div> </a>
+              </div>
+            </div>
+
+            <div class="profile-info">
+              <div class="header--text">
+                Profile Settings
+
+                <span>Edit basic information about you</span>
+              </div>
+
+              <form class="settings-form" method="" action="">
+                <div class="author--avatar">
+                  <img src="assets/images/profile.svg" alt="" />
+
+                  <label for="photo">
+                    <img class="camera" src="assets/images/camera.svg" alt="" />
+                  </label>
+                  <input type="file" id="photo" />
+                </div>
+
+                <div class="input--rows">
+                  <div class="data--row">
+                    <div class="form-group">
+                      <label for="firstname">Enter your First Name</label>
+                      <input
+                        type="text"
+                        id="firstname"
+                        name="firstname"
+                        class="form-control"
+                        placeholder="John"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="lastname">Enter your Last Name</label>
+                      <input
+                        type="text"
+                        id="lastname"
+                        name="lastname"
+                        class="form-control"
+                        placeholder="John"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="data--row">
+                    <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="John@gmail"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="phone">Phone number</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="form-control"
+                        placeholder="070680373937"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="settings-btn">
+                    <input
+                      type="submit"
+                      value="cancel"
+                      class="btn cancel-btn"
+                    />
+                    <input
+                      type="submit"
+                      value="save changes"
+                      class="btn save-btn"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/select.js"></script>
+  </body>
+</html>
