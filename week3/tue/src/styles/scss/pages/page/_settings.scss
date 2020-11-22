@@ -167,3 +167,27 @@
     }
 
 }
+
+.copy--code{
+    @extend .d-flex;
+    @extend .align-items-center;
+    padding: .3rem;
+    margin-top: .625rem;
+    background: rgba(76, 141, 235, 0.10077);
+    border: 1px solid rgba(76, 141, 235, 0.10077);
+    box-sizing: border-box;
+    border-radius: .3125rem;
+
+    .form-control{
+        background-color: transparent;
+        border: none;
+    }
+
+    .copy-btn{
+        text-align: center;
+        margin-right: .2rem;
+        border-radius: .3125rem;
+        padding: .625rem 2.5rem;
+    }
+
+}
