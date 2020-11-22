@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="d-flex">
+    <div class="dashboard-sidebar">
+        <div class="menu">
+            <span class="logo-white">
+
+            </span>
+            <span class="menu-item">
+                <a href="/">
+                    <img src="assets/images/home-icon.svg" alt="">
+                </a>
+            </span>
+            <span class="menu-item">
+                <a href="/">
+                    <img class="people-icon" src="assets/images/people.svg" alt="">
+                </a>
+            </span>
+            <span class="menu-item">
+                <a href="/">
+                    <img src="assets/images/settings.svg" alt="">
+                </a>
+            </span>
+        </div>
+        <div class="signout">
+            <a href="/">
+                <img src="assets/images/log-out.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard--authors">
+        <div class="searchbar">
+            <div>
+                <input type="text" class="search--area" placeholder="Search for author">
+            </div>
+            <div class="avatar"></div>
+        </div>
+
+        <div class="dashboard-inner">
+            <h2 class="dashboard-inner-row1">Settings</h2>
+            <div class="dashboard-inner-row2">
+                <div class="profile-settings-options">
+                    <span><a href=""><img src="./assets/images/token.svg" alt="">Profile Settings</a></span>
+                    <span><a href=""><img src="./assets/images/lock.svg" alt="">Security</a></span>
+                    <span><a href=""><img src="./assets/images/token.svg" alt="">Connect Website</a></span>
+                    <span><a href=""><img src="./assets/images/token.svg" alt="">Get Token</a></span>
+                </div>
+                <div class="edit-basic-info-section">
+                    <div class="edit-basic-info-section-inner">
+                        <h5>Profile Settings</h5>
+                        <p>Edit basic information about you</p>
+                        <hr>
+
+                        <span class="photo-icon">
+                            <img src="./assets/images/Ellipse 1.svg" alt="">
+                            <label for="upload-icon">
+                                <img class="upload-icon" src="./assets/images/Group 7236.svg" alt="">
+                            </label>
+                            <input type="file" id="upload-icon">
+                        </span>
+
+                        <form action="">
+                            <div class="form-layout">
+                                <div class="form-input">
+                                    <label>Enter Your First Name</label>
+                                    <input type="text" placeholder="John" name="name" required>
+                                </div>
+
+                                <div class="form-input">
+                                    <label>Enter Your Last Name</label>
+                                    <input type="text" placeholder="Doe" name="name" required>
+                                </div>
+                                <div class="form-input">
+                                    <label> Email Address</label>
+                                    <input type="text" placeholder="john@gmail.com" name="name" required>
+                                </div>
+                                <div class="form-input">
+                                    <label>Phone Number</label>
+                                    <input type="text" placeholder="07000777111" name="name" required>
+                                </div>
+                            </div>
+                            <div class="form-button">
+                                <div></div>
+                                <a href="#">Cancel</a>
+                                <button type="submit" class="submit-btn">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div></div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="./assets/scripts/app.js"></script>
+</body>
+
+</html>

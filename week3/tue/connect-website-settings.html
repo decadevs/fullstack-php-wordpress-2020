@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="d-flex">
+    <div class="dashboard-sidebar">
+        <div class="menu">
+            <span class="logo-white">
+
+            </span>
+            <span class="menu-item">
+                <a href="/">
+                    <img src="assets/images/home-icon.svg" alt="">
+                </a>
+            </span>
+            <span class="menu-item">
+                <a href="/">
+                    <img class="people-icon" src="assets/images/people.svg" alt="">
+                </a>
+            </span>
+            <span class="menu-item">
+                <a href="/">
+                    <img src="assets/images/settings.svg" alt="">
+                </a>
+            </span>
+        </div>
+        <div class="signout">
+            <a href="/">
+                <img src="assets/images/log-out.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard--authors">
+        <div class="searchbar">
+            <div>
+                <input type="text" class="search--area" placeholder="Search for author">
+            </div>
+            <div class="avatar"></div>
+        </div>
+
+        <div class="dashboard-inner">
+            <h2 class="dashboard-inner-row1">Settings</h2>
+            <div class="dashboard-inner-row2">
+                <div class="profile-settings-options">
+                    <span><a href=""><img src="./assets/images/token.svg" alt="">Profile Settings</a></span>
+                    <span><a href=""><img src="./assets/images/lock.svg" alt="">Security</a></span>
+                    <span><a href=""><img src="./assets/images/token.svg" alt="">Connect Website</a></span>
+                    <span><a href=""><img src="./assets/images/token.svg" alt="">Get Token</a></span>
+                </div>
+                <div class="edit-basic-info-section">
+                    <div class="edit-basic-info-section-inner">
+                        <h5>Connect Website</h5>
+                        <p>Add website to begin tracking</p>
+                        <hr>
+                        <button class="add-website modal-btn">Add Website</button>
+                    </div>
+
+                </div>
+            </div>
+            <div></div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Modal Section  -->
+
+    <div>
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="#">
+                <div class="container">
+                    <span class="modal-header">
+                        <div class="title">Add Author</div>
+                        <div class="modal-close" title="Close Modal">+</div>
+                    </span>
+
+                    <hr>
+                    <span class="photo-icon">
+                        <img src="./assets/images/Ellipse 1.svg" alt="">
+                        <label for="upload-icon">
+                            <img class="upload-icon" src="./assets/images/Group 7236.svg" alt="">
+                        </label>
+                        <input type="file" id="upload-icon">
+                    </span>
+
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Full Name" name="name" required>
+
+                    <label>Email</label>
+                    <input type="email" placeholder="Email Address" name="email" required>
+
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="Phone Number" name="phone" required>
+
+
+                    <div class="clearfix">
+                        <button type="submit" class="submit-btn">Add Author</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="./assets/scripts/app.js"></script>
+</body>
+
+</html>
