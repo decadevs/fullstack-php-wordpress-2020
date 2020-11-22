@@ -71,6 +71,7 @@
 
 .security-pad{
     padding: 2rem 2rem 6rem 2rem;
+    height: 450px;
 }
 
 .settings-form{
@@ -129,6 +130,40 @@
         opacity: 0.3;
         box-shadow: 0px 4px 14px rgba(24, 20, 38, 0.15);
         
+    }
+
+}
+
+.website--list{
+    @extend .fw-400;
+    margin-top: 1.25rem;
+
+    .website-row{
+        padding: 1rem 0;
+        border-bottom: 1px solid $lightblue;
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .justify-content-between;
+
+        .website-name{
+            @extend .d-flex;
+        }
+
+        .index{
+            width: 1.875rem;
+            font-size: 1rem !important;
+            color: $darkgrey !important;
+        }
+
+        .website{
+            font-size: 1rem !important;
+            color: $darkgrey !important;
+        }
+
+        .delete{
+            font-size: 1rem !important;
+            color: $darkgrey !important;
+        }
     }
 
 }

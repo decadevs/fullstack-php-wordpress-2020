@@ -1,0 +1,164 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/styles/scss/main.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="d-flex">
+      <div class="dashboard-sidebar">
+        <div class="menu">
+          <span class="logo-white"> </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="assets/images/home.svg" alt="" />
+            </a>
+          </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="assets/images/people.svg" alt="" />
+            </a>
+          </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="assets/images/settings.svg" alt="" />
+            </a>
+          </span>
+        </div>
+        <div class="signout">
+          <a href="/">
+            <img src="assets/images/logout.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="dashboard--authors">
+        <div class="searchbar">
+          <div>
+            <label for="search" class="search--author--label">
+              <input
+                type="text"
+                class="search--area"
+                placeholder="Search for author"
+              />
+            </label>
+          </div>
+          <div class="avatar"></div>
+        </div>
+
+        <div class="table--container">
+          <div class="table--container--header">
+            <h2 class="settings-title">Settings</h2>
+          </div>
+
+          <div class="settings--body">
+            <div class="nav">
+              <div class="nav-item">
+                <img src="assets/images/profile-icon.svg" />
+                <a href="/">
+                  <div class="nav-text">Profile Settings</div>
+                </a>
+              </div>
+
+              <div class="nav-item">
+                <img src="assets/images/security.svg" />
+                <a href="/">
+                  <div class="nav-text">Security</div>
+                </a>
+              </div>
+
+              <div class="nav-item">
+                <img src="assets/images/connect.svg" />
+                <a href="/">
+                  <div class="nav-text active">Connect Website</div>
+                </a>
+              </div>
+
+              <div class="nav-item">
+                <img src="assets/images/token.svg" />
+                <a href="/">
+                  <div class="nav-text">Get Token</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="profile-info">
+              <div class="header--text">
+                Connect Website
+
+                <span>Add Website to begin Tracking</span>
+              </div>
+
+              <div class="input--rows security-pad">
+                <button class="btn btn-table">Add Website</button>
+
+
+                <div class="website--list">
+                    <div class="website-row">
+                        <span class="website-name">
+                        <span class="index">1</span>
+                        <span class="website">www.websiteone.com</span>
+                        </span>
+                        <a href="/"><span class="delete"> DELETE </span></a>
+                    </div>
+
+                    <div class="website-row">
+                        <span class="website-name">
+                        <span class="index">2</span>
+                        <span class="website">www.websiteone.com</span>
+                        </span>
+                        <a href="/"><span class="delete"> DELETE </span></a>
+                    </div>
+
+                </div>
+              </div>
+
+              <!--Modal starts here-->
+              <div class="modal">
+                <div class="container-modal-form animate">
+                  <form class="modal-form">
+                    <div class="form--title">
+                      <span>Add Website</span>
+                      <span class="close"
+                        ><img src="assets/images/close.svg" alt=""
+                      /></span>
+                    </div>
+
+                    <div class="form-group pad">
+                      <label class="author-control">Website url</label>
+                      <input
+                        type="text"
+                        name="url"
+                        class="form-control author-form"
+                        placeholder="Enter url"
+                      />
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="Add Website"
+                      class="btn btn-primary sign-btn"
+                    />
+                  </form>
+                </div>
+              </div>
+              <div class="modal-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="modal.js"></script>
+  </body>
+</html>

@@ -198,9 +198,33 @@
     @extend .align-items-center;
     @extend .justify-content-between;
 
+    span{
+    color: $black !important;
+    @extend .fw-700;
+    }
+
     .close{
       cursor: pointer;
+
+      img{
+      width: 10px;
+      height: 10px;
     }
+    }
+
+
+  }
+
+  .form-group{
+    input{
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+
+  .pad{
+    padding-top: 1rem;
   }
 
   .author--avatar{
