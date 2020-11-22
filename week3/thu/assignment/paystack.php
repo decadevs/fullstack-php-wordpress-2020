@@ -36,7 +36,7 @@ class Paystack {
 
     protected function validateMetadata($metadata) {
         
-        if (!$name && !($metadata instanceof object )) {
+        if (!$metadata && !($metadata instanceof object )) {
             throw new Exception('Error: Invalid Metadata Error');
         }
     }
@@ -141,6 +141,7 @@ function isOk($result) {
 }
 
 
+// An example on how to use the class
 
     $paystack = new Paystack('sk_test_e6993f24cc41a4a9aa6c375ab3c3f52df0db31c2');
 
