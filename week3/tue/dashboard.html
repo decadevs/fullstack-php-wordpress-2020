@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
-    <script src="assets/scripts/main.js" defer></script>
+    <!-- <script src="assets/scripts/main.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="assets/scripts/dashboard.js" defer></script>
 </head>
 <body>
     <div class="d-flex">
@@ -48,138 +50,592 @@
             </div>
             <div class="table--container">
                 <div class="table--container--header">
-                    <h2 class="tabel-title">
-                        Authors
+                    <h2 class="table-title">
+                        Dashboard
                     </h2>
-                    <button id="myBtn" class="btn btn-table">Add Author</button>
                 </div>
-                <table class="table-wrapper">
-                    <thead class="table-header">
-                        <tr class="table-header-row">
-                            <td class="table-head-data"></td>
-                            <td class="table-head-data">Author’s Details</td>
-                            <td class="table-head-data">Email address</td>
-                            <td class="table-head-data">Phone number</td>
-                            <td class="table-head-data">No. of Posts</td>
-                            <td class="table-head-data">Total Reach</td>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr class="table-body-row">
-                            <td class="table-data tab-index">1</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
-                            <td class="table-data">debra.holt@example.com</td>
-                            <td class="table-data">070893935083</td>
-                            <td class="table-data">120 Posts</td>
-                            <td class="table-data">3.4k Reach</td>
-                        </tr>
-                        <tr class="table-body-row">
-                            <td class="table-data tab-index">2</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
-                            <td class="table-data">debra.holt@example.com</td>
-                            <td class="table-data">070893935083</td>
-                            <td class="table-data">120 Posts</td>
-                            <td class="table-data">3.4k Reach</td>
-                        </tr>
-                        <tr class="table-body-row">
-                            <td class="table-data tab-index">3</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
-                            <td class="table-data">debra.holt@example.com</td>
-                            <td class="table-data">070893935083</td>
-                            <td class="table-data">120 Posts</td>
-                            <td class="table-data">3.4k Reach</td>
-                        </tr>
-                        <tr class="table-body-row">
-                            <td class="table-data tab-index">4</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
-                            <td class="table-data">debra.holt@example.com</td>
-                            <td class="table-data">070893935083</td>
-                            <td class="table-data">120 Posts</td>
-                            <td class="table-data">3.4k Reach</td>
-                        </tr>
-                        <tr class="table-body-row">
-                            <td class="table-data tab-index">5</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
-                            <td class="table-data">debra.holt@example.com</td>
-                            <td class="table-data">070893935083</td>
-                            <td class="table-data">120 Posts</td>
-                            <td class="table-data">3.4k Reach</td>
-                        </tr>
-                        <tr class="table-body-row">
-                            <td class="table-data tab-index">6</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
-                            <td class="table-data">debra.holt@example.com</td>
-                            <td class="table-data">070893935083</td>
-                            <td class="table-data">120 Posts</td>
-                            <td class="table-data">3.4k Reach</td>
-                        </tr>
-                        <tr class="table-body-row">
-                            <td class="table-data tab-index">7</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
-                            <td class="table-data">debra.holt@example.com</td>
-                            <td class="table-data">070893935083</td>
-                            <td class="table-data">120 Posts</td>
-                            <td class="table-data">3.4k Reach</td>
-                        </tr>
-                        <tr class="table-body-row">
-                            <td class="table-data tab-index">8</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
-                            <td class="table-data">debra.holt@example.com</td>
-                            <td class="table-data">070893935083</td>
-                            <td class="table-data">120 Posts</td>
-                            <td class="table-data">3.4k Reach</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <section class="navigation-bar">
-                    <div></div>
-                    <div class="pagination">
-                        <div><a class="arrow-btn" href=""><img src="assets/images/leftarrow.svg" alt=""></a></div>
-                        <div><a class="page-link active" href="">1</a></div>
-                        <div><a class="page-link" href="">2</a></div>
-                        <div><a class="page-link" href="">3</a></div>
-                        <div><a class="page-link" href="">4</a></div>
-                        <div><a class="page-link" href="">...</a></div>
-                        <div><a class="arrow-btn" href=""><img src="assets/images/rightarrow.svg" alt=""></a></div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
 
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Add Author</h2>
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <figure>
-                    <img src="assets/images/author.svg" alt="author-avatar">
-                </figure>
-                <form action="" method="post">
-                    <div class="inp-grp">
-                        <label for="fullname">Full name</label>
-                        <input type="text" name="fullname" placeholder="Full name" id="fullname">
+                <div class="graph-container">
+                    <div class="top-authors">
+                        <div class="author-labels">
+                            <p>Top Authors</p>
+                            <p>Last 6 months 
+                                <span>
+                                    <img src="assets/images/dropdown.svg" alt="">
+                                </span>
+                            </p>
+                        </div>
+                        <canvas id="myChart">Your browser doesn't support canvas</canvas>
                     </div>
-                    <div class="inp-grp">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" placeholder="Email Address" id="email">
+                    <div class="sharing-channel">
+                        <div class="author-labels">
+                            <p>Sharing Channel</p>
+                            <p>Last 6 months
+                                <span>
+                                    <img src="assets/images/dropdown.svg" alt="">
+                                </span>
+                            </p>
+                        </div>
+                        <canvas id="myChart2">Your browser doesn't support canvas</canvas>
                     </div>
-                    <div class="inp-grp">
-                        <label for="phone-number">Phone number</label>
-                        <input type="number" name="phoneNumber" placeholder="Phone Number" id="phone-number">
+                    <div class="authors">
+                        <div class="authors-list">
+                            <h3>Authors</h3>
+                            <div><img src="assets/images/forwardarrow.svg" alt="next"></div>
+                        </div>
+                        <div class="load-authors">
+                            <section>
+                                <div class="serial">1</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div class="serial">2</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div class="serial">2</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div class="serial">2</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div class="serial">1</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+
+                            <section>
+                                <div class="serial">2</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+
+                            <section>
+                                <div class="serial">3</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+
+                            <section>
+                                <div class="serial">4</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+
+                            <section>
+                                <div class="serial">5</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">120 posts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            
+                            <section>
+                                <div></div>
+                                <div>
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td class="author-email">jennywilson@gmail.com</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
                     </div>
-                    <div class="inp-grp">
-                        <button name="add-author" class="auth-btn" type="submit">Add Author</button>
+
+                    <div class="shared-authors">
+                        <div class="load-shared-authors">
+                            <div class="authors-list">
+                                <h3>Top Shared Author</h3>
+                                <!-- <div><img src="assets/images/forwardarrow.svg" alt="next"></div> -->
+                            </div>
+                            <section>
+                                <div class="serial">1</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                            <section>
+                                <div class="serial">2</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                            <section>
+                                <div class="serial">3</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                            <section>
+                                <div class="serial">4</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                            <section>
+                                <div class="serial">5</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                        </div>
                     </div>
-                </form>
+
+                    <div class="top-post">
+                        <div>
+                            <h3>Top Post</h3>
+                        </div>
+                        <div class="load-top-posts">
+                            <section>
+                                <div class="serial">1</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                                </td>
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+                            
+                            <section>
+                                <div class="serial">2</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                                </td>
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                            <section>
+                                <div class="serial">3</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                                </td>
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                            <section>
+                                <div class="serial">4</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                                </td>
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                            <section>
+                                <div class="serial">5</div>
+                                <div class="roader-details">
+                                    <table class="author-post-list">
+                                        <tbody>
+                                            <tr class="author-row-list">
+                                                <td class="author-row-td">
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                                </td>
+                                                <td class="author-row-td">
+                                                    <img src="assets/images/sample_image.png" alt="avatar">
+                                                </td>
+                                                <td class="author-row-td">Jenny Wilson</td>
+                                                <td class="author-row-td">3.4K shares</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div></div>
+                                <div></div>
+                            </section>
+
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+                
             </div>
         </div>
-    
     </div>
+    
 </body>
 </html>
