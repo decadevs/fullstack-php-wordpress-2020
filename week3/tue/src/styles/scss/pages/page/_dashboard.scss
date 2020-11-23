@@ -1,0 +1,60 @@
+.dashboard-body {
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-between;
+    width: 100%;
+    height: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    h5 {
+        font-weight: bold;
+        margin-top: 0.8rem;
+    }
+    .authors {
+        display: block;
+        width: 23rem;
+        height: 43.9375rem;
+        padding: 1rem;
+        background-color: $white;
+        .authors-heading {
+            height: 2.5rem;
+            @extend .d-flex;
+            @extend .justify-content-between;
+            img {
+                margin-top: 0.9rem;
+            }
+        }
+    }
+
+    .chart-box {
+        @extend .d-flex;
+        @extend .flex-column;
+        @extend .justify-content-between;
+        width: 58.2rem;
+        height: 43.9375rem;
+        .charts {
+            @extend .d-flex;
+            @extend .justify-content-between;
+        }
+        .top-shared-authors {
+            background-color: $white;
+            width: 22.6875rem;
+            height: 20.9375rem;
+            padding: 1rem;
+        }
+        .top-posts {
+            background-color: $white;
+            width: 33.75rem;
+            height: 20.9375rem;
+            padding: 1rem;
+        }
+        .data {
+            @extend .d-flex;
+            @extend .justify-content-between;
+        }
+    }
+}
+
+.header-section {
+    height: 5rem!important;
+}
