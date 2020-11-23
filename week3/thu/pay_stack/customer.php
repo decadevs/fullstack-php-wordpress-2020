@@ -22,7 +22,7 @@ class Customer extends Setup {
      ]));
 
      if($response && $response->status){    
-       echo 'Customer Created'; PHP_EOL();           
+       echo 'Customer Created' . PHP_EOL;          
         //return customer_code and ID
         return [
                 'first_name'=>$response->data->first_name,
@@ -53,7 +53,7 @@ class Customer extends Setup {
 $tester = new Customer('sk_test_be2fb87d138fce446cfc07e109abd880528ebfe4');
 
 /* create customer */
-    // print_r( $tester->createCustomer('kemi@outlook.com', 'kemi', 'adeyemi', '08093057922'));
+    print_r( $tester->createCustomer('tosan@outlook.com', 'tosan', 'eresanara', '08093057922'));
 
 /* list customers */
-    print_r($tester->listCustomers());
+    // print_r($tester->listCustomers());
