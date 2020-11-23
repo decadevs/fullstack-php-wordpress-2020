@@ -1,0 +1,226 @@
+.page--title{
+    @extend .fw-900;
+    color: $black;
+    font-size: 28px;
+    line-height: 33px;
+    padding: 2rem 0;
+    margin: 0;
+
+
+}
+
+
+.dashboard-body{
+    @extend .d-flex;
+    // @extend .align-items-center;
+    @extend .justify-content-between;
+    margin-bottom: 2rem;
+
+
+    .chartside{
+        width: 73%;
+        overflow: hidden;
+        @extend .d-flex;
+        @extend .flex-column;
+        gap: 1rem;
+        
+        .charts{
+            @extend .d-flex;
+            @extend .justify-content-between;
+            width: 100%;
+
+        }
+
+        .barchart{
+            width: 59%;
+            height: 100%;
+        }
+
+        .piechart{
+            width: 39%;
+            height: 100%;
+        }
+
+        .stats{
+            @extend .d-flex;
+            @extend .justify-content-between;
+
+            .top-shared-author{
+                padding: 1rem 1rem 0 1rem;
+                background-color: $white;
+                width: 39%;
+                font-size: 14px;
+                overflow-y: scroll;
+
+                .top-author-header{
+                    @extend .fw-700;
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding: 1rem 0;
+                }
+
+                .top-author-row{
+                    @extend .d-flex;
+                    @extend .align-items-center;
+                    @extend .justify-content-between;
+                    padding: 5px 0;
+
+                    .top-author-index{
+                        width: 15px;
+                    }
+
+                    .top-author-wrap{
+                        width: 100%;
+                        border-bottom: solid 1px $lightblue;
+                        padding: .2rem 0;
+                        @extend .d-flex;
+                        @extend .align-items-center;
+                        @extend .justify-content-between;
+                        
+
+                        .top-author-name{
+                            @extend .d-flex;
+                            @extend .align-items-center;
+                            @extend .justify-content-between;
+                        }
+
+                        .top-author-image{
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                            margin-right: .3rem;
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    .top-posts{
+        width: 59%;
+        height: 100%;
+        margin-left: 10px;
+        padding: 1rem;
+        font-size: 14px;
+        background-color: $white;
+    }
+
+    .top-post-header{
+        @extend .fw-700;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 1rem 0;
+    }
+
+    .top-post-row{
+        // @extend .justify-content-between;
+        @extend .align-items-center;
+        padding: 0 0 .65rem 0;
+    }
+
+    .post-index{
+        padding: 0 .8rem 0 0;
+        font-size: 14px;
+    }
+
+    .title-index{
+         @extend .justify-content-between;
+         @extend .align-items-center;
+         width: 100%;
+         padding-bottom: .5rem;
+         border-bottom: 1px solid $lightblue;
+    }
+
+    .top-post-title{
+        width: 280px;
+        line-height: 14.22px;
+        padding: 0 .3rem;
+    }
+
+    .pic-name-shares{
+        @extend .justify-content-between;
+        @extend .align-items-center;
+        width: 12rem;
+    }
+
+    .top-author-name{
+        @extend .align-items-center;
+    }
+
+    .top-author-image{
+        margin-right: .3rem;
+    }
+
+
+
+
+    .rightbar{
+        width: 26%;
+        // max-width: 28%;
+        padding: 1rem;
+        background: $white;
+        box-shadow: 0px 2px 10px rgba(76, 141, 235, 0.10077);
+        overflow-y: scroll;
+
+        .right--header{
+            padding-bottom: 1rem;
+            @extend .justify-content-between;
+            
+            .right-title{
+                @extend .fw-600;
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+
+
+        .author--row{
+            width: 100%;
+            margin: 1rem 0;
+
+            .index{
+                display: block;
+                padding: .3rem 0;
+                width: 15px;
+                
+            }
+
+            .author--name-email{
+                border-bottom: solid 1.5px $lightblue;
+                width: 100%;
+                margin-left: .4rem;
+                padding-bottom: .4rem;
+                @extend .justify-content-between;
+
+                .author--photo{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    display: block;
+                    margin: 0 .4rem 0 0;
+                }
+
+                .name--posts{
+                    @extend .justify-content-between;
+                    width: 100%;
+                    padding: .3rem 0;
+                    font-size: 1rem;
+                    
+                }
+
+                .email{
+                    display: block;
+                    padding: .3rem 0;
+                    font-size: 14px;
+                }
+            }
+        }
+    
+    }
+
+}
+
