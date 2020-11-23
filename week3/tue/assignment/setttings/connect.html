@@ -76,7 +76,32 @@
         </div>
 
     </div>
+    <div class="modal">
+    
+        <form class="form modal-form">
+          <div class="form-header name">
+            <h2>Add Website</h2>
+            <p id="close">X</p>
+          </div>
+          <div class="form-group">
+            <label for="url">Website Url</label>
+            <input type="text" name="url" class="form-control max-width" id="url" placeholder="Enter url">
+          </div>
+          <input type="submit" value="Add Website"  id="myBtn" class="btn max-width">
+        
+        </form>
+    </div>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        let modalEle = document.querySelector(".modal");
+        document.querySelector("#myBtn").addEventListener("click", () => {
+        modalEle.style.display = "block";
+        });
+        document.querySelector("#close").addEventListener("click", () => {
+        modalEle.style.display = "none";
+        });
+        
+    </script>
 </body>
 
 </html>
