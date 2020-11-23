@@ -1,0 +1,10 @@
+.profile--container{
+    padding: 0 1.5rem;
+    @extend .d-flex;
+}
+
+.settings--icon{
+    width: 2.25rem; height: 2.25rem;
+    background-color: red; display: block;
+    text-align: center; font-size: 1.2rem; border: black thin solid;
+}

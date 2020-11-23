@@ -64,6 +64,9 @@
     @extend .align-items-center;
     @extend .justify-content-between;
 }
+.table-title{
+  color: $black; font-weight: bold;
+}
 .btn-table{
    border-radius: 0.25rem; 
    padding-left: 2rem;
