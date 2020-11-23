@@ -1,0 +1,28 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 100vh;
+  }
+  .columns:nth-child(1){
+    background: red;
+    grid-column: 1/6;
+  }
+  .columns:nth-child(2){
+    background: green;
+    grid-column: 6/10;
+  }
+  .columns:nth-child(3){
+    background:yellow;
+    grid-column: 10/-1;
+    grid-row: 1/-1;
+  }
+  .columns:nth-child(4){
+    background: blue;
+    grid-column: 1/5;
+  }
+  .columns:nth-child(5){
+    background: orange;
+    grid-column: 5/10;
+  }

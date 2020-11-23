@@ -5,7 +5,7 @@
   display: block;
   background-color: $primary;
   max-width: 3.75rem;
-  height: 100%;
+  height: 130%;
   flex: 1;
 }
 .dashboard--authors {
@@ -73,7 +73,6 @@
     display: block;
     padding: 1.5rem 3.37rem 1.5rem 4rem;
     @extend .d-flex;
-    @extend .align-items-center;
     @extend .justify-content-between;
 }
 .table--body{

@@ -1,0 +1,79 @@
+.table--heading{
+    .navigation{
+       color: $primary; 
+       font-weight: 600;
+       line-height: 18.96px;
+       @extend .d-flex;
+       @extend .align-items-center;
+       margin: 0.9rem 0 0.9rem 0 ;
+        img{
+            margin-right: 0.2rem;
+        }
+    }
+    .table-title-1{
+        font-weight: 900; 
+        margin-top: 0;   
+
+    }
+    .table-title-2{
+        font-weight: 600; 
+        margin: 0.9rem auto 0.9rem auto;
+    }
+   .search--area-1{
+        @extend .search--area;
+        width: 46rem;
+        height: 45px;
+   }
+   .input-margin{
+        margin-bottom: 1rem;
+   }
+}
+.thead{
+  
+    @extend .d-flex;
+    background: $lightblue;
+    width: 100%;
+    @extend .align-items-center;
+}
+.table--head--wrap{
+    @extend .d-flex;
+    @extend .align-items-center;
+    background: $lightblue;
+    width: 100%;
+    margin: 0rem 1.3rem 0rem 1.2rem;
+    height: 4.4375rem;
+    font-weight: 600;
+
+    span{
+        line-height: 19px;
+    }
+    .post--number{
+        width: 1.9rem;
+        text-align: left;
+        
+    }
+    .post--title{
+        width: 32rem;
+        padding: auto 0.4rem;
+    }
+    .post--date{
+        width: 22rem;
+        margin: auto 1rem;
+
+    }
+    .post--view{
+        width: 21rem;
+    }
+
+}
+.tbody{
+    @extend .thead;
+    background: $white;
+    .table--body--wrap{
+        @extend .table--head--wrap;
+        background: $white;
+        font-weight: normal !important;
+        border-bottom: 1px solid $lightblue;
+        
+    }
+}

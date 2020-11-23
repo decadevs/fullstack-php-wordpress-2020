@@ -1,10 +1,10 @@
 /////////////////////////////////////////////////////////
 // Typography                                          //
 /////////////////////////////////////////////////////////
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 // Type Defaults
 //// Base
-$hfont : 'Roboto', sans-serif !default;
+$hfont : 'Rubik' !default;
 $bfont : $hfont !default;
 $line-height-base: 1.5!default;
 //// Mobile Sizes
@@ -49,9 +49,9 @@ body {
 //// Defaults
 .heading {
 	font-family: $hfont;
-	font-weight: 300;
+	font-weight: 400;
 	color: $headingcolor;
-	strong {font-weight: 400;}
+	strong {font-weight: 500;}
 }
 .body {
 	font-family: $bfont;
