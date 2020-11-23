@@ -5,7 +5,7 @@
   display: block;
   background-color: $primary;
   max-width: 3.75rem;
-  height: 100%;
+  min-height: 100%;
   flex: 1;
 }
 .dashboard--authors {
@@ -50,7 +50,7 @@
     @extend .d-flex;
     @extend .align-items-center;
     @extend .justify-content-between;
-    padding: 1.6125rem 1.1rem;
+    padding: 0.6125rem 1.1rem;
 }
 .table--container{
     background-color: $lightpurple;
@@ -61,7 +61,123 @@
     @extend .d-flex;
     @extend .align-items-center;
     @extend .justify-content-between;
+    height: 5.5rem;
 }
+
+.arrow-image {
+  height: 1rem;
+}
+
+.go-back {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+  margin-top: 0.5rem;
+  width: 5.5rem;
+}
+
+.back {
+  height: inherit;
+}
+.authors--posttable--header {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .align-items-start;
+}
+
+.posttable--header--content {
+  height: 10rem;
+}
+.table-title {
+  font-weight: bolder!important;
+}
+
+.filter--div {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+.post--search {
+  width: 45rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  padding-left: 2rem;
+  background-image: url("/week3/tue/assets/images/Search\ Image.svg");
+  background-repeat: no-repeat;
+  background-position: 0.7rem 0.7rem;
+}
+
+
+// styling for filter
+
+.filter {
+  color: $black;
+  font-weight: bolder;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+}
+
+.selectBox {
+  position: relative;
+  // top: -1px;
+  border: none;
+}
+
+.carret {
+  position: relative;
+  top: -2px;
+  font-weight: bold;
+}
+.carret:hover {
+  cursor: pointer;
+}
+.selectedOpt {
+  width: 11.375rem;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+  border: 1px solid lightgrey;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 3px;
+  height: 2.5rem;
+  background-color: $white;
+  line-height: 27px; 
+}
+.openSelect .selectedOpt {
+  border: 1px solid #ddd;
+}
+.option {
+    display: block;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 20px;
+    border-bottom: 1px solid $lightblue;
+}
+.option:hover {
+  background: $lightblue;
+}
+.optList {
+  position: absolute;
+  top: 1.4rem;
+  right: 1rem;
+  z-index: 1;
+  border: 1px solid #ddd;
+  background-color: $white;
+  padding: 0rem 0.5rem;
+  width: 11.375rem;
+}
+.option .selected {
+  background: $lightblue;
+}
+
+
+
 .btn-table{
    border-radius: 0.25rem; 
    padding-left: 2rem;
@@ -70,7 +186,7 @@
 
 .table--head{
     background-color: $lightblue;
-    padding: 1.5rem 3.37rem 1.5rem 4rem;
+    padding: 1.2rem 3.37rem 1.2rem 4rem;
     @extend .d-flex;
     @extend .align-items-start;
     @extend .justify-content-between;
@@ -82,7 +198,7 @@
 
 .table-row{
     border-bottom: 1px solid $lightblue;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     padding-right: 2.5rem;
     @extend .d-flex;
     @extend .align-items-start;
@@ -176,7 +292,7 @@
     margin-bottom: 20px;
     border: 1px solid lightgrey;
     border-radius: 4px;
-    background-color: $lightblue;
+    background-color: $lightpurple;
     padding: 0px 15px;
   }
 
@@ -209,4 +325,60 @@
 
 #pic {
   display: none;
+}
+
+.pagination {
+  @extend .d-flex;
+  @extend .justify-content-end;
+}
+
+.pagination-child {
+  @extend .d-flex;
+  @extend .justify-content-between;
+  width: 35%;
+  margin: 15px;
+}
+
+.arrow-btn {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  background-color: none;
+  border: none;
+  color: $black;
+  padding: 0px 10px;
+}
+
+.page-btn {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  background-color: $white;
+  color: $black;
+  border: none;
+  border-radius: 4px;
+}
+
+.selected {
+  border-radius: 4px;
+}
+
+.head--first {
+  @extend .d-flex;
+  @extend .align-items-start;
+  width: 28.5rem!important;
+}
+
+.row--first {
+  @extend .d-flex;
+  @extend .align-items-start;
+  width: 30rem!important;
+}
+
+.author-name {
+  margin-left: 1rem;
+}
+
+span {
+  font-size: 1rem;
 }

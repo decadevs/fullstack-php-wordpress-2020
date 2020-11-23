@@ -1,0 +1,164 @@
+.profile-settings {
+    position: absolute;
+    top: 10.125rem;
+    left: 27.3125rem;
+    border-radius: 10px;
+    @extend .d-flex; 
+    background-color: $white;
+    width: 60rem;
+    height: 38.6875rem;
+}
+
+.settings-options {
+    position: absolute;
+    top: 9rem;
+    left: 5rem;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-items-start;
+    @extend .justify-content-between;
+    height: 15rem;
+}
+
+.link {
+    @extend .d-flex;
+    @extend .justify-content-between;
+    min-width: 5rem;
+}
+
+.link img {
+    margin-right: 1rem;
+}
+
+.link h5 {
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.link h6 {
+    margin: 0px;
+    font-size: 0.8rem;
+}
+
+.profile-top h5 {
+    color: $lightgrey;
+}
+
+.profile-top {
+    height: 9rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.profile-top h4, .profile-top h5 {
+    margin: 10px;
+}
+
+.profile-settings {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-items-start;
+}
+
+.profile-body {
+    height: 35rem;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    @extend .d-flex;
+    @extend .flex-column;
+    // @extend .align-items-start;
+    form {
+        @extend .d-flex;
+        @extend .flex-column;
+        width: inherit;
+    }
+    .author-pic {
+        margin: 0.5rem 0rem 1.3rem;
+    }
+    input[type="submit"] {
+        opacity: 0.3;
+        width: 19.125rem!important;
+    }
+    button {
+        width: 15.625rem;
+        background-color: $white;
+        border-color: $lightgrey;
+        color: darkgrey;
+        border-radius: 5px;
+    }
+    .form-submit {
+        @extend .justify-content-end;
+    }
+    .table--body {
+        padding-top: 2rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .table-row {
+        padding-right: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    background-color: $lightgrey;
+}
+
+.form-inputs-container {
+    width: inherit;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    input {
+        @extend .d-flex;
+        width: 26rem;
+    }
+}
+
+.form-submit-container {
+    width: 68%;
+    @extend .d-flex;
+    @extend .justify-content-between;
+}
+
+.add-website-form {
+    form {
+        padding: 2rem 0rem;
+    }
+}
+
+.row-info {
+    width: 95%;
+    @extend .d-flex;
+    @extend .justify-content-between;
+}
+
+.delete {
+    font-weight: bolder;
+}
+
+.token-container {
+    padding: 10px;
+    height: 4.375rem;
+    width: inherit;
+    background-color: $lightpurple;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-between;
+    h4 {
+        margin: 0;
+        padding: 1rem 1.25rem;
+        border-radius: 4px;
+    }
+    a {
+        height: 3.125rem;
+    }
+}
+
+.instruction {
+    margin-block-start: 0rem;
+    margin-block-end: 2.5rem;
+}
