@@ -20,14 +20,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DDE9FB;
+    background: #F9FAFF;
 }
 
 .my-form{
-    width: 380px;
+    width: 370px;
     background-color: #ffffff;
-    padding: 3rem;
-    padding-top: 2rem ;
+    padding: 2.5rem;
+    padding-top: 1.5rem ;
 }
 
 .signup--logo{
