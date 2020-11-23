@@ -38,7 +38,7 @@ class Paystack{
     public function createCustomer(array $data):string{
         try{
             
-            if(!$this->has_unecessary_data($data)){
+            if(!$this->has_unnecessary_data($data)){
                 throw new Exception("Too many Data to create your profile");
             }
             if(!$this->is_data_not_empty($data)){
@@ -84,7 +84,7 @@ class Paystack{
      * @param array data to pass to the API
      * @return boolean false if more than 4 and true otherwise
      */
-    protected function has_unecessary_data(array $data): bool{
+    protected function has_unnecessary_data(array $data): bool{
         if(count($data)>4){
             return false;
         }
