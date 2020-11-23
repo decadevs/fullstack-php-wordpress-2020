@@ -1,7 +1,9 @@
+
 .dashboard-sidebar {
   @extend .d-flex;
   @extend .flex-column;
   @extend .align-items-center;
+  @extend .justify-content-between;
   display: block;
   background-color: $primary;
   max-width: 3.75rem;
@@ -109,3 +111,94 @@
   .hide-bottom{
       border-bottom: none;
   }
+
+  .modal-bg{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(0,0,0,0.5);
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibilty 0, opacity 0.5s;
+  }
+
+  .activate-modal{
+    visibility: visible; opacity: 1;
+  }
+
+  .modal{
+    background-color: $white;
+    padding: 20px 20px 0 20px; border-radius: 5px;
+  }
+
+  .frm-title{
+    @extend .d-flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+    border-bottom: $line solid thin;
+  }
+
+  .frm-title h6{
+    margin-block-start: 0.33em;
+    margin-block-end: 0.33em;
+    font-weight: bold;
+  }
+
+  .form-group{
+    @extend .d-flex;
+    @extend .flex-column;
+    margin: 10px 0;
+  }
+
+  .form-group label{
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .form-control{
+    width: 300px; height: 35px;
+    background-color: $lightpurple;
+    border: $line solid thin;
+  }
+  .close-modal{
+    color: rgba(0,0,0, 0.3); cursor: pointer;
+  }
+
+  .btnsubmit{
+    width: 300px !important; margin-top: 10px;
+    height: 40px; border-radius: 5px !important;
+    padding: 10px 24px !important;
+  }
+
+  .author-img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%; overflow: hidden;
+    margin-top: 20px; margin-bottom: 10px;
+  }
+  .author-img img{
+    max-width: 100px; max-height: 96px;
+    display: block; margin: auto;
+  }
+
+  .menu-icon{
+    width: 2.8rem; height: 2.8rem; border-radius: 0.312rem; font-size: 1.12rem; padding-top: 0.81rem;
+    text-align: center;background-color: rgba(35, 80, 188, 0.3); color: $white; cursor: pointer;
+  }
+  .menu-icon2{color: $white; opacity: 0.5; font-size: 18px; cursor: pointer;}
+
+  .signout{font-size: 1.12rem; color: $white; padding-bottom: 2.5rem; cursor: pointer;}
+
+  .pagination{@extend .d-flex; @extend .justify-content-end; margin-top: 0.625rem;}
+  .paginate{@extend .d-flex; @extend .justify-content-between; @extend .align-items-center; width: 30%;}
+  .page{
+    width: 3.0rem; height: 3.0rem; background-color: $white; 
+    border-radius: 0.312rem; text-align: center; padding-top: 0.93rem;
+  }
+  .active{background-color: $primary; color: $white;}

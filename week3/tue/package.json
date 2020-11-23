@@ -1,7 +1,7 @@
 {
   "name": "static-page",
   "version": "1.0.0",
-  "description": "",
+  "description": "- Clone the repo: `git clone https://github.com/decadevs/fullstack-php-wordpress-2020.git`\r - Install dependencies with [npm](https://www.npmjs.com/): `npm install`\r - Run the gulp watch command in your terminal: `npm run gulpwatch`",
   "main": "gulpfile.js",
   "dependencies": {
     "del": "^6.0.0",
@@ -13,8 +13,8 @@
     "gulp-uglify": "^3.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
     "gulp-babel": "^8.0.0"
   },
   "scripts": {
