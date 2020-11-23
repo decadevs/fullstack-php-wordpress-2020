@@ -138,7 +138,9 @@ class Paystack{
     }
 
 }
+    $secret_key = "";
     $paystack = new Paystack($secret_key);
+
     $data = [
         "first_name" => "Biola",
         "last_name" => "Dapo",
@@ -146,6 +148,6 @@ class Paystack{
         "phone" => "08071717970",
     ];
     $res = $paystack->createCustomer($data);
-    // $res = $paystack->getCustomers(3,2);
+    $res = $paystack->getCustomers(3,2);
     var_dump($res);
 ?>
