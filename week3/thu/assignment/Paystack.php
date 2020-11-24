@@ -27,15 +27,15 @@ class Paystack
         ];
 
         if (!filter_var($fields["email"], FILTER_VALIDATE_EMAIL)) {
-            echo "Invalid email format";
+            die("Invalid email format");
         }
 
         if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["first_name"])) {
-            echo "Only letters and white space allowed";
+            die("Only letters and white space allowed");
         }
 
         if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["last_name"])) {
-            echo "Only letters and white space allowed";
+            die ("Only letters and white space allowed");
         }
 
 
