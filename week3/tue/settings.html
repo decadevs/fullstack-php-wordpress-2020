@@ -45,14 +45,52 @@
                 </h2>
             </div>
             <div class="profile--container">
-                <div class="setting--menu">
-                    <div><div class="settings--icon"><i class="far fa-user"></i></div> Profile Settings</div>
-                    <div><span class="settings--icon"><i class="far fa-user"></i></span> Security</div>
-                    <div><span class="settings--icon"><i class="far fa-user"></i></span> Connect Website</div>
-                    <div><span class="settings--icon"><i class="far fa-user"></i></span> Get Token</div>
+                <div class="setting--wrapper">
+                    <div class="setting--menu"><span class="setting--icon"><i class="far fa-user-circle"></i></span> <span class="current">Profile Settings</span></div>
+                    <div class="setting--menu"><span class="setting--icon"><i class="fas fa-lock"></i></span> Security</div>
+                    <div class="setting--menu"><span class="setting--icon"><i class="far fa-user"></i></span> Connect Website</div>
+                    <div class="setting--menu"><span class="setting--icon"><i class="far fa-user"></i></span> Get Token</div>
                 </div>
                 <div class="profile--body">
-                    
+                    <div class="title--line">
+                        <h2 class="profile--title">Profile Settings</h2>
+                        <h6 class="profile--subtitle">Edit basic information about you</h6>
+                    </div>
+                    <div class="profile--form">
+                        <form action=""  method="post" class="profileForm">
+                            <div class="pix--group">
+                                <div class="profile--pix"></div>
+                                <div class="camera--cover"><div class="camera-bg"><div class="camera"></div></div></div>
+                            </div>
+                            <div class="form--group">
+                                <div class="input--group">
+                                    <label for="firstName">Enter your First Name</label>
+                                    <input type="text" id="firstName" class="form--input" value="John">
+                                </div>
+                                <div class="input--group">
+                                    <label for="lastName">Enter your Last Name</label>
+                                    <input type="text" id="lastName" class="form--input" value="John">
+                                </div>
+                            </div>
+                            <div class="form--group">
+                                <div class="input--group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form--input" value="john@gmail.com">
+                                </div>
+                                <div class="input--group">
+                                    <label for="phone">Phone Number</label>
+                                    <input id="phone" class="form--input" value="070680373937">
+                                </div>
+                            </div>
+                            <div class="btn--group">
+                                <div class="btn--wrapper">
+                                    <button type="button" class="btn--cancel">Cancel</button>
+                                    <button type="submit" class="btn--save">Save Changes</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
             </div>
 
