@@ -25,6 +25,20 @@ class Paystack
             'last_name' => $fields["last_name"],
             'phone' => $fields["phone"]
         ];
+
+        if (!filter_var($fields["email"], FILTER_VALIDATE_EMAIL)) {
+            echo "Invalid email format";
+        }
+
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["first_name"])) {
+            echo "Only letters and white space allowed";
+        }
+
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["last_name"])) {
+            echo "Only letters and white space allowed";
+        }
+
+
         $fields_string = http_build_query($fields);
         //open connection
         $ch = curl_init();
