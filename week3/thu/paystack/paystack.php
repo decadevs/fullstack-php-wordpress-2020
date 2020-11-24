@@ -1,6 +1,11 @@
 <?php
 
 class Paystack {
+  private $secreteKey;
+
+  function __construct($secreteKey) {
+    $this->secreteKey = $secreteKey;
+  }
 
     function createCustomer($fields) {
 
@@ -16,7 +21,7 @@ class Paystack {
         curl_setopt($ch,CURLOPT_POST, true);
         curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        "Authorization: Bearer sk_test_9081ce3c5ade85d7e9fb685a121eb6f64bba1d06",
+        "Authorization: Bearer " . "$this->secreteKey",
         "Cache-Control: no-cache",
         ));
         
@@ -40,7 +45,7 @@ class Paystack {
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => array(
-           "Authorization: Bearer sk_test_9081ce3c5ade85d7e9fb685a121eb6f64bba1d06",
+           "Authorization: Bearer " . "$this->secreteKey",
            "Cache-Control: no-cache",
           ),
         ));
@@ -58,15 +63,13 @@ class Paystack {
     }
 }
 
-$paystack = new Paystack();
-// $fields = [
-//     'email' => "",
-//     'first_name' => "",
-//     'last_name' => "",
-//     'phone' => ""
-//     ];
-// $res = $paystack->createCustomer($fields);
-// echo $res;
+$paystack = new Paystack("sk_test_9081ce3c5ade85d7e9fb685a121eb6f64bba1d06");
+$paystack->createCustomer([
+  'email' => "",
+  'first_name' => "",
+  'last_name' => "",
+  'phone' => ""
+  ]);
 
 $customers = $paystack->listCustomers();
 echo $customers;
