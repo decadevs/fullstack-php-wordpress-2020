@@ -2,12 +2,9 @@ $(window).on("load", function (e) {
     $(".selectCodePen").hide();
     $(".filter").append('<div class="selectedOpt">Select filter<span class="carret">⌵</span></div><div class="selectBox"><div class="optList"></div></div>');
     var getSelectHtml = $(".selectCodePen").html();
-    console.log(getSelectHtml);
     getSelectHtml = getSelectHtml.replace(/<option>/g, '<div class="option">');  
     getSelectHtml = getSelectHtml.replace(/<\/option>/g,"</div>");
-    console.log(getSelectHtml);
     var optionLength =  $(".selectCodePen").find("option").length;
-    console.log(optionLength);
 
     $(".optList").append(getSelectHtml);
     $(".optList").hide();
