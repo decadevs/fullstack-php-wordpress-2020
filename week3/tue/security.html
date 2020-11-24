@@ -46,40 +46,34 @@
             </div>
             <div class="profile--container">
                 <div class="setting--wrapper">
-                    <div class="setting--menu"><span class="setting--icon"><i class="far fa-user-circle"></i></span> <span class="current">Profile Settings</span></div>
-                    <div class="setting--menu"><span class="setting--icon"><img src="/week3/tue/assets/images/Path244.png" alt="" ></span> Security</div>
+                    <div class="setting--menu"><span class="setting--icon"><i class="far fa-user-circle"></i></span> <span>Profile Settings</span></div>
+                    <div class="setting--menu"><span class="setting--icon"><img src="/week3/tue/assets/images/Path244.png" alt="" ></span> <span class="current"> Security</span></div>
                     <div class="setting--menu"><span class="setting--icon connector"><img src="/week3/tue/assets/images/Vector_3.png" class="plug1" alt="" ><img src="/week3/tue/assets/images/Vector_1.png" class="plug" alt="" ></span> Connect Website</div>
                     <div class="setting--menu"><span class="setting--icon connector"><img src="/week3/tue/assets/images/Vector_2.png" class="token" alt="" ></span> Get Token</div>
                 </div>
                 <div class="profile--body">
                     <div class="title--line">
-                        <h2 class="profile--title">Profile Settings</h2>
-                        <h6 class="profile--subtitle">Edit basic information about you</h6>
+                        <h2 class="profile--title">Security</h2>
+                        <h6 class="profile--subtitle">Update your password.</h6>
                     </div>
                     <div class="profile--form">
                         <form action=""  method="post" class="profileForm">
-                            <div class="pix--group">
-                                <div class="profile--pix"></div>
-                                <div class="camera--cover"><div class="camera-bg"><div class="camera"></div></div></div>
+                            
+                            <div class="form--group">
+                                <div class="input--group">
+                                    <label for="current">Current Password</label>
+                                    <input type="password" id="current" class="form--input" value="JohnJohn">
+                                </div>
+                                
                             </div>
                             <div class="form--group">
                                 <div class="input--group">
-                                    <label for="firstName">Enter your First Name</label>
-                                    <input type="text" id="firstName" class="form--input" value="John">
+                                    <label for="new-pswd">New Password</label>
+                                    <input type="password" id="new-pswd" class="form--input" value="070680373937">
                                 </div>
                                 <div class="input--group">
-                                    <label for="lastName">Enter your Last Name</label>
-                                    <input type="text" id="lastName" class="form--input" value="John">
-                                </div>
-                            </div>
-                            <div class="form--group">
-                                <div class="input--group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" id="email" class="form--input" value="john@gmail.com">
-                                </div>
-                                <div class="input--group">
-                                    <label for="phone">Phone Number</label>
-                                    <input id="phone" class="form--input" value="070680373937">
+                                    <label for="confirm">Confirm New Password</label>
+                                    <input type="password" id="confirm" class="form--input" value="070680373937">
                                 </div>
                             </div>
                             <div class="btn--group">

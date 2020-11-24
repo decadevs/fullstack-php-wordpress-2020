@@ -9,11 +9,19 @@
     text-align: center; padding-top: 0.44rem; font-size: 1.2rem; color: $primary;
     border-radius: 0.31rem;
 }
+.setting--icon.connector{
+    position: relative;
+}
+.setting--icon.connector .plug{position: absolute; top: 14px; left: 11px;}
+.setting--icon.connector .plug1{position: absolute; top: 8px; left: 15px;}
+.setting--icon.connector .token{position: absolute; top: 11px; left: 9px;}
+.setting--menu{display: flex; align-items: center;}
 .setting--menu .current{font-weight: 700;}
 .profile--body{
     width: 60rem; border-radius: 0.625rem;
     background-color: $white; margin-bottom: 6.125rem;
 }
+.profile--body.website{height: 619px;}
 .profile--title{
     margin-bottom: 0; font-weight: 700;
     

@@ -51,52 +51,47 @@
                     <div class="setting--menu"><span class="setting--icon connector"><img src="/week3/tue/assets/images/Vector_3.png" class="plug1" alt="" ><img src="/week3/tue/assets/images/Vector_1.png" class="plug" alt="" ></span> Connect Website</div>
                     <div class="setting--menu"><span class="setting--icon connector"><img src="/week3/tue/assets/images/Vector_2.png" class="token" alt="" ></span> Get Token</div>
                 </div>
-                <div class="profile--body">
+                <div class="profile--body website">
                     <div class="title--line">
-                        <h2 class="profile--title">Profile Settings</h2>
-                        <h6 class="profile--subtitle">Edit basic information about you</h6>
+                        <h2 class="profile--title">Connect Website</h2>
+                        <h6 class="profile--subtitle">Add website to begin tracking</h6>
                     </div>
                     <div class="profile--form">
-                        <form action=""  method="post" class="profileForm">
-                            <div class="pix--group">
-                                <div class="profile--pix"></div>
-                                <div class="camera--cover"><div class="camera-bg"><div class="camera"></div></div></div>
-                            </div>
-                            <div class="form--group">
-                                <div class="input--group">
-                                    <label for="firstName">Enter your First Name</label>
-                                    <input type="text" id="firstName" class="form--input" value="John">
-                                </div>
-                                <div class="input--group">
-                                    <label for="lastName">Enter your Last Name</label>
-                                    <input type="text" id="lastName" class="form--input" value="John">
-                                </div>
-                            </div>
-                            <div class="form--group">
-                                <div class="input--group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" id="email" class="form--input" value="john@gmail.com">
-                                </div>
-                                <div class="input--group">
-                                    <label for="phone">Phone Number</label>
-                                    <input id="phone" class="form--input" value="070680373937">
-                                </div>
-                            </div>
-                            <div class="btn--group">
-                                <div class="btn--wrapper">
-                                    <button type="button" class="btn--cancel">Cancel</button>
-                                    <button type="submit" class="btn--save">Save Changes</button>
-                                </div>
-                            </div>
+                        <form class="profileForm">
+                            <button class="btn-website">Add website</button>
                         </form>
                     </div>
 
                 </div>
             </div>
-
         </div>
         
     </div>
+
+    <div class="modal-bg">
+        <div class="modal">
+            <form action="" method="post" class="modal-frm">
+                <div class="frm-title">
+                    <h6>Add Website</h6><span class="close-modal"><i class="fas fa-times"></i></span>
+                </div>
+                <div class="author-img"><img src="assets/images/authorpix.jpg" alt="author image"></div>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input id="fullname" class="form-control" type="text" placeholder="Full name" >
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input id="email" class="form-control" type="email" placeholder="Email address" >
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" class="form-control" type="tel" placeholder="Phone number" >
+                </div>
+                <input class="btnsubmit" type="submit" value="Add Author">
+            </form>
+        </div>
+    </div>
+    <script src="js/home.js"></script>
 
 </body> 
 </html>
