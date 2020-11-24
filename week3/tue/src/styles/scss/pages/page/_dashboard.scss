@@ -2,13 +2,10 @@
     display: grid;
     grid-gap: 1.3rem;
     grid-template-columns: repeat(3,1fr);
-    border: 1px solid blue;
 }
 
 #myChart{
-    // border: 2px solid red;
     height: inherit;
-    // width: 4rem;
 }
 
 .top-authors{
@@ -17,12 +14,6 @@
     width: 30vw;
     padding: 1rem;
     background-color: $white;
-    // grid-column-start: 1;
-    // grid-column-end: 2;
-    // grid-row-start: 1;
-    // grid-row-end: 2;
-    // border: 1px solid rgb(238, 93, 112);
-    // border: 1px solid yellow;
 }
 
 .author-labels{
@@ -36,7 +27,6 @@
     width: 30vw;
     padding: 1rem;
     background-color: $white;
-    // border: 2px solid red;
 }
 
 .authors{
@@ -53,13 +43,12 @@
     @extend .justify-content-between;
     @extend .align-items-center;
 }
+
 .authors-list h3{
     margin: 0;
 }
 
-
 [class^="load"] section{
-    // border: 1px solid red;
     @extend .d-flex;
     @extend .align-items-center;
     @extend .justify-content-between;
@@ -68,7 +57,6 @@
 
 [class^="load"] section>:first-child{
     width: 10%;
-    // border: 1px solid green;
 }
 
 [class^="load"] section:nth-of-type(even)>div:nth-of-type(even){
@@ -76,20 +64,11 @@
     width: 84%;
     padding-left: 2.1rem;
     padding-bottom: 1rem;
-    // margin: auto;
-
 }
 
 .roader-details{
     width: 85%;
 }
-
-// .author-post-list p{
-//     margin: 0;
-//     // border: 1px solid red;
-//     padding: 0 1rem;
-//     padding-right: 2.0rem;
-// }
 
 .author-post-list img{
     width: 26px;
@@ -101,7 +80,6 @@
 }
 
 .author-row-list{
-    // border: 2px solid yellowgreen;
     width: 100%;
 }
 
@@ -113,19 +91,8 @@
     padding-right: 1.4rem;
 }
 
-// .author-details{
-//     border: 1px solid brown;
-//     // column-span: 4;
-//     // margin-right: 90px;
-// }
-
-// .author-name{
-//     font-size: 1rem;
-// }
-
 .author-email{
     font-size: 12px;
-    // border: 1px solid red;
     margin-left: -20px;
     letter-spacing: 0.03rem;
 }

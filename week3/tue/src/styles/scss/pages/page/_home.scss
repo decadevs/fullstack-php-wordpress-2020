@@ -11,7 +11,7 @@
   padding-bottom: 65px;
 }
 
-.signoout-item a{
+.signout-item a{
   @extend .d-flex;
   @extend .justify-content-between;
   @extend .align-items-center;
@@ -44,25 +44,21 @@
 
 .menu-item {
   margin-bottom: 2rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.menu-item.active-one{
+  background-color: rgba(0,0,0,0.2);
 }
 
 .search--area {
   background: $white;
-  border: 1px solid rgba(76, 141, 235, 0.186481);
-  box-sizing: border-box;
+  border: 1px solid $lightblue;
   border-radius: 5px;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
   color: $darkgrey;
-  width: 20.25rem;
-}
-
-.avatar{
-  height: 2.75rem;
-  width: 2.75rem;
-  background-color: red;
-  border-radius: 50%;
 }
 
 .searchbar{
@@ -132,9 +128,19 @@
 .table-head-data{
   padding: 1.3rem 0;
 }
+
+.table-data:nth-of-type(2){
+  display: flex;
+  align-items: center;
+}
+
 .table-data{
   padding: 15px 0;
   font-size: 1rem;
+}
+
+.table-data-name{
+  margin: 0 0.9rem;
 }
 
 .tab-index{
@@ -163,7 +169,7 @@
   @extend .d-flex;
   @extend .align-items-center;
   @extend .justify-content-between;
-  width: 50%;
+  // width: 50%;
 }
 
 .page-link{
@@ -172,7 +178,11 @@
   padding: 1.3rem;
   color: $primary;
   border-radius: 5px;
-  margin: 0 8px;
+  margin: 0 0.7rem;
+}
+
+.page-link:hover{
+  background-color: rgb(235, 235, 235);
 }
 
 .active{
