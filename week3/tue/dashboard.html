@@ -16,27 +16,27 @@
                 <span class="logo-white">
                     
                 </span>
-                <span class="menu-item">
-                    <a href="/">
-                        <img src="assets/images/home.svg" alt="home">
+                <span class="menu-item active-one">
+                    <a class="" href="dashboard.html">
+                        <img src="assets/images/home.svg" alt="dashboard">
                     </a>
                 </span>
                 <span class="menu-item">
-                    <a href="/">
-                        <img src="assets/images/people.svg" alt="people">
+                    <a href="home.html">
+                        <img src="assets/images/people.svg" alt="author">
                     </a>
                 </span>
                 <span class="menu-item">
-                    <a href="/">
+                    <a href="settings.html">
                         <img src="assets/images/settings.svg" alt="settings">
                     </a>
                 </span>
             </div>
             <div class="signout">
-                <span class="signoout-item">
+                <span class="signout-item">
                     <a href="/">
-                        <img class="signout-item-img" src="assets/images/arrowbar.svg" alt="">
-                        <img class="signout-item-img" src="assets/images/arrowicon.svg" alt="">
+                        <img class="signout-item-img" src="assets/images/arrowbar.svg" alt="arrow">
+                        <img class="signout-item-img" src="assets/images/arrowicon.svg" alt="bar">
                     </a>
                 </span>
             </div>
@@ -44,9 +44,13 @@
         <div class="dashboard--authors">
             <div class="searchbar">
                 <div>
-                    <input type="text" class="search--area" placeholder="Search for author">
+                    <form action="" method="get">
+                        <input type="search" class="search--area" placeholder="Search for author">
+                    </form>
                 </div>
-                <div class="avatar"></div>
+                <div>
+                    <img src="assets/images/avatarimage.svg" alt="avatar">
+                </div>
             </div>
             <div class="table--container">
                 <div class="table--container--header">
@@ -65,6 +69,9 @@
                                 </span>
                             </p>
                         </div>
+                        <!-- <div style="border: 1px solid red">
+                            <img src="assets/images/barchart.svg" alt="top authors chart">
+                        </div> -->
                         <canvas id="myChart">Your browser doesn't support canvas</canvas>
                     </div>
                     <div class="sharing-channel">
@@ -76,6 +83,9 @@
                                 </span>
                             </p>
                         </div>
+                        <!-- <div style="border: 1px solid red">
+                            <img src="assets/images/piechart.svg" alt="sharing channel">
+                        </div> -->
                         <canvas id="myChart2">Your browser doesn't support canvas</canvas>
                     </div>
                     <div class="authors">
