@@ -5,7 +5,6 @@
   display: block;
   background-color: $primary;
   max-width: 3.75rem;
-  height: 130%;
   flex: 1;
 }
 .dashboard--authors {
@@ -43,8 +42,11 @@
 .avatar{
   height: 2.75rem;
   width: 2.75rem;
-  background-color: red;
   border-radius: 50%;
+
+  img{
+    width: 100%;
+  }
 }
 .searchbar{
     @extend .d-flex;
@@ -57,6 +59,64 @@
     flex: 1;
     padding: 0 1.1rem;
 }
+
+
+.table--head--wrap{
+  
+  .post--detail{
+    width: 16rem;
+    padding: 0 0 0 0;
+    text-align: center;
+    @extend .d-flex;
+    
+    .author--image{
+      height: 1.7rem;
+      width: 1.7rem;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: $primary;
+      margin-right: 0.6rem;
+
+      img{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    
+    .author--name{
+      margin-top: 0.3rem;
+      padding: 0;
+    }
+  }
+  .post--email{
+      width: 20rem;
+      margin: auto 1rem;
+  }
+  
+  .post--phone{
+    width: 19rem;
+  }
+  .post--no{
+    width: 16rem;
+  }
+  
+
+
+}
+.tbody{
+  @extend .thead;
+  background: $white;
+  .table--body--wrap{
+      @extend .table--head--wrap;
+      background: $blue;
+      font-weight: normal !important;
+      border-bottom: 1px solid $lightblue;
+      
+  }
+}
+
 .table--container--header{
     @extend .d-flex;
     @extend .align-items-center;
@@ -68,18 +128,6 @@
    padding-right: 2rem;
 }
 
-.table--head{
-    background-color: $lightblue;
-    display: block;
-    padding: 1.5rem 3.37rem 1.5rem 4rem;
-    @extend .d-flex;
-    @extend .justify-content-between;
-}
-.table--body{
-    padding: 0 1.5rem;
-    background-color: $white;
-}
-
 .table-row{
     border-bottom: 1px solid $lightblue;
     padding: 1.5rem 0;
@@ -89,14 +137,7 @@
     @extend .justify-content-between;
 }
 
-.author--image{
-    height: 1.2rem;
-    width: 1.2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: $primary;
-    margin-right: 0.4rem;
-  }
+
   .author--index{
       margin-right: 1.2rem;
   }
@@ -108,3 +149,111 @@
   .hide-bottom{
       border-bottom: none;
   }
+
+
+  
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: 300ms ease-in-out;
+  border-radius: 2px;
+  z-index: 10;
+  background-color: #fff;
+  max-width: 80%;
+  margin: 0;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.modal-header {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+  margin: 0;
+  padding: 0 0 1.875rem 0;
+  border-bottom: 1px solid $lightblue;
+  font-size: 1.5rem;
+
+}
+
+.title {
+  font-weight: 700;
+}
+.close-button{
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  outline: unset;
+  cursor: pointer;
+  color:#405169;
+
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+.container--modal{
+  @extend .container--signin;
+
+  .signin--logo-modal{
+    @extend .signin--logo;
+    @extend .align-items-start;
+    @extend .justify-content-start; 
+    margin: 2rem 0 1rem 0;
+
+    img{
+      width: 100%;
+    }
+  }
+  .form-group-modal{
+    label{
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+
+    .form-control-modal{
+      @extend .form-control;
+      border: 1px solid $lightblue;
+      width: 33.625rem;
+      height: 2.8rem;
+      margin-bottom: 1rem;
+      
+    }
+    
+  }
+  .sign-btn-modal{
+    @extend .sign-btn;
+    margin-top: 1rem;
+  }
+  
+}
+
+.table-title{
+  font-weight: 900; 
+}

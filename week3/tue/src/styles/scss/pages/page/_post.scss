@@ -1,3 +1,4 @@
+
 .table--heading{
     .navigation{
        color: $primary; 
@@ -26,6 +27,14 @@
    }
    .input-margin{
         margin-bottom: 1rem;
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .justify-content-between;
+
+        span{
+            font-weight: 900;
+        }
+
    }
 }
 .thead{
@@ -59,7 +68,6 @@
     .post--date{
         width: 22rem;
         margin: auto 1rem;
-
     }
     .post--view{
         width: 21rem;
