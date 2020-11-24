@@ -1,184 +1,292 @@
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>modal</title>
     <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="d-flex">
-    <div class="dashboard-sidebar">
-        <div class="menu">
-            <span class="logo-white">
-                
-            </span>
-            <span class="menu-item">
-                <a href="/">
-                    <img src="assets/images/home.svg" alt="">
-                </a>
-            </span>
-            <span class="menu-item">
-                <a href="/">
-                    <img src="assets/images/home.svg" alt="">
-                </a>
-            </span>
-            <span class="menu-item">
-                <a href="/">
-                    <img src="assets/images/home.svg" alt="">
-                </a>
-            </span>
+<body class="body modal-body">
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="menu">
+                <span class="logo-white">
+                    
+                </span>
+                    <span class="menu-item">
+                        <a href="#">
+                            <img src="assets/images/home-blur.svg" alt="">
+                        </a>
+                    </span>
+                <span class="menu-item highlight">
+                    <a href="#">
+                        <img src="assets/images/people-white.svg" alt="">
+                    </a>
+                </span>
+                <span class="menu-item">
+                    <a href="#">
+                        <img src="assets/images/settings.svg" alt="">
+                    </a>
+                </span>
+            </div>
+            <div class="signout">
+                <span class="">
+                    <a href="#" class="signout-link">
+                        <img src="assets/images/signout.svg" alt="">
+                    </a>
+                </span>
+            </div>
         </div>
-        <div class="signout"></div>
-    </div>
-    <div class="dashboard--authors">
-        <div class="searchbar">
-            <div>
-                <input type="text" class="search--area" placeholder="Search for author">
-            </div>
-            <div class="avatar"></div>
-        </div>
-        <div class="table--container">
-            <div class="table--container--header">
-                <h2 class="tabel-title">
-                    Authors
-                </h2>
-                <button class="btn btn-table">Add Author</button>
-            </div>
-
-            <div class="table--head">
-                <span > 
-                    Author’s Details
-                </span>
-                <span > 
-                    Email address
-                </span>
-                <span > 
-                    Phone number
-                </span>
-                <span > 
-                    No. of Posts
-                </span>
-                <span > 
-                    Total Reach
-                </span>
-            </div>
-            <div class="table--body">
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                       <div class="author--image"></div>
-                        Jenny Wilson
-                    </span>
-                    <span class="row--item">
-                        debra.holt@example.com
-                    </span>
-                    <span class="row--item">
-                        070893935083
-                    </span>
-                    <span class="row--item">
-                        120 Posts
-                    </span>
-                    <span class="row--item">
-                        3.4k Reach                    
-                    </span>
-                </div>
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                       <div class="author--image"></div>
-                        Jenny Wilson
-                    </span>
-                    <span class="row--item">
-                        debra.holt@example.com
-                    </span>
-                    <span class="row--item">
-                        070893935083
-                    </span>
-                    <span class="row--item">
-                        120 Posts
-                    </span>
-                    <span class="row--item">
-                        3.4k Reach                    
-                    </span>
-                </div>
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                       <div class="author--image"></div>
-                        Jenny Wilson
-                    </span>
-                    <span class="row--item">
-                        debra.holt@example.com
-                    </span>
-                    <span class="row--item">
-                        070893935083
-                    </span>
-                    <span class="row--item">
-                        120 Posts
-                    </span>
-                    <span class="row--item">
-                        3.4k Reach                    
-                    </span>
-                </div>
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                       <div class="author--image"></div>
-                        Jenny Wilson
-                    </span>
-                    <span class="row--item">
-                        debra.holt@example.com
-                    </span>
-                    <span class="row--item">
-                        070893935083
-                    </span>
-                    <span class="row--item">
-                        120 Posts
-                    </span>
-                    <span class="row--item">
-                        3.4k Reach                    
-                    </span>
-                </div>
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                       <div class="author--image"></div>
-                        Jenny Wilson
-                    </span>
-                    <span class="row--item">
-                        debra.holt@example.com
-                    </span>
-                    <span class="row--item">
-                        070893935083
-                    </span>
-                    <span class="row--item">
-                        120 Posts
-                    </span>
-                    <span class="row--item">
-                        3.4k Reach                    
-                    </span>
-                </div>
-                <div class="table-row hide-bottom">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                       <div class="author--image"></div>
-                        Jenny Wilson
-                    </span>
-                    <span class="row--item">
-                        debra.holt@example.com
-                    </span>
-                    <span class="row--item">
-                        070893935083
-                    </span>
-                    <span class="row--item">
-                        120 Posts
-                    </span>
-                    <span class="row--item">
-                        3.4k Reach                    
-                    </span>
+        <main class="main">
+            <div class="header">
+                <div class="search-width ">
+                    <div class="input-control ">
+                        <form action="">
+                            <label for="search"></label>
+                            <input type="text" placeholder="Search for author" class="search--area">
+                        </form>
+                    </div>
+                    <div class="avatar">
+                        <a href="#">
+                            <img src="assets/images/avatar.svg" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-        </div>
+            <div class="content">
+                <div class="content-wrapper-modal ">
+                    <div class="title-wrap-home">
+                        <h3 class="page-title">Authors</h3>
+                        <button class="btn btn-table btn-home">Add Author</button>
+                    </div>
+                    <div class="table-area">
+                        <div class="table-header">
+                            <span > 
+                                Author’s Details
+                            </span>
+                            <span > 
+                                Email address
+                            </span>
+                            <span > 
+                                Phone number
+                            </span>
+                            <span > 
+                                No. of Posts
+                            </span>
+                            <span > 
+                                Total Reach
+                            </span>
+                        </div>
+                        <div class="table-body text-home">
+                            <div class="row--control">
+                                <div class="table-row">
+                                    <span class="row--item">
+                                        <span class="author--index">1</span>
+                                        <div class="author--image">
+                                                <img src="assets/images/author.svg" alt=""> 
+                                        </div>
+                                        <span class="author--name">Jenny Wilson</span>
+                                    </span>
+                                    <span class="row--item author--email">
+                                        debra.holt@example.com
+                                    </span>
+                                    <span class="row--item author--phone">
+                                        070893935083
+                                    </span>
+                                    <span class="row--item author--post">
+                                        120 Posts
+                                    </span>
+                                    <span class="row--item">
+                                        3.4k Reach                    
+                                    </span>
+                                </div>
+                                <hr> 
+                            </div>
+                            <div class="row--control">
+                                <div class="table-row">
+                                    <span class="row--item">
+                                        <span class="author--index">2</span>
+                                        <div class="author--image">
+                                                <img src="assets/images/author.svg" alt=""> 
+                                        </div>
+                                        <span class="author--name">Jenny Wilson</span>
+                                    </span>
+                                    <span class="row--item author--email">
+                                        debra.holt@example.com
+                                    </span>
+                                    <span class="row--item author--phone">
+                                        070893935083
+                                    </span>
+                                    <span class="row--item author--post">
+                                        120 Posts
+                                    </span>
+                                    <span class="row--item">
+                                        3.4k Reach                    
+                                    </span>
+                                </div>
+                                <hr> 
+                            </div>
+                            <div class="row--control">
+                                <div class="table-row">
+                                    <span class="row--item">
+                                        <span class="author--index">3</span>
+                                        <div class="author--image">
+                                                <img src="assets/images/author.svg" alt=""> 
+                                        </div>
+                                        <span class="author--name">Jenny Wilson</span>
+                                    </span>
+                                    <span class="row--item author--email">
+                                        debra.holt@example.com
+                                    </span>
+                                    <span class="row--item author--phone">
+                                        070893935083
+                                    </span>
+                                    <span class="row--item author--post">
+                                        120 Posts
+                                    </span>
+                                    <span class="row--item">
+                                        3.4k Reach                    
+                                    </span>
+                                </div>
+                                <hr> 
+                            </div>
+                            <div class="row--control">
+                                <div class="table-row">
+                                    <span class="row--item">
+                                        <span class="author--index">4</span>
+                                        <div class="author--image">
+                                                <img src="assets/images/author.svg" alt=""> 
+                                        </div>
+                                        <span class="author--name">Jenny Wilson</span>
+                                    </span>
+                                    <span class="row--item author--email">
+                                        debra.holt@example.com
+                                    </span>
+                                    <span class="row--item author--phone">
+                                        070893935083
+                                    </span>
+                                    <span class="row--item author--post">
+                                        120 Posts
+                                    </span>
+                                    <span class="row--item">
+                                        3.4k Reach                    
+                                    </span>
+                                </div>
+                                <hr> 
+                            </div>
+                            <div class="row--control">
+                                <div class="table-row">
+                                    <span class="row--item">
+                                        <span class="author--index">5</span>
+                                        <div class="author--image">
+                                                <img src="assets/images/author.svg" alt=""> 
+                                        </div>
+                                        <span class="author--name">Jenny Wilson</span>
+                                    </span>
+                                    <span class="row--item author--email">
+                                        debra.holt@example.com
+                                    </span>
+                                    <span class="row--item author--phone">
+                                        070893935083
+                                    </span>
+                                    <span class="row--item author--post">
+                                        120 Posts
+                                    </span>
+                                    <span class="row--item">
+                                        3.4k Reach                    
+                                    </span>
+                                </div>
+                                <hr> 
+                            </div>
+                            <div class="row--control">
+                                <div class="table-row">
+                                    <span class="row--item">
+                                        <span class="author--index">6</span>
+                                        <div class="author--image">
+                                                <img src="assets/images/author.svg" alt=""> 
+                                        </div>
+                                        <span class="author--name">Jenny Wilson</span>
+                                    </span>
+                                    <span class="row--item author--email">
+                                        debra.holt@example.com
+                                    </span>
+                                    <span class="row--item author--phone">
+                                        070893935083
+                                    </span>
+                                    <span class="row--item author--post">
+                                        120 Posts
+                                    </span>
+                                    <span class="row--item">
+                                        3.4k Reach                    
+                                    </span>
+                                </div>
+                                <hr> 
+                            </div>
+                            <div class="row--control">
+                                <div class="table-row">
+                                    <span class="row--item">
+                                        <span class="author--index">7</span>
+                                        <div class="author--image">
+                                                <img src="assets/images/author.svg" alt=""> 
+                                        </div>
+                                        <span class="author--name">Jenny Wilson</span>
+                                    </span>
+                                    <span class="row--item author--email">
+                                        debra.holt@example.com
+                                    </span>
+                                    <span class="row--item author--phone">
+                                        070893935083
+                                    </span>
+                                    <span class="row--item author--post">
+                                        120 Posts
+                                    </span>
+                                    <span class="row--item">
+                                        3.4k Reach                    
+                                    </span>
+                                </div>
+                                <hr> 
+                            </div>
+                            <div class="row--control">
+                                <div class="table-row">
+                                    <span class="row--item">
+                                        <span class="author--index">8</span>
+                                        <div class="author--image">
+                                                <img src="assets/images/author.svg" alt=""> 
+                                        </div>
+                                        <span class="author--name">Jenny Wilson</span>
+                                    </span>
+                                    <span class="row--item author--email">
+                                        debra.holt@example.com
+                                    </span>
+                                    <span class="row--item author--phone">
+                                        070893935083
+                                    </span>
+                                    <span class="row--item author--post">
+                                        120 Posts
+                                    </span>
+                                    <span class="row--item">
+                                        3.4k Reach                    
+                                    </span>
+                                </div>
+                                <hr> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="pagination">
+                        <button class="page-num-end"><img src="assets/images/path-left.svg" alt=""> </button>
+                        <button class="page-num text-home">1</button>
+                        <button class="page-num-2 text-home ">2</button>
+                        <button class="page-num text-home">3</buttton>
+                        <button class="page-num text-home">4</button>
+                        <button class="page-num text-home dots"><img src="assets/images/dots.svg" alt=""></button>
+                        <button class="page-num-end"><img src="assets/images/page-right.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
     <div class="modal">
         <form class="my-form-modal">
@@ -189,10 +297,17 @@
                     </h2>
                     <p class="modal-btn">X</p>
                 </div>
+
                 <div class="modal-logo-section">
-                    <div class="modal-logo">
-                    </div>
-                </div>
+                    <img src="assets/images/modal.svg" alt="" class="modal-logo img"/>
+      
+                    <label for="photo">
+                      <img class="camera" src="assets/images/camera.svg" alt="" />
+                    </label>
+                    <input type="file" id="photo" class="none"/>
+                  </div>
+
+                
                 <div class="modal-form-group">
                     <label>Full Name</label>
                     <input type="text" name="email" class="form-control" placeholder="Full name">
@@ -211,4 +326,3 @@
     </div>
 </body>
 </html>
-
