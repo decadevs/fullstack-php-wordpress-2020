@@ -78,3 +78,13 @@ class Paystack
         }
     }
 }
+
+$paystack = new Paystack("sk_test_12f4e6e0c711cf17036fba33116151f5c7b751c9");
+
+echo "<pre>";
+var_dump($paystack->createCustomer(['first_name' => 'Chuks', 'last_name' => 'John', 'phone' => '0939039209', 'email' => 'chuk@example.com']));
+echo "</pre>";
+
+echo "<pre>";
+var_dump($paystack->getCustomers());
+echo "</pre>";
