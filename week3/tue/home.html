@@ -15,26 +15,26 @@
                     
                 </span>
                 <span class="menu-item">
-                    <a href="/">
-                        <img src="assets/images/home.svg" alt="home">
+                    <a href="dashboard.html">
+                        <img src="assets/images/home.svg" alt="dashboard">
+                    </a>
+                </span>
+                <span class="menu-item active-one">
+                    <a href="home.html">
+                        <img src="assets/images/people.svg" alt="author">
                     </a>
                 </span>
                 <span class="menu-item">
-                    <a href="/">
-                        <img src="assets/images/people.svg" alt="people">
-                    </a>
-                </span>
-                <span class="menu-item">
-                    <a href="/">
+                    <a href="settings.html">
                         <img src="assets/images/settings.svg" alt="settings">
                     </a>
                 </span>
             </div>
             <div class="signout">
-                <span class="signoout-item">
+                <span class="signout-item">
                     <a href="/">
-                        <img class="signout-item-img" src="assets/images/arrowbar.svg" alt="">
-                        <img class="signout-item-img" src="assets/images/arrowicon.svg" alt="">
+                        <img class="signout-item-img" src="assets/images/arrowbar.svg" alt="arrow">
+                        <img class="signout-item-img" src="assets/images/arrowicon.svg" alt="bar">
                     </a>
                 </span>
             </div>
@@ -42,9 +42,13 @@
         <div class="dashboard--authors">
             <div class="searchbar">
                 <div>
-                    <input type="text" class="search--area" placeholder="Search for author">
+                    <form action="" method="get">
+                        <input type="search" class="search--area" placeholder="Search for author">
+                    </form>
                 </div>
-                <div class="avatar"></div>
+                <div>
+                    <img src="assets/images/avatarimage.svg" alt="avatar">
+                </div>
             </div>
             <div class="table--container">
                 <div class="table--container--header">
@@ -67,7 +71,7 @@
                     <tbody class="table-body">
                         <tr class="table-body-row">
                             <td class="table-data tab-index">1</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
+                            <td class="table-data"><span class="table-avatar"></span> <span class="table-data-name">Jenny Wilson</span> </td>
                             <td class="table-data">debra.holt@example.com</td>
                             <td class="table-data">070893935083</td>
                             <td class="table-data">120 Posts</td>
@@ -75,7 +79,7 @@
                         </tr>
                         <tr class="table-body-row">
                             <td class="table-data tab-index">2</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
+                            <td class="table-data"><span class="table-avatar"></span> <span class="table-data-name">Jenny Wilson</span> </td>
                             <td class="table-data">debra.holt@example.com</td>
                             <td class="table-data">070893935083</td>
                             <td class="table-data">120 Posts</td>
@@ -83,7 +87,7 @@
                         </tr>
                         <tr class="table-body-row">
                             <td class="table-data tab-index">3</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
+                            <td class="table-data"><span class="table-avatar"></span> <span class="table-data-name">Jenny Wilson</span> </td>
                             <td class="table-data">debra.holt@example.com</td>
                             <td class="table-data">070893935083</td>
                             <td class="table-data">120 Posts</td>
@@ -91,7 +95,7 @@
                         </tr>
                         <tr class="table-body-row">
                             <td class="table-data tab-index">4</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
+                            <td class="table-data"><span class="table-avatar"></span> <span class="table-data-name">Jenny Wilson</span> </td>
                             <td class="table-data">debra.holt@example.com</td>
                             <td class="table-data">070893935083</td>
                             <td class="table-data">120 Posts</td>
@@ -99,7 +103,7 @@
                         </tr>
                         <tr class="table-body-row">
                             <td class="table-data tab-index">5</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
+                            <td class="table-data"><span class="table-avatar"></span> <span class="table-data-name">Jenny Wilson</span> </td>
                             <td class="table-data">debra.holt@example.com</td>
                             <td class="table-data">070893935083</td>
                             <td class="table-data">120 Posts</td>
@@ -107,7 +111,7 @@
                         </tr>
                         <tr class="table-body-row">
                             <td class="table-data tab-index">6</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
+                            <td class="table-data"><span class="table-avatar"></span> <span class="table-data-name">Jenny Wilson</span> </td>
                             <td class="table-data">debra.holt@example.com</td>
                             <td class="table-data">070893935083</td>
                             <td class="table-data">120 Posts</td>
@@ -115,7 +119,7 @@
                         </tr>
                         <tr class="table-body-row">
                             <td class="table-data tab-index">7</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
+                            <td class="table-data"><span class="table-avatar"></span> <span class="table-data-name">Jenny Wilson</span> </td>
                             <td class="table-data">debra.holt@example.com</td>
                             <td class="table-data">070893935083</td>
                             <td class="table-data">120 Posts</td>
@@ -123,7 +127,7 @@
                         </tr>
                         <tr class="table-body-row">
                             <td class="table-data tab-index">8</td>
-                            <td class="table-data"><span class="table-avatar"></span> Jenny Wilson</td>
+                            <td class="table-data"><span class="table-avatar"></span> <span class="table-data-name">Jenny Wilson</span> </td>
                             <td class="table-data">debra.holt@example.com</td>
                             <td class="table-data">070893935083</td>
                             <td class="table-data">120 Posts</td>
