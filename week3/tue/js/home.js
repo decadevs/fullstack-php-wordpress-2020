@@ -1,11 +1,11 @@
-let btnTable = document.querySelector('.btn-table');
+//let btnTable = document.querySelector('.btn-table');
 let btnConnect = document.querySelector('.btn-website')
 let modal = document.querySelector('.modal-bg');
 let closeModal = document.querySelector('.close-modal');
 
-btnTable.addEventListener('click', function(){
-    modal.classList.add('activate-modal');
-})
+// btnTable.addEventListener('click', function(){
+//     modal.classList.add('activate-modal');
+// })
 
 btnConnect.addEventListener('click', function(){
     modal.classList.add('activate-modal');
