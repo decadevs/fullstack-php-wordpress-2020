@@ -73,6 +73,20 @@ h2{
     
     
 }
+
+h3{
+    
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #405169;
+    margin: 0;
+}
+    
+    
 p{
     font-weight: 700;
     color: rgba(64, 81, 105, 0.5);
@@ -219,6 +233,7 @@ img{
 .modal{
     position: fixed;
     display: none;
+    z-index: 5;
     left:0;
     top:0;
     background: rgba(197, 197, 197, 0.5);
@@ -246,6 +261,31 @@ img{
 #close:focus {
             color: rgb(255, 0, 0);
             cursor: pointer;
-        }
+}
+.pad{
+    padding-top: 2rem;
+}
+.label-prop{
+    background: rgba(76, 141, 235, 0.10077);
+    border: 1px solid rgba(76, 141, 235, 0.10077);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0 1rem;
+    
+}
+li{
+    padding-left: 1rem;
+    border-bottom: 1px solid#DDE9FB;
+    height: 3rem;
+}
+ol{
+    margin: 2rem;
+    color: #405169;
+}
+li button{
+    border-style: none;
+    color: #405169;
+    background: inherit;
+    
 
-/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+}

@@ -6,6 +6,7 @@
     <title>Connect</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="profile.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body class="d-flex">
@@ -69,7 +70,7 @@
                         <p>Add website to begin tracking</p>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-small">Add Website</button>
+                        <button class="btn btn-small" id="myBtn">Add Website</button>
                     </div>
                 </div>   
             </div>
@@ -87,18 +88,18 @@
             <label for="url">Website Url</label>
             <input type="text" name="url" class="form-control max-width" id="url" placeholder="Enter url">
           </div>
-          <input type="submit" value="Add Website"  id="myBtn" class="btn max-width">
+          <input type="submit" value="Add Website"  class="btn max-width "/>
         
         </form>
     </div>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
     <script>
         let modalEle = document.querySelector(".modal");
-        document.querySelector("#myBtn").addEventListener("click", () => {
-        modalEle.style.display = "block";
-        });
         document.querySelector("#close").addEventListener("click", () => {
         modalEle.style.display = "none";
+        });
+        document.querySelector("#myBtn").addEventListener("click", () => {
+        modalEle.style.display = "block";
         });
         
     </script>
