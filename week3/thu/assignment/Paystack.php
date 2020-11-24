@@ -31,11 +31,11 @@ class Paystack
         }
 
         if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["first_name"])) {
-            die("Only letters and white space allowed");
+            die("Only letters and white space allowed for first name");
         }
 
         if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["last_name"])) {
-            die ("Only letters and white space allowed");
+            die ("Only letters and white space allowed for last name");
         }
 
 
