@@ -4,6 +4,8 @@
     left: 27.3125rem;
     border-radius: 10px;
     @extend .d-flex; 
+    @extend .flex-column;
+    @extend .align-items-start;
     background-color: $white;
     width: 60rem;
     height: 38.6875rem;
@@ -55,19 +57,12 @@
     margin: 10px;
 }
 
-.profile-settings {
-    @extend .d-flex;
-    @extend .flex-column;
-    @extend .align-items-start;
-}
-
 .profile-body {
     height: 35rem;
     width: 100%;
     padding: 1rem 2.5rem;
     @extend .d-flex;
     @extend .flex-column;
-    // @extend .align-items-start;
     form {
         @extend .d-flex;
         @extend .flex-column;
@@ -91,6 +86,7 @@
         @extend .justify-content-end;
     }
     .table--body {
+        width: 100%;
         padding-top: 2rem;
         padding-left: 0;
         padding-right: 0;
