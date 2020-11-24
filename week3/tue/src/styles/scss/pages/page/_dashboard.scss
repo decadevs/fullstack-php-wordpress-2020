@@ -1,0 +1,105 @@
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-main-inner {
+    background: #F9FAFF;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.dashboard-contents {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    column-gap: 15px;
+    margin-bottom: 15px;
+}
+
+.dashboard-contents-inner-left {
+    display: grid;
+    grid-template-rows: 51.5% auto;
+    row-gap: 15px;
+    margin-left: 15px;
+}
+
+.dashboard-contents-inner-row1 {
+    display: grid;
+    grid-template-columns: 2fr 1.4fr;
+    column-gap: 15px;
+}
+
+.dashboard-contents-inner-row1 div {
+    padding: 20px;
+}
+
+
+.dashboard-content-box1 {
+    background-color: #fff;
+}
+
+.dashboard-content-box2 {
+    background-color: #fff;
+}
+
+.dashboard-contents-inner-row2 {
+    display: grid;
+    grid-template-columns: 1.4fr 2fr;
+    column-gap: 15px;
+}
+
+.dashboard-contents-inner-row2 div {
+    padding: 20px;
+}
+
+.dashboard-content-box3 {
+    background-color: #fff;
+}
+
+.dashboard-content-box4 {
+    background-color: #fff;
+}
+
+
+.dashboard-contents-inner-right {
+    display: grid;
+    grid-template-rows: 100%;
+    background: #fff;
+}
+
+.dashboard-contents-inner-right div {
+    padding: 20px;
+}
+
+// right inner layout starts
+
+.right-content-inner h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.right-content-inner span {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.right-content-inner span * {
+
+    border: 1px solid blue;
+}
+
+.author-profile {
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+    // align-items: baseline;
+    
+}
+
+// right inner layout ends
+

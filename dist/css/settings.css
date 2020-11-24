@@ -174,4 +174,27 @@ h2 {
 }
 
 /*Connect Website Styles Ends*/
+.input-btn {
+  background: rgba(0, 204, 240, 0.02);
+  border: 1px solid rgba(24, 20, 38, 0.0992133);
+  border-radius: 4px;
+  padding: 10px 0 10px 20px;
+  font-size: .9em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+.token-btn {
+  position: absolute;
+  right: 57px;
+  margin-top: 7px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 8px 40px;
+}
+
+.copy-token-p {
+  margin: 30px 0;
+}
 /*# sourceMappingURL=settings.css.map */

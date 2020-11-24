@@ -6,6 +6,7 @@
   background-color: $primary;
   max-width: 3.75rem;
   // height: 100%;
+  // overflow: auto;
   flex: 1;
 }
 
@@ -88,7 +89,8 @@
 }
 
 .post-searchbar label {
-  font-weight: 400;;
+  font-weight: 400;
+  ;
 }
 
 .table--container {
