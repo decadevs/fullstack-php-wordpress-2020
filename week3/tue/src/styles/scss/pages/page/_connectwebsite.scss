@@ -1,0 +1,53 @@
+.btn-website{border-radius: 0.25rem !important;}
+
+.modal-connect{
+    width: 37.6rem; height: 20rem;
+    display: flex; flex-direction: column;
+    align-items: center; margin-top: 1.5rem;
+}
+.connect-title{
+    border-bottom: $line thin solid;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+    width: 33.62rem; margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+.connect-title h6{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.web-group{
+    @extend .d-flex;
+    @extend .flex-column;
+    margin: 0.625rem 0 1.875rem 0;
+}
+
+.web-group label{
+    color: #181426; font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.web-control{
+    width: 33.625rem; height: 2.81rem;
+    background-color: $lightpurple;
+    border: $line solid thin; padding-left: 1.25rem;
+}
+
+.btn-url{
+    width: 33.625rem !important;
+    margin-top: 0.625rem;
+    height: 2.5rem; border-radius: 0.312rem !important;
+    padding: 0.625rem 1.5rem !important;
+}
+.displayweb{margin: 0 2.18rem;}
+.display-web-container{
+    display: flex; justify-content: space-between;
+    margin-bottom: 2.06rem; margin-top: 1.375rem;
+    border-bottom: $line thin solid; padding-bottom: 2.06rem;
+}
+.web-name span{margin-right: 1.25rem;}
