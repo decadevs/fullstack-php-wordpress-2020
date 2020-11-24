@@ -27,7 +27,7 @@ class Paystack
         ];
 
         if (!filter_var($fields["email"], FILTER_VALIDATE_EMAIL)) {
-            die("Invalid email format");
+            throw new Exception("Invalid email format");
         }
 
         if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["first_name"])) {
