@@ -31,15 +31,15 @@ class Paystack
         }
 
         if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["first_name"])) {
-            die("Only letters and white space allowed for first name");
+            throw new Exception("Only letters and white space allowed for first name");
         }
 
         if (!preg_match("/^[a-zA-Z-' ]*$/", $fields["last_name"])) {
-            die("Only letters and white space allowed for last name");
+            throw new Exception("Only letters and white space allowed for last name");
         }
 
         if (!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{3}$/", $fields["phone"])) {
-            die("Invalid Phone number");
+            throw new Exception("Invalid Phone number");
         }
 
 
@@ -100,7 +100,7 @@ class Paystack
 $paystack = new Paystack("sk_test_12f4e6e0c711cf17036fba33116151f5c7b751c9");
 
 echo "<pre>";
-var_dump($paystack->createCustomer(['first_name' => 'John', 'last_name' => 'John', 'phone' => '0939039209', 'email' => 'jchukaa@example.com']));
+var_dump($paystack->createCustomer(['first_name' => '..', 'last_name' => 'John', 'phone' => '0939039209', 'email' => 'jchuokaa@example.com']));
 echo "</pre>";
 
 echo "<pre>";
