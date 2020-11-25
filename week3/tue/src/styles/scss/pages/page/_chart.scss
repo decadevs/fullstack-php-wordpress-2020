@@ -9,12 +9,15 @@ body,html{
   counter-reset: my-sec-counter;
 
 }
+.arrow{
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .grid-container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 17px;
-    height: 100vh;
     
     .columns img{
         width:100%;
@@ -49,6 +52,7 @@ body,html{
       @extend .align-items-center;
       padding: 0 1.4rem;
       margin-top: 1.9rem;
+      
     }
     .column--body{
       width: 100%;

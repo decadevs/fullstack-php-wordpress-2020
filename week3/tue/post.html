@@ -12,22 +12,28 @@
                 
             </span>
             <span class="menu-item">
-                <a href="/">
+                <a href="chart.html">
                     <img src="assets/images/home.svg" alt="">
                 </a>
             </span>
-            <span class="menu-item">
-                <a href="/">
+            <span class="menu-item active-menu">
+                <a href="home.html">
                     <img src="assets/images/people.svg" alt="">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="/">
+                <a href="setting.html">
                     <img src="assets/images/tool.svg" alt="">
                 </a>
             </span>
         </div>
-        <div class="signout"></div>
+        <div class="signout">
+            <span class="menu-item">
+                <a href="index.html">
+                    <img src="assets/images/log-out.svg" alt="">
+                </a>
+            </span>
+        </div>
     </div>
     <div class="dashboard--authors">
         <div class="searchbar">
@@ -49,8 +55,18 @@
                 <h4 class="table-title-2">Jenny Wilson' Post</h4>
                 <div class="input-margin">
                     <input type="text" class="search--area-1" placeholder="Search for posts">
-                    <div>
-                        <span>Filter By:</span>                      
+                    <div class="filter--div">
+                        <span class="text">Filter By:</span>   
+                        <span>
+                            <li class="nav-lists__links dropdown">
+                                <a href="#" class="drop-btn">Select filter<img src="assets/images/caret.svg" alt="" class="caret"></a>
+                                <span class="drodown-lists">
+                                    <a href="" class="dropdown-lists__links caret">Date Posted</a>
+                                    <a href="" class="dropdown-lists__links caret">No. of View</a>
+                                    <a href="" class="dropdown-lists__links caret">No. of Shares</a>
+                                </span>
+                            </li>
+                        </span>                   
                     </div>
                 </div>
             </div>
@@ -134,7 +150,7 @@
                 </div>
                 
             </div>
-            <div class="tbody">
+            <div class="tbody marginBottom">
                 <div class="table--body--wrap">
                     <span class="post--number">8</span>
                     <span class="post--title">I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality</span>
@@ -144,6 +160,16 @@
                 </div>
                 
             </div>
+
+            <div class="pagination">
+                <button class="page-num-end"><img src="assets/images/path-l.svg" alt=""> </button>
+                <button class="page-num text-home">1</button>
+                <button class="page-num-2 text-home ">2</button>
+                <button class="page-num text-home">3</buttton>
+                <button class="page-num text-home">4</button>
+                <button class="page-num text-home dots"><img src="assets/images/dots.svg" alt=""></button>
+                <button class="page-num-end"><img src="assets/images/path-r.svg" alt=""></button>
+            </div>  
         </div>
     </div>
     <script src="assets/scripts/script.js" defer></script>

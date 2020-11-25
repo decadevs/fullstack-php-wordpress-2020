@@ -11,23 +11,29 @@
             <span class="logo-white">
                 
             </span>
-            <span class="menu-item">
-                <a href="/">
+            <span class="menu-item ">
+                <a href="chart.html">
                     <img src="assets/images/home.svg" alt="">
                 </a>
             </span>
-            <span class="menu-item">
-                <a href="/">
+            <span class="menu-item active-menu">
+                <a href="home.html">
                     <img src="assets/images/people.svg" alt="">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="/">
+                <a href="setting.html">
                     <img src="assets/images/tool.svg" alt="">
                 </a>
             </span>
         </div>
-        <div class="signout"></div>
+        <div class="signout">
+            <span class="menu-item">
+                <a href="index.html">
+                    <img src="assets/images/log-out.svg" alt="">
+                </a>
+            </span>
+        </div>
     </div>
     <div class="dashboard--authors">
         <div class="searchbar">
@@ -172,17 +178,32 @@
                 
             </div>
 
+            <div class="pagination">
+                <button class="page-num-end"><img src="assets/images/path-l.svg" alt=""> </button>
+                <button class="page-num text-home">1</button>
+                <button class="page-num-2 text-home ">2</button>
+                <button class="page-num text-home">3</buttton>
+                <button class="page-num text-home">4</button>
+                <button class="page-num text-home dots"><img src="assets/images/dots.svg" alt=""></button>
+                <button class="page-num-end"><img src="assets/images/path-r.svg" alt=""></button>
+            </div>    
         </div>
+       
     </div>
 
+    
     <div class="modal container--modal" id="modal">
-        <form class="my-form">
+        <form class="">
             <div class="modal-header">
                 <div class="title">Add Author</div>
                 <button data-close-button class="close-button">&times;</button>
             </div>
             <div class="signin--logo-modal">
                 <img src="assets/images/Ellipse.png" alt="">
+                <label for="photo">
+                    <img class="camera" src="assets/images/camera.svg" alt="" />
+                </label>
+                <input type="file" id="photo" class="none"/>
             </div>
             <div class="form-group-modal">
                 <label class="modal-label">Full name</label>

@@ -1,6 +1,6 @@
+const overlay = document.getElementById('overlay-connect');
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay');
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -11,13 +11,13 @@ openModalButtons.forEach(button => {
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = button.closest('.modal'); //select parent element html
+        const modal = button.closest('.modal-connect'); //select parent element html
         closeModal(modal)
     })
 })
 
 overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
+    const modals = document.querySelectorAll('.modal-connect.active')
     modals.forEach(modal => {
         closeModal(modal)
     })
@@ -40,5 +40,3 @@ function closeModal(modal){
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
-
-

@@ -1,0 +1,120 @@
+.connect-button{
+    margin-bottom: 1rem;
+}
+.security-margin{
+    margin-top: 2rem;
+}
+
+.setting--header--connect{
+    @extend .setting--header;
+    width: 56.1rem;
+    padding: 0 0 1.875rem 0;
+}
+
+.sign-btn-connect{
+    width: 10.9rem;
+    margin-top: 2.5rem;
+    border-radius: 0.25rem !important;
+}
+
+
+#overlay-connect {
+    @extend #overlay;
+}
+  
+  #overlay-connect.active {
+    @extend #overlay.active;
+  }
+
+
+  .modal-connect {
+    @extend .modal;
+  }
+  
+  .modal-connect.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  
+  .modal-header-connect {
+    @extend .modal-header;
+  
+  }
+  
+  .title {
+    font-weight: 700;
+  }
+  
+  
+  .container--modal-connect{
+    @extend .container--modal;
+  
+    .signin--logo-modal-connect{
+      @extend .signin--logo-modal;
+  
+      img{
+        width: 100%;
+      }
+    }
+    .form-group-modal-connect{
+      label{
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+  
+      .form-control-modal-connect{
+        @extend .form-control-modal;
+               
+      }
+      
+    }
+    .sign-btn-modal-connect{
+      @extend .sign-btn-modal;
+    }
+    
+  }
+  
+  .added--website{
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-between; 
+    padding: 1.6rem 0;
+    font-weight: 400;
+    border-bottom: 1px solid $lightblue;
+
+
+    .text > span{
+       margin-right: 1.5rem;
+    }
+    .delete--button > a{
+        font-weight: 700;
+        color: $black;
+    }
+  }
+  .token-copy-text{
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding: 2.5rem 1rem 2.5rem 0;
+  }
+
+  .token-border{
+      background: rgba(76, 141, 235, 0.10077);
+      padding: 1rem;
+      border-radius: 4px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      border: 1px solid rgba(76, 141, 235, 0.10077);
+      @extend .d-flex;
+      @extend .align-items-center;
+      @extend .justify-content-between;
+    .token--button{
+        width: 8.6rem;
+        height: 3.125rem;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 0.7rem 2.5rem;
+       
+
+    }
+  }
