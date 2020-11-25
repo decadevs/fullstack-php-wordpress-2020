@@ -50,49 +50,72 @@
                 <div class="profile-settings-options">
                     <span><a href="./profile-settings.html"><img src="./assets/images/token.svg" alt="">Profile
                             Settings</a></span>
-                    <span><a href="./security-settings.html" class="page-indicator"><img src="./assets/images/lock.svg"
+                    <span><a href="./security-settings.html"><img src="./assets/images/lock.svg"
                                 alt="">Security</a></span>
-                    <span><a href="./connect-website-settings.html"><img src="./assets/images/token.svg" alt="">Connect
+                    <span><a href="./connect-website-settings.html" class="page-indicator"><img
+                                src="./assets/images/token.svg" alt="">Connect
                             Website</a></span>
                     <span><a href="./get-token-settings.html"><img src="./assets/images/token.svg" alt="">Get
                             Token</a></span>
                 </div>
-                <div class="edit-basic-info-section profile-setting">
-                    <h5>Security</h5>
-                    <p>Update Your Password.</p>
-                    <hr>
+                <div class="edit-basic-info-section">
                     <div class="edit-basic-info-section-inner">
-                        <form action="">
-                            <div class="form-layout">
-                                <div class="form-input">
-                                    <label>Current Password</label>
-                                    <input type="password" placeholder="password" name="name" required>
-                                </div>
-                                <div></div>
-
-                                <div class="form-input">
-                                    <label>New Password</label>
-                                    <input type="password" placeholder="New Password" name="name" required>
-                                </div>
-                                <div class="form-input">
-                                    <label>Confirm New Password</label>
-                                    <input type="password" placeholder="Confirm New Password" name="name" required>
-                                </div>
-                            </div>
-                            <div class="form-button">
-                                <div></div>
-                                <a href="#">Cancel</a>
-                                <button type="submit" class="submit-btn">Save Changes</button>
-                            </div>
-                        </form>
+                        <h5>Connect Website</h5>
+                        <p>Add website to begin tracking</p>
                     </div>
+                    <hr>
+                    <button class="add-website modal-btn">Add Website</button>
+                    <div class="connect-website-list website-row-one">
+                        <div class="list1">
+                            <p>1</p>
+                            <p>www.websiteone.com</p>
+                        </div>
+                        <p>DELETE</p>
+                    </div>
+                    <hr>
+                    <div class="connect-website-list">
+                        <div class="list1">
+                            <p>2</p>
+                            <p>www.websiteone.com</p>
+                        </div>
+                        <p>DELETE</p>
+                    </div>
+                    <hr>
 
                 </div>
+
+
+
             </div>
             <div></div>
         </div>
 
+    </div>
 
+
+    <!-- Modal Section  -->
+
+    <div>
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="#">
+                <div class="container">
+                    <span class="modal-header">
+                        <div class="title">Add Website</div>
+                        <div class="modal-close" title="Close Modal">+</div>
+                    </span>
+
+                    <hr>
+
+                    <label>Website Url</label>
+                    <input type="text" placeholder="Enter Url" name="phone" required>
+
+
+                    <div class="clearfix">
+                        <button type="submit" class="submit-btn">Add Website</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
     </div>
 

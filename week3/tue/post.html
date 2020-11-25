@@ -12,22 +12,21 @@
 <body class="d-flex">
     <div class="dashboard-sidebar">
         <div class="menu">
-            <span class="logo-white">
 
-            </span>
+            <a class="logo-white" href="./dashboard.html"></a>
             <span class="menu-item">
-                <a href="/">
-                    <img src="assets/images/home-icon.svg" alt="">
+                <a href="./home.html">
+                    <i class="fas fa-home"></i>
                 </a>
             </span>
             <span class="menu-item">
-                <a href="/">
-                    <img class="people-icon" src="assets/images/people.svg" alt="">
+                <a href="./post.html">
+                    <i class="fas fa-user-friends"></i>
                 </a>
             </span>
             <span class="menu-item">
-                <a href="/">
-                    <img src="assets/images/settings.svg" alt="">
+                <a href="./profile-settings.html">
+                    <i class="fa fa-cog"></i>
                 </a>
             </span>
         </div>
@@ -46,7 +45,7 @@
             <div class="avatar"></div>
         </div>
 
-        <div class="table--container">
+        <div class="table-container">
 
             <div class="table--container--header2">
                 <a class="go-back" href=""><img src="./assets/images/left-arrow.svg" alt=""> Go Back</a>
@@ -64,18 +63,22 @@
 
                     <div class="post-searchbar">
                         <label for="cars">Filter By:</label>
-                        <select id="cars" name="cars" class="select--area">
-                            <option value="">Select Filter</option>
-                            <option value="saab">Date Posted</option>
-                            <option value="fiat">No. of Views</option>
-                            <option value="audi">No. of Shares</option>
-                        </select>
+                        <div>
+                            <select id="cars" name="cars" class="select--area table-body-row">
+                                <option value="">Select Filter</option>
+                                <option value="saab">Date Posted</option>
+                                <option value="fiat">No. of Views</option>
+                                <option value="audi">No. of Shares</option>
+                            </select>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
 
-            <div class="table--head">
+            <div class="post-table-head">
+                <span></span>
                 <span>
                     Post Title
                 </span>
@@ -90,88 +93,93 @@
                 </span>
             </div>
 
-            <div class="table--body">
-                <!-- row 1 -->
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
+            <div class="table-body">
+                <div class="table-body-row">
+                    <span>1</span>
+                    <span>
                         I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
                     </span>
-                    <span class="row--item">
+                    <span>
                         October 17, 2020
                     </span>
-                    <span class="row--item">
+                    <span>
                         120 Views
                     </span>
-                    <span class="row--item">
+                    <span>
                         20 Shares
                     </span>
                 </div>
-                <!-- row 2 -->
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                        I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
-                    </span>
-                    <span class="row--item">
-                        October 17, 2020
-                    </span>
-                    <span class="row--item">
-                        120 Views
-                    </span>
-                    <span class="row--item">
-                        20 Shares
-                    </span>
-                </div>
-                <!-- row 3 -->
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                        I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
-                    </span>
-                    <span class="row--item">
-                        October 17, 2020
-                    </span>
-                    <span class="row--item">
-                        120 Views
-                    </span>
-                    <span class="row--item">
-                        20 Shares
-                    </span>
-                </div>
-                <!-- row 4 -->
-                <div class="table-row">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
-                        I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
-                    </span>
-                    <span class="row--item">
-                        October 17, 2020
-                    </span>
-                    <span class="row--item">
-                        120 Views
-                    </span>
-                    <span class="row--item">
-                        20 Shares
-                    </span>
-                </div>
+                <hr>
 
-                <!-- row 5 -->
-                <div class="table-row hide-bottom">
-                    <span class="row--item">
-                        <span class="author--index">1</span>
+                <div class="table-body-row">
+                    <span>2</span>
+                    <span>
                         I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
                     </span>
-                    <span class="row--item">
+                    <span>
                         October 17, 2020
                     </span>
-                    <span class="row--item">
+                    <span>
                         120 Views
                     </span>
-                    <span class="row--item">
+                    <span>
                         20 Shares
                     </span>
                 </div>
+                <hr>
+
+                <div class="table-body-row">
+                    <span>3</span>
+                    <span>
+                        I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                    </span>
+                    <span>
+                        October 17, 2020
+                    </span>
+                    <span>
+                        120 Views
+                    </span>
+                    <span>
+                        20 Shares
+                    </span>
+                </div>
+                <hr>
+
+                <div class="table-body-row">
+                    <span>4</span>
+                    <span>
+                        I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                    </span>
+                    <span>
+                        October 17, 2020
+                    </span>
+                    <span>
+                        120 Views
+                    </span>
+                    <span>
+                        20 Shares
+                    </span>
+                </div>
+                <hr>
+
+                <div class="table-body-row">
+                    <span>5</span>
+                    <span>
+                        I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
+                    </span>
+                    <span>
+                        October 17, 2020
+                    </span>
+                    <span>
+                        120 Views
+                    </span>
+                    <span>
+                        20 Shares
+                    </span>
+                </div>
+    
+
+
 
             </div>
 
@@ -228,7 +236,7 @@
 
     </div>
 
-
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="./assets/scripts/app.js"></script>
 </body>
 
