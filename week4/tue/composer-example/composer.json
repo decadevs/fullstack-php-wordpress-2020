@@ -1,0 +1,14 @@
+{
+    "name": "joefazee/composer-example",
+    "description": "Sample project",
+    "authors": [
+        {
+            "name": "Abah Joseph",
+            "email": "joefazee@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2",
+        "ramsey/uuid": "^4.1"
+    }
+}
