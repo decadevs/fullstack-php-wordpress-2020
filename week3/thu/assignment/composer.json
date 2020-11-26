@@ -1,0 +1,13 @@
+{
+    "name": "dell/assignment",
+    "description": "simple API call",
+    "authors": [
+        {
+            "name": "Rafiat",
+            "email": "danijurafiat@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    }
+}

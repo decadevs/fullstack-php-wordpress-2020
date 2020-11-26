@@ -1,107 +1,98 @@
 <?php
-
-
+require_once __DIR__."/vendor/autoload.php";
 
 trait ValidateInput{
-    
-    public function validate($email, $first_name, $last_name){
-        $last_name = filter_var($last_name, FILTER_SANITIZE_STRING);
-        $first_name = filter_var($first_name, FILTER_SANITIZE_STRING);
-        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-        $fields=["email"=>$email,"first_name"=>$first_name,"last_name"=>$last_name];
+    public function validateName($name){
+
+        try{
+            $pattern = "/^[a-z'-]+$/";
+            if (preg_match($pattern, $name) ===0){
+                throw new Exception("Invalid name");
+            }
+            return $name;
+        }
+        catch(Exception $e){
+            echo 'Message: '.$e->getMessage();
+        }
+     }
         
-        return $fields;
+    public function validateEmail($email){
+        try{
+            if(filter_var($email, FILTER_VALIDATE_EMAIL) === FALSE){
+                throw new Exception("Invalid email");
+            }
+            return $email;
+        }
+        catch(Exception $e){
+            echo 'Message: '.$e->getMessage() ;
+        }
     }
+        
+     
  }
 
-
-class Paystack{
+ trait SanitizeInput{
+    
+    public function sanitizeName($name){
+        return filter_var($name, FILTER_SANITIZE_STRING);
+        
+    }
+    public function sanitizeEmail($email){
+        return filter_var($email, FILTER_SANITIZE_EMAIL);
+    }
+ }
+Class Paystack{
     use ValidateInput;
+    use sanitizeInput;
     private $key;
+    public $httpclient ;
+    public $header;
     public $url = "https://api.paystack.co/customer";
+    
 
     public function __construct($key){
         $this->key = $key;
+        $this->header = ["Authorization" => "Bearer ".$this->key, "Cache-control"=>"no-cache"];
+        $this->client = new \GuzzleHttp\client(['base_uri' => $this->url]);
     
     }
-    public function create_customer($email, $first_name, $last_name){
-        $fields=$this->validate($email, $first_name, $last_name);
-        $fields_string = http_build_query($fields);
-  
-        $curl = curl_init();
-  
- 
-        curl_setopt($curl,CURLOPT_URL, $this->url);
-        curl_setopt($curl,CURLOPT_POST, true);
-        curl_setopt($curl,CURLOPT_POSTFIELDS, $fields_string);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, [
-            "Authorization: Bearer ".$this->key,
-            "Cache-Control: no-cache",
-        ]);
+    public function customer($email, $firstName, $lastName){
+        $email= $this->sanitizeEmail($this->validateEmail($email));
+        $firstName = $this->sanitizeName($this->validateName($firstName));
+        $lastName = $this->sanitizeName($this->validateName($lastName));
+        return ["email"=>$email,"firstName"=>$firstName,"lastName"=>$lastName];
+       
+    }
+    public function createCustomer($email, $firstName, $lastName){
+        try{
+            $customer = $this->customer($email, $firstName, $lastName);
         
-        curl_setopt($curl,CURLOPT_RETURNTRANSFER, true); 
+            $res = $this->client->request("POST", "/customer",["headers"=>$this->header], ["body"=>$customer]);
+            return "{$firstName}: Your account has been created";
+        }
+        catch(\GuzzleHttp\Exception\RequestException $e){
+            if ($e->hasResponse()) {
+                $response = $e->getResponse();
+                return((string) $response->getBody());
+            }
     
-    
-        $result = curl_exec($curl);
-        return $customer;
+        }
+    }
+    public function getCustomer(){
+       try{
+        $res = $this->client->request("GET", "/customer",["headers"=>$this->header]);
+        return json_decode($res->getBody());
+       }
 
-    }
-    public function list_customers(){
-        $curl = curl_init();
-  
-        curl_setopt_array($curl, [
-        CURLOPT_URL => $this->url,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-        CURLOPT_HTTPHEADER => [
-            "Authorization: Bearer ".$this->key,
-            "Cache-Control: no-cache",
-        ],
-        ]);
-        
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-        curl_close($curl);
-        
-        if ($err) {
-            echo "cURL Error #:" . $err;
-        } else {
-            echo $response;
+       catch(\GuzzleHttp\Exception\RequestException $e){
+        if ($e->hasResponse()) {
+            $response = $e->getResponse();
+            return((string) $response->getBody());
         }
 
     }
-
-    public function list_customers_page($perpage=1, $page=1){
-        $curl = curl_init();
-  
-        curl_setopt_array($curl, [
-        CURLOPT_URL => $this->url."?perPage=".$perpage."&page=".$page,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-        CURLOPT_HTTPHEADER => [
-            "Authorization: Bearer ".$this->key,
-        "Cache-Control: no-cache",
-        ],
-        ]);
         
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-        curl_close($curl);
-        
-        if ($err) {
-            echo "cURL Error #:" . $err;
-        } else {
-            echo $response;
-        }
-
     }
+    
 }
 
