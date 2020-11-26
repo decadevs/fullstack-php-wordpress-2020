@@ -1,0 +1,107 @@
+.input--rows {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+  line-height: 19px;
+  margin-top: 2rem;
+  border-radius: 0.25rem;
+  
+}
+
+.website-row {
+  border-bottom: 1px solid #dde9fb;
+	padding: 1.5rem 0;
+	padding-right: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+/* modal starts here */
+.modal-bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(197, 197, 197, 0.5);
+	backdrop-filter: blur(4px);
+	width: 100%;
+	height: 100vh;
+}
+.my-form {
+	position: fixed;
+	left: 27.96%;
+	right: 27.96%;
+	top: 25.25%;
+	background: white;
+	border-radius: 0.625rem;
+	width: 41.625rem;
+	height: 22.25rem;
+	padding: 3rem;
+	font-family: Rubik;
+}
+.modal--header {
+	margin-top: -50px;
+	padding: 0.3125rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #dde9fb;
+	margin-bottom: 15px;
+}
+.add-author {
+	color: #181426;
+	font-weight: 500;
+	font-family: Rubik;
+	font-size: 1.5rem;
+}
+.modal-close {
+	color: rgba(64, 81, 105, 0.6);
+	cursor: pointer;
+	padding: 2rem;
+}
+.author--avatar {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	margin: 1.5rem 0;
+}
+.fa-camera {
+	position: relative;
+  left: 60%;
+  top: -20%;
+	color: #4c60eb;
+	border: 5px solid white;
+	border-radius: 90%;
+	cursor: pointer;
+	background-color: white;
+}
+.form-group label {
+	color: #181426;
+	letter-spacing: 1px;
+	font-weight: 500;
+	font-family: Rubik;
+	text-transform: none;
+}
+.form-control {
+	background: rgba(0, 204, 240, 0.02);
+	border: 1px solid rgba(24, 20, 38, 0.0992133);
+	border-radius: 4px;
+	font-family: Rubik;
+	height: 3.25rem;
+	margin: auto;
+}
+.sign-btn {
+	height: 3.75rem;
+  /* margin-bottom: ; */
+  margin-top: 5rem;
+  
+}
+.form-group input {
+  width: 35rem;
+}
+
+.form-group {
+  margin-left: 0.75rem;
+}
+
+/* modal ends here */

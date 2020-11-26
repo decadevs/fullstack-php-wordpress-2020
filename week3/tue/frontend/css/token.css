@@ -1,0 +1,23 @@
+.sub-title {
+	margin-top: 3rem;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 28px;
+
+	color: #405169;
+}
+
+.copy--code {
+	margin-top: 2rem;
+	display: flex;
+	background: rgba(76, 141, 235, 0.10077);
+	border: 1px solid rgba(76, 141, 235, 0.10077);
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+.input--rows {
+	margin-left: 2rem;
+}

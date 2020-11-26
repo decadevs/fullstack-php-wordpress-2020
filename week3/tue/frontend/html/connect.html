@@ -1,0 +1,159 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Connect</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../../assets/styles/scss/main.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/profileSettings.css" />
+		<link rel="stylesheet" href="../css/connect.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+
+	<body class="d-flex">
+		<div class="dashboard-sidebar">
+			<div class="menu">
+				<span class="logo-white"> </span>
+				<span class="menu-item">
+					<a href="/">
+						<img src="../../assets/images/home.svg" alt="" />
+					</a>
+				</span>
+				<span class="menu-item">
+					<a href="/">
+						<img src="../../assets/images/people.svg" alt="" />
+					</a>
+				</span>
+				<span class="menu-item">
+					<a href="/">
+						<img src="../../assets/images/settings.svg" alt="" />
+					</a>
+				</span>
+			</div>
+			<div class="signout"></div>
+		</div>
+		<div class="dashboard--authors">
+			<div class="searchbar">
+				<div>
+					<input
+						type="text"
+						class="search--area"
+						placeholder="Search for author"
+					/>
+				</div>
+				<div class="avatar"></div>
+			</div>
+			<div class="table--container">
+				<div class="table--container--header">
+					<h2 class="table-title">
+						Settings
+					</h2>
+				</div>
+
+				<div class="settings--body">
+					<div class="nav">
+						<div class="nav-item">
+							<img src="../../assets/images/profile.svg" />
+							<a href="profileSettings.html">
+								<div class="nav-text">Profile Settings</div>
+							</a>
+						</div>
+
+						<div class="nav-item">
+							<img src="../../assets/images/security.svg" />
+							<a href="security.html">
+								<div class="nav-text">Security</div>
+							</a>
+						</div>
+
+						<div class="nav-item">
+							<img src="../../assets/images/connect.svg" />
+							<a href="connect.html">
+								<div class="nav-text active">Connect Website(s)</div>
+							</a>
+						</div>
+
+						<div class="nav-item">
+							<img src="../../assets/images/token.svg" />
+							<a href="token.html">
+								<div class="nav-text">Get Token</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="form-profile">
+						<div class="header--text">
+							Connect Website
+
+							<span>Add website to begin tracking</span>
+						</div>
+
+						<form class="settings-form" method="" action="">					
+              <div class="input--rows security-pad">
+                <button class="btn btn-table">Add Website</button>
+
+                <div class="website--list">
+                  <div class="website-row">
+                    <span class="website-name">
+                      <span class="index">1</span>
+                      <span class="website">www.websiteone.com</span>
+                    </span>
+                    <a href="/"><span class="delete"> DELETE </span></a>
+                  </div>
+
+                  <div class="website-row">
+                    <span class="website-name">
+                      <span class="index">2</span>
+                      <span class="website">www.websiteone.com</span>
+                    </span>
+                    <a href="/"><span class="delete"> DELETE </span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+            <!-- start of modal -->
+            <div class="modal-bg">
+              <form class="my-form">
+                <div class="modal--header">
+                  <h2 class="add-author">
+                    Add Website
+                  </h2>
+                  <i class="fa fa-times modal-close" aria-hidden="true"></i>
+                </div>
+
+                <div class="form-group">
+                  <label class="">Website Url</label>
+                  <input
+                    type="text"
+                    name="fullname"
+                    class="form-control"
+                    placeholder="Enter url"
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="Add Website"
+                  class="btn btn-primary sign-btn"
+                />
+            </div>
+          </form>
+
+          <!-- end of modal -->
+				</div>
+			</div>
+		</div>
+		<script src="../javascript/modal.js"></script>
+	</body>
+</html>
