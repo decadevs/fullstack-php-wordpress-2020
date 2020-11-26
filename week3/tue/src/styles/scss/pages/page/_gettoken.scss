@@ -10,9 +10,10 @@
     margin-top: 40px;
 }
 .token-input{
-    width: 478px; height: 28px;
-    border: none; background-color: transparent;
+    width: 478px; height: 28px; padding-left: 20px;
+    border: hidden; background-color: transparent;
 }
+
 .btn-copy{
     border-radius: 4px !important;
     width: 138px; height: 50px; font-size: 24px;

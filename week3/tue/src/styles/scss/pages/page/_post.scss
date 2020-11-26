@@ -1,0 +1,55 @@
+.search-post-wrapper{
+    display: flex; align-items: center;
+    width: 735px; height: 45px;
+    border: 1px solid rgba(76, 141, 235, 0.186481);
+    border-radius: 5px; padding-left: 11px; margin: 16px 0;
+}
+.search-post{
+    width: 107px; height: 17px;
+    border: hidden; margin-left: 10px;
+}
+.search-icon{width: 16px; height: 16px;}
+.filter-wrapper{margin: 16px 0; padding-right: 20px;}
+.filter-wrapper label{font-weight: 700; color: #181426; padding-right: 24px;}
+#filter{width: 182px; height: 45px; border: hidden;}
+.row-hidden{visibility: hidden;}
+.post-tb-head{
+    display: flex;
+    justify-content: space-between;
+    background-color: $lightblue;
+    padding: 1.5rem 0;
+}
+.item-row-title{
+    flex: 35%; padding-left: 12px;
+}
+.item-row{
+    flex: 20%;
+    text-align: center;
+}
+.blank-row{flex: 5%; text-align: center;}
+.item-row-body{
+    flex: 35%;
+}
+.post-body-wrapper{
+    background-color: $white;
+}
+.post-wrap{padding: 0 15px;}
+.post-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    border-bottom: $lightblue thin solid;
+}
+.post-owner{
+    display: flex; flex-direction: column;
+    padding-top: 21px;
+}
+.post-nav{display: flex; align-items: center;}
+.post-nav span{padding-left: 7px;}
+.poster{
+    font-size: 28px; font-weight: 700;
+    margin-top: 21px; margin-bottom: 32px;
+}
+.name-poster{font-size: 24px;}
+#filter{border: hidden;}
+#filter option{border: $lightblue thin solid;}
