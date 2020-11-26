@@ -10,45 +10,39 @@
 
 .left-side-dash{
     // border: 2px solid red;
-    // display: flex;
     grid-column-start: 1;
     grid-column-end: 3;
-    // grid-row-start: 1;
-    // grid-row-end: 3;
 }
 
-.second-part-dash{
-    border: 1px solid purple;
-}
+// .second-part-dash{
+//     // border: 1px solid purple;
+// }
 
 .author-share{
-    // display: flex;
     @extend .d-flex;
     @extend .justify-content-between;
-    border: 1px solid darkkhaki;
+    // border: 1px solid darkkhaki;
+    margin-bottom: 1rem;
 }
 
 .sh-auth-top-psts{
-    // display: flex;
     @extend .d-flex;
     @extend .justify-content-between;
 }
 
 .top-authors{
-    position: relative;
     // height: 40vh;
     width: 55%;
     padding: 1rem;
     background-color: $white;
 }
 
-.author-labels{
-    @extend .d-flex;
-    @extend .justify-content-between;
-}
+// .author-labels{
+//     @extend .d-flex;
+//     @extend .justify-content-between;
+// }
 
 .sharing-channel{
-    position: relative;
     // height: 40vh;
     width: 40%;
     padding: 1rem;
@@ -107,6 +101,7 @@
 
 .roader-details{
     width: 85%;
+    // border: 1px solid purple;
 }
 
 .author-post-list img{
@@ -116,6 +111,14 @@
 
 .author-post-list{
     border-collapse: collapse;
+    // border: 1px solid maroon;
+    width: 100%;
+}
+
+.author-post-list-lower{
+    width: 96%;
+    margin: auto;
+    // border: 1px solid coral;
 }
 
 .author-row-list{
