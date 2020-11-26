@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authors</title>
+    <title>Author Profile</title>
     <link rel="stylesheet" type="text/css" href="../../assets/styles/scss/main.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/authors.css">
+    <link rel="stylesheet" href="../css/authorProfile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body class="d-flex">
     <div class="dashboard-sidebar">
       <div class="menu">
-        <span class="logo-white"> </span>
+        <span class="logo-white">
+
+        </span>
         <span class="menu-item">
           <a href="/">
             <img src="../../assets/images/home.svg" alt="">
@@ -41,177 +43,150 @@
       </div>
       <div class="table--container">
         <div class="table--container--header">
-          <h2 class="table-title">
-            Authors
-          </h2>
-          <button class="btn btn-table">Add Author</button>
+          <div class="table-header">
+
+            <div class="author-name">
+              <h2 class="table-title">Jenny Wilson</h2>
+              <h3 class="table-subtitle">Jenny Wilson's Post</h3>
+            </div>
+
+            <div class="search-filter">
+
+              <div class="searchbar">
+                <div>
+                  <input type="text" class="search--area" placeholder="Search for post">
+                </div>
+              </div>
+
+              <div class="filterbar">
+                <label for="cars" >Filter by:</label>  
+                  <select name="filter" id="filter" class="filter--area">
+                    <option value="Select-filter">Select filter</option>
+                    <option value="date">Date Posted</option>
+                    <option value="no-of-views">No. of views</option>
+                    <option value="no-of-shares">No. of shares</option>
+                  </select>
+              </div>
+
+            </div>
+          </div>
         </div>
-        <!-- start of modal -->
-        <div class="modal-bg">
-          <form class="my-form">
-            <div class="modal--header">
-              <h2 class="add-author">
-                Add Authors 
-              </h2>
-              <i class="fa fa-times modal-close" aria-hidden="true"></i>
-            </div>
-
-            <div class="author--avatar">
-              <img src="../../assets/images/avatar.svg" alt=""></img>
-              <i class="fa fa-camera" aria-hidden="true"></i>
-            </div>
-
-            <div class="form-group">
-              <label class="">Full Name</label>
-              <input type="text" name="fullname" class="form-control" placeholder="Full name">
-            </div>
-
-            <div class="form-group">
-              <label class="">Email address</label>
-              <input type="text" name="email" class="form-control" placeholder="Email address">
-            </div>
-
-            <div class="form-group">
-              <label class="">Phone number</label>
-              <input type="tel" name="phonenumber" class="form-control" placeholder="Phone number">
-            </div>
-
-            <input type="submit" value="Add Author" class="btn btn-primary sign-btn">
-
-          </form>
-        </div>
-        <!-- end of modal -->
+ 
         <div class="table--head">
           <span>
-            Author’s Details
+            Post Title
           </span>
           <span>
-            Email address
+            Date Posted
           </span>
           <span>
-            Phone number
+            No. of Views
           </span>
           <span>
-            No. of Posts
+            No. of Shares
           </span>
-          <span>
-            Total Reach
-          </span>
+
         </div>
         <div class="table--body">
           <div class="table-row">
             <span class="row--item">
               <span class="author--index">1</span>
-              <div class="author--image"></div>
-              Jenny Wilson
+              
+              I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
             </span>
             <span class="row--item">
-              debra.holt@example.com
+              October 17, 2020
             </span>
             <span class="row--item">
-              070893935083
+              120 Views
             </span>
             <span class="row--item">
               120 Posts
             </span>
-            <span class="row--item">
-              3.4k Reach
-            </span>
+
           </div>
           <div class="table-row">
             <span class="row--item">
-              <span class="author--index">1</span>
-              <div class="author--image"></div>
-              Jenny Wilson
+              <span class="author--index">2</span>
+             
+            I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
             </span>
             <span class="row--item">
-              debra.holt@example.com
+              October 17, 2020
             </span>
             <span class="row--item">
-              070893935083
+              120 Views
             </span>
             <span class="row--item">
               120 Posts
             </span>
-            <span class="row--item">
-              3.4k Reach
-            </span>
+
           </div>
           <div class="table-row">
             <span class="row--item">
-              <span class="author--index">1</span>
-              <div class="author--image"></div>
-              Jenny Wilson
+              <span class="author--index">3</span>
+              I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
             </span>
             <span class="row--item">
-              debra.holt@example.com
+              October 17, 2020
             </span>
             <span class="row--item">
-              070893935083
+              120 Views
             </span>
             <span class="row--item">
               120 Posts
             </span>
-            <span class="row--item">
-              3.4k Reach
-            </span>
+
           </div>
           <div class="table-row">
             <span class="row--item">
-              <span class="author--index">1</span>
-              <div class="author--image"></div>
-              Jenny Wilson
+              <span class="author--index">4</span>
+              I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
             </span>
             <span class="row--item">
-              debra.holt@example.com
+             October 17, 2020
             </span>
             <span class="row--item">
-              070893935083
+              120 Views
             </span>
             <span class="row--item">
               120 Posts
             </span>
-            <span class="row--item">
-              3.4k Reach
-            </span>
+
           </div>
           <div class="table-row">
             <span class="row--item">
-              <span class="author--index">1</span>
-              <div class="author--image"></div>
-              Jenny Wilson
+              <span class="author--index">5</span>
+              
+            I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
             </span>
             <span class="row--item">
-              debra.holt@example.com
+              October 17, 2020
             </span>
             <span class="row--item">
-              070893935083
+            120 Views
             </span>
             <span class="row--item">
               120 Posts
             </span>
-            <span class="row--item">
-              3.4k Reach
-            </span>
+
           </div>
           <div class="table-row hide-bottom">
             <span class="row--item">
-              <span class="author--index">1</span>
-              <div class="author--image"></div>
-              Jenny Wilson
+              <span class="author--index">6</span>
+              
+              I LEND MY VOICE: #EndSARS, #EndPoliceIntimidation #EndPoliceBrutality
             </span>
             <span class="row--item">
-              debra.holt@example.com
+              October 17, 2020
             </span>
             <span class="row--item">
-              070893935083
+              120 Views
             </span>
             <span class="row--item">
               120 Posts
             </span>
-            <span class="row--item">
-              3.4k Reach
-            </span>
+
           </div>
         </div>
       <!--carousel-->
@@ -232,8 +207,8 @@
       </div>
       <!--End of carousel-->
       </div>
+
     </div>
-    <script src="../javascript/modal.js"></script>
   </body>
 
 </html>

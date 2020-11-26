@@ -1,0 +1,129 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Setting</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/styles/scss/main.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/profileSettings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body class="d-flex">
+      <div class="dashboard-sidebar">
+        <div class="menu">
+          <span class="logo-white"> </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="../../assets/images/home.svg" alt="" />
+            </a>
+          </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="../../assets/images/people.svg" alt="" />
+            </a>
+          </span>
+          <span class="menu-item">
+            <a href="/">
+              <img src="../../assets/images/settings.svg" alt="" />
+            </a>
+          </span>
+        </div>
+        <div class="signout"></div>
+      </div>
+      <div class="dashboard--authors">
+      <div class="searchbar">
+        <div>
+          <input type="text" class="search--area" placeholder="Search for author">
+        </div>
+        <div class="avatar"></div>
+      </div>
+        <div class="table--container">
+          <div class="table--container--header">
+            <h2 class="table-title">
+              Settings
+            </h2>
+      </div>
+  
+          <div class="settings--body">
+            <div class="nav">
+              <div class="nav-item">
+                <img src="../../assets/images/profile.svg">
+                <a href="profileSettings.html">
+                  <div class="nav-text active">Profile Settings</div>
+                </a>
+              </div>
+  
+              <div class="nav-item">
+                <img src="../../assets/images/security.svg" />
+                <a href="security.html">
+                  <div class="nav-text">Security</div>
+                </a>
+              </div>
+  
+              <div class="nav-item">
+                <img src="../../assets/images/connect.svg" />
+                <a href="connect.html">
+                  <div class="nav-text">Connect Website</div>
+                </a>
+              </div>
+  
+              <div class="nav-item">
+                <img src="../../assets/images/token.svg" />
+                <a href="token.html">
+                  <div class="nav-text">Get Token</div>
+                </a>
+              </div>
+            </div>
+  
+            <div class="form-profile">
+              <div class="header--text">
+                Profile Settings
+  
+                <span>Edit basic information about you</span>
+              </div>
+  
+              <form class="settings-form" method="" action="">
+                <div class="author--avatar">
+                  <img src="../../assets/images/avatar.svg" alt=""></img>
+                  <i class="fa fa-camera" aria-hidden="true"></i>
+                </div>
+  
+                <div class="input--rows">
+                  <div class="data--row">
+                    <div class="form-group">
+                      <label for="firstname">Enter your First Name</label>
+                      <input type="text" id="firstname" name="firstname" class="form-control" placeholder="John" />
+                    </div>
+  
+                    <div class="form-group">
+                      <label for="lastname">Enter your Last Name</label>
+                      <input type="text" id="lastname" name="lastname" class="form-control" placeholder="John" />
+                    </div>
+                  </div>
+  
+                  <div class="data--row">
+                    <div class="form-group bottom-group">
+                      <label for="email">Email Address</label>
+                      <input type="email" id="email" name="email" class="form-control" placeholder="John@gmail" />
+                    </div>
+  
+                    <div class="form-group bottom-group">
+                      <label for="phone">Phone number</label>
+                      <input type="tel" id="phone" name="phone" class="form-control" placeholder="070680373937" />
+                    </div>
+                  </div>
+  
+                  <div class="settings-btn">
+                    <input type="submit" value="cancel" class="btn cancel-btn" />
+                    <input type="submit" value="save changes" class="btn save-btn" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
