@@ -19,12 +19,11 @@ button {
     grid-template-rows: .4fr 5fr .7fr;
     overflow-y: auto;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 h2 {
     margin: 15px 0 20px 20px;
-    // border: 1px solid purple;
     font-size: 1.7em;
     font-weight: 700;
 }
@@ -33,14 +32,12 @@ h2 {
     margin: 0 20px 20px 20px;
     display: grid;
     grid-template-columns: 2fr 5fr;
-    // border: 1px solid red;
 }
 
 .profile-settings-options {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    // margin-right: 20px;
 }
 
 .profile-settings-options>span {
@@ -210,7 +207,6 @@ h2 {
 /*Connect Website Styles Starts*/
 
 .add-website {
-    // width: 18vw;
     margin-top: 20px;
 }
 
@@ -255,7 +251,6 @@ h2 {
         margin: 20px auto;
     }
 }
-
 
 
 /*Connect Website Styles Ends*/
