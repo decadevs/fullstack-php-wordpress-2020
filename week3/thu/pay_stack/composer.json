@@ -1,0 +1,12 @@
+{
+    "name": "waramie/pay_stack",
+    "authors": [
+        {
+            "name": "Warami",
+            "email": "wrmyeresanara@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.2"
+    }
+}

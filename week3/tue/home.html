@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="d-flex">
     <div class="dashboard-sidebar">
@@ -43,6 +44,34 @@
                 </h2>
                 <button class="btn btn-table">Add Author</button>
             </div>
+
+            <!-- modal -->
+            <div class="modal-bg">
+                <form class="form">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Add Author</h2>
+                        <span class="modal-close"><i class="fa fa-close" aria-hidden="true"></i></span>
+                    </div>
+                    <div>
+                        <img src="assets/images/avatar.svg" alt="" class="modal-img">
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="full_name">Full Name</label>
+                        <input type="text" name="full_name" placeholder="Full name"class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email_address">Email Address</label>
+                        <input type="email" name="email_address" placeholder="Email address"class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="number" name="phone_number" placeholder="Phone number" class="form-control">
+                    </div>
+                    <input type="submit" value="Add Author" class="btn btn-primary sign-btn">
+                </form>
+            </div>
+            <!-- end of modal -->
 
             <div class="table--head">
                 <span > 
@@ -180,5 +209,6 @@
             
         </div>
     </div>
+    <script src="modal.js"></script>
 </body>
 </html>

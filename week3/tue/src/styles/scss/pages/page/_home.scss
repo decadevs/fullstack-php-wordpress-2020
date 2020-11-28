@@ -109,3 +109,83 @@
   .hide-bottom{
       border-bottom: none;
   }
+
+  .modal-bg {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(197, 197, 197, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    background-color: $white;
+    left:27.96%;
+    right:27.96%;
+    top: 14.99%;
+    width: 40rem;
+    height:37rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0.625rem;
+  }
+
+  .modal-header {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $lightpurple;
+    margin-bottom: 0.9375rem;
+  }
+
+ .modal-title {
+    color: #000000;
+    // left: 30.31%;
+    // right:59.96%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .modal-close {
+    font-weight: 700;
+    padding-top: 1.5rem;
+    cursor: pointer;
+    color: rgba(64, 81, 105, 0.6);
+  }
+
+  .modal-img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 1.5rem 0;
+
+  }
+
+  .fa-camera { 
+      position:fixed;
+      color: $primary;
+      background-color: $white;
+      left: 37.00%;
+      top: 39.05%;
+      cursor: pointer;
+  }
+
+ .form-group label {
+    text-transform: none;
+    font-weight: 700;
+ }
+
+ .form-control {
+   min-width: 10px;
+   border-color:rgba(24, 20, 38, 0.0992133);
+   background: rgba(0, 204, 240, 0.02);
+
+ }
