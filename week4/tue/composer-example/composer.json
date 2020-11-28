@@ -1,10 +1,10 @@
 {
-    "name": "waramie/composer-example",
-    "description": "sample project",
+    "name": "joefazee/composer-example",
+    "description": "Sample project",
     "authors": [
         {
-            "name": "Warami",
-            "email": "wrmyeresanara@gmail.com"
+            "name": "Abah Joseph",
+            "email": "joefazee@gmail.com"
         }
     ],
     "require": {
