@@ -1,67 +1,59 @@
 <?php
- // Autoloader
-require_once ('./vendor/autoload.php');
-// Startup
-require_once('httpClient.php');
-
-// dotenv
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-class Customer extends HttpClient { 
+require 'setup.php';
+class Customer extends Setup {
+  private $endpoint = 'https://api.paystack.co/customer';
   public function __construct($secret_key) {
     //set parent secret_key
-    parent::__construct($secret_key);
+    $this->secret_key = $secret_key;
   }
   
   /**
      * Creates a Customer.
   **/
 
-  public function createCustomer (array $data) {
-    try {
-      
-      if($this->curl($this->endpoint.'customer', "POST", $data)){
-                return $data;
-            }else {
-                throw new Exception("There is an error in connection");
-            }
-    } catch(Exception $error){
-            return $error->getMessage();
-        }
-  }
+  public function createCustomer ($email, $firstName, $lastName, $phone) {
+   $url = $this->endpoint;
+    if ($email) {
+     $response = json_decode($this->curlPost($url, TRUE, [
+       'email' => $email,
+       'first_name' => $firstName,
+       'last_name' => $lastName,
+       'phone' => $phone
+     ]));
 
+     if($response && $response->status){    
+       echo 'Customer Created' . PHP_EOL;          
+        //return customer_code and ID
+        return [
+                'first_name'=>$response->data->first_name,
+                'last_name'=>$response->data->last_name,
+                'customer_id'=>$response->data->id, 
+                'customer_code'=>$response->data->customer_code
+               ];
+     }
+      //api request failed
+      return false;
+    }
+    return false;
+  }
 
     /**
      * Lists the Customers.
     **/
 
-  public function listCustomers(){
-        try{
-            $result = $this->curl($this->endpoint, "GET", []);
-            if($result){
-                return $result;
-            }else{
-                throw new Exception("There is an error in connection");
-            }
-        }catch(Exception $error){
-            return $error->getMessage();
-        }
-    }
+  public function listCustomers () {
+     $url = $this->endpoint;
+    return $response = json_decode($this->curlList($url, TRUE));
+  }
 }
 
   /**
      * Test API's.
   **/
-$secret_key = "";
-  $tester = new Customer($secret_key);
-    $data = [
-        "first_name" => "Warami",
-        "last_name" => "Eresanara",
-        "email" => "waieresanara@outlook.com",
-        "phone" => "08170002951",
-    ];
+$tester = new Customer('sk_test_be2fb87d138fce446cfc07e109abd880528ebfe4');
+
 /* create customer */
-    // print_r( $tester->createCustomer($data));
+    print_r( $tester->createCustomer('tosan@outlook.com', 'tosan', 'eresanara', '08093057922'));
 
 /* list customers */
-    print_r($tester->listCustomers());
+    // print_r($tester->listCustomers());
