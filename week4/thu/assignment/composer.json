@@ -1,0 +1,19 @@
+{
+    "name": "wpanalytics/assignment",
+    "authors": [
+        {
+            "name": "Rafiat",
+            "email": "danijurafiat@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4":{
+            "maths\\":"maths/"
+        }, 
+        "files": [
+            "./public/setup/config.php",
+            "./public/setup/model.php"
+        ]
+    }
+}
