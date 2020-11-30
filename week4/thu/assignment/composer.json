@@ -1,0 +1,21 @@
+{
+    "name": "princeid/wpanalytics",
+    "description": "Wordpress Analytics",
+    "authors": [
+        {
+            "name": "Prince Dickson",
+            "email": "dicksoniprince@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "week4_assignment\\" : "app/",
+            "second_file\\" : "app/"
+        },
+        "files": [
+            "core/config.php",
+            "core/sampledata.json"
+        ]
+    }
+}
