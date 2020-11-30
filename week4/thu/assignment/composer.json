@@ -1,0 +1,22 @@
+{
+    "name": "wpanalytic/johnbosco",
+    "description": "test setup for the wp analytic system",
+    "authors": [
+        {
+            "name": "Johnbosco Nweke",
+            "email": "nwekejohnbosco@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\": "models/"
+        },
+        "files":[
+            "core/config.php",
+            "core/routes.php"
+        ]
+    }
+}
