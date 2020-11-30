@@ -1,0 +1,19 @@
+{
+    "name": "waramie/assignment",
+    "description": "setup for the wpanalytic",
+    "authors": [
+        {
+            "name": "Warami",  
+            "email": "wrmyeresanara@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "core/config.php"
+        ]
+    }
+}
