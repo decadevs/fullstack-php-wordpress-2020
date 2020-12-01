@@ -1,0 +1,20 @@
+{
+    "name": "mystevotgit/wpanalytics",
+    "description": "Wordpress analytics",
+    "authors": [
+        {
+            "name": "mystevotgit",
+            "email": "oyeolatunji@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Wpanalytics\\" : "Wpanalytics/" 
+        },
+        "files": [
+            "core/config.php",
+            "core/routes.php"
+        ]
+    }
+}
