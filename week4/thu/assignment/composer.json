@@ -14,8 +14,7 @@
             "second_file\\" : "app/"
         },
         "files": [
-            "core/config.php",
-            "core/sampledata.json"
+            "core/config.php"
         ]
     }
 }
