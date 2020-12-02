@@ -1,0 +1,17 @@
+{
+    "name": "olumaja/wpanalytic",
+    "description": "Wordpress Analytics",
+    "authors": [
+        {
+            "name": "Olumaja",
+            "email": "olumajasegun@gmai.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WP_App\\": "WP_App/"
+        },
+        "files":["support/config.php", "support/db.php"]
+    }
+}
