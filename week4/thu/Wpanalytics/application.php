@@ -4,6 +4,6 @@ namespace Wpanalytics;
 
 class Application {
     public function mount() {
-        echo __METHOD__;
+        return new Router();
     }
 }
