@@ -4,6 +4,8 @@ namespace Wpanalytics;
 
 class Application {
     public function mount() {
-        return new Router();
+        $router = new Router();
+
+        $router->executeUrl();
     }
 }

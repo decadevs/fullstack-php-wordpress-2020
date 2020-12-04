@@ -53,11 +53,11 @@ class Router {
 
             $parts = explode('@', $foundRoute['callback']);
 
-            $controller= 'App\Controllers\\'.$parts[0];
+            $controller= 'Wpanalytics\Controllers\\'.$parts[0];
             return call_user_func(array(new $controller, $parts[1]), array());
         }
 
-        $controller = 'App\Controllers\NotFoundController';
+        $controller = 'Wpanalytics\Controllers\NotFoundController';
 
         return call_user_func(array(new $controller, 'index'), array());
     }
