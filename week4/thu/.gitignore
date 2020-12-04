@@ -474,4 +474,4 @@ composer.lock
 
 .env
 
-/public/uploads
+/public/static/node_modules

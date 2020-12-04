@@ -1,0 +1,138 @@
+.dashboard-body {
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-between;
+    width: 100%;
+    height: 100%;
+    padding-left: 0.12rem;
+    padding-right: 0.12rem;
+    .author--image {
+        background-image: url("week4/thu/public/static/assets/images/jenny wilson.svg");
+    }
+    h5 {
+        font-weight: bold;
+        margin-top: 0.8rem;
+        margin-bottom: 0;
+    }
+    .authors {
+        display: block;
+        width: 30%;
+        height: 43.9375rem;
+        padding: 1rem;
+        background-color: $white;
+        .authors-heading {
+            height: 2.5rem;
+            @extend .d-flex;
+            @extend .justify-content-between;
+            img {
+                margin-top: 0.9rem;
+            }
+        }
+        p, h4{
+            display: block!important;
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 20px
+        }
+        .index {
+            position: relative;
+            top: -0.6rem;
+            font-size: small;
+        }
+        .author--image {
+            position: relative;
+            top: -0.6rem;
+        }
+        .posts {
+            margin-top: 0.275rem;
+        }
+        .author-name {
+            margin-left: 0.2rem;
+        }
+    }
+
+    .table--body {
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .table-row {
+        padding-right: 0;
+        padding-top: 0.85rem;
+        padding-bottom: 0.85rem;
+        width: 96%;
+    }
+    .remove-border {
+        border-bottom: 0px!important;
+    }
+
+    .chart-box {
+        @extend .d-flex;
+        @extend .flex-column;
+        @extend .justify-content-between;
+        width: 68.683%;
+        height: 43.9375rem;
+        .charts {
+            @extend .d-flex;
+            @extend .justify-content-between;
+        }
+        .top-shared-authors {
+            @extend .d-flex;
+            @extend .flex-column;
+            background-color: $white;
+            width: 40%;
+            height: 20.9375rem;
+            padding: 1rem;
+            .table-row {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+        .top-posts {
+            background-color: $white;
+            width: 58%;
+            height: 20.9375rem;
+            padding: 1rem;
+        }
+        .data {
+            @extend .d-flex;
+            @extend .justify-content-between;
+        }
+    }
+}
+
+.header-section {
+    height: 5rem!important;
+}
+
+.small-font {
+    font-size: x-small;
+    @extend .d-flex;
+    @extend .align-items-center;
+}
+
+.reach {
+    position: relative;
+    top: 4px;
+}
+
+.add-border {
+    border-bottom: 1px solid $lightpurple;
+}
+
+.blue-post {
+    color: blue;
+    max-width: 3rem;
+}
+
+.table--row {
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-between;
+}
+
+.authors-name {
+    display: block;
+    font-size: small;
+    margin-top: 0;
+    margin-bottom: 0;
+}

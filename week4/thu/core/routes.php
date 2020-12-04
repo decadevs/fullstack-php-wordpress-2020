@@ -1,36 +1,15 @@
 <?php
+use \Wpanalytics\Router;
 
-Use \Wpanalytics\Router;
-
-Route::get('auth/login', 'AuthController@index');
-Route::get('/', 'Homepage@index');
-Route::get('/', 'Homepage@index');
-
-// function getCleanURI(): string {
-//     $uri = isset($_SERVER['PHP_SELF']) ? trim($_SERVER['PHP_SELF']) : '/';
-//     $uri = str_ireplace('index.php', '', $uri);
-//     $uri = trim($uri, '/');
-//     return $uri;
-// }
-
-// function homePage() {
-//     include_once '../homepage.php';
-// }
-
-// function aboutPage() {
-//     include_once '../aboutpage.php';
-// }
-
-// $uri = getCleanURI();
-
-// $routes = [
-//     '' => 'homePage',
-//     'about' => 'aboutPage'
-// ];
-
-// foreach($routes as $url=>$handler) {
-//     if($uri === $url) {
-//         call_user_func($handler);
-//         exit;
-//     }
-// }
+Router::get('/', 'AuthController@login');
+Router::get('auth/login', 'AuthController@login');
+Router::post('auth/login', 'AuthController@store');
+Router::get('auth/logout', 'AuthController@logout');
+Router::get('auth/reg', 'AuthController@signup');
+Router::get('dashboard', 'HomeController@index');
+Router::get('settings', 'SettingsController@settings');
+Router::get('security', 'SettingsController@security');
+Router::get('connect-website', 'SettingsController@connect');
+Router::get('token', 'SettingsController@token');
+Router::get('author', 'HomeController@author');
+Router::get('authorpost', 'HomeController@authorpost');
