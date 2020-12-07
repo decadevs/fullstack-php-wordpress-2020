@@ -6,5 +6,3 @@
 require_once '../vendor/autoload.php';
 
 (new App\Application())->mount();
-
-echo "still working..";
