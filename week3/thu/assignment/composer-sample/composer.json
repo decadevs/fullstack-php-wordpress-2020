@@ -1,0 +1,13 @@
+{
+    "name": "hp/composer-sample",
+    "description": "Sample project",
+    "authors": [
+        {
+            "name": "Olumaja",
+            "email": "olumajasegun@gmai.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    }
+}
