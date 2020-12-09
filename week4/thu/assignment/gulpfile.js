@@ -10,11 +10,11 @@ var del = require('del');
 var paths = {
   styles: {
     src: 'static/src/styles/**/*.scss',
-    dest: 'public/css'
+    dest: 'public/css/'
   },
   scripts: {
     src: '/static/src/scripts/**/*.js',
-    dest: 'public/js'
+    dest: 'public/js/'
   }
 };
  

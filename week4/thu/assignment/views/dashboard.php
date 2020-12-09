@@ -15,19 +15,19 @@
                     </span>
             <span class="menu-item">
                     <a href="home.html">
-                        <img src="/public/images/people.svg" alt="">
+                        <img src="/images/people.svg" alt="">
                     </a>
                 </span>
             <span class="menu-item">
                     <a href="settings.html">
-                        <img src="/public/images/settings.svg" alt="">
+                        <img src="/images/settings.svg" alt="">
                     </a>
                 </span>
         </div>
         <div class="signout">
                 <span class="">
                     <a href="/auth/logout" class="signout-link">
-                        <img src="public/images/signout.svg" alt="">
+                        <img src="/images/signout.svg" alt="">
                     </a>
                 </span>
         </div>
@@ -52,7 +52,7 @@
             <div class="content-wrapper">
                 <div class="title-wrap">
                     <h3 class="page-title">Dashboard</h3>
-                    
+
                 </div>
                 <div class="content-area">
                     <div class="grid-area">
@@ -369,7 +369,7 @@
                                 <div class="span-content">
                                     <div class="author-details">
                                         <div class="author-image">
-                                            <img src="/public/images/author.svg" alt="">
+                                            <img src="/images/author.svg" alt="">
                                         </div>
                                         <div class="author-name-row">
                                             <div class="text author-name">Leslie Alexander</div>
