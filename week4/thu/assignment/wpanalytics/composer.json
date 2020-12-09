@@ -14,7 +14,8 @@
         },
         "files": [
             "core/config.php",
-            "core/routes.php"
+            "core/routes.php",
+            "core/functions.php"
         ]
     }
 }

@@ -2,11 +2,6 @@
 
 namespace App;
 
-/**
- * Class Router
- *
- * @package \App
- */
 class Router
 {
     protected $serverInfo;
@@ -59,6 +54,7 @@ class Router
             $parts = explode('@', $foundRoute['callback']);
 
             $controller= 'App\Controllers\\'.$parts[0];
+
             return call_user_func(array(new $controller, $parts[1]), array());
         }
 

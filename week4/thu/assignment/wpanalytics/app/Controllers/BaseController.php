@@ -4,11 +4,6 @@ namespace App\Controllers;
 
 use App\Http\Request;
 
-/**
- * Class BaseController
- *
- * @package \App\Controllers
- */
 abstract class BaseController
 {
     protected $request;
@@ -20,9 +15,12 @@ abstract class BaseController
 
     public function loadView($name, $data = []) {
 
+        $view = VIEW_PATH . '/'. $name . '.php';
+        if(!file_exists($view)) throw new \Exception($view . ' not found');
+
         ob_start();
         extract($data);
-        require_once VIEW_PATH . '/'. $name . '.php';
+        require_once $view;
         $content =  ob_get_contents();
         ob_clean();
 

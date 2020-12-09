@@ -5,4 +5,4 @@
 
 require_once '../vendor/autoload.php';
 
-(new App\Application())->mount();
+(new App\Application());
