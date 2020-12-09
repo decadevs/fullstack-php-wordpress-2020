@@ -8,6 +8,8 @@ class ComposerStaticInit01fd47d032300437a43aa16669497489
 {
     public static $files = array (
         '5972051756107b9f261fcc9fb3d7a370' => __DIR__ . '/../..' . '/core/config.php',
+        '51178530e2aafee5d130d06141747f80' => __DIR__ . '/../..' . '/core/functions.php',
+        '4d85ee1ca74c9b40d62bb82aa228f3ba' => __DIR__ . '/../..' . '/core/routes.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -20,7 +22,7 @@ class ComposerStaticInit01fd47d032300437a43aa16669497489
     public static $prefixDirsPsr4 = array (
         'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/App',
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
