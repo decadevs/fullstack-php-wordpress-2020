@@ -30,7 +30,7 @@
                 </a>
             </span>
             <span class="menu-item logout">
-                <a href="mysignin.html">
+            <a href="/auth/login">
                     <img src="assets/images/log-out 1.svg" alt="log-out">
                 </a>
             </span>

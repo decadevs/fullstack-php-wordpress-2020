@@ -9,4 +9,3 @@
  use Wpanalytics\application;
 
  $app = new Application();
- $app->mount();

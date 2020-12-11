@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/mysignin.css" />
 </head>
 <body class="container--signin">
-    <form class="my-form" action="signup.php">
+    <form class="my-form" action="/auth/reg" method="post">
       <div class="signin--logo">
        <span> Logo</span>
       </div>
@@ -16,17 +16,21 @@
       <h6 class="signin-subtitle">Please enter your credentials to proceed.</h6>
       <div class="form-group">
         <label>Email address</label>
-        <input type="text" name="email" class="form-control" placeholder="samplemail@mail.com">
+        <input type="email" name="email" class="form-control" placeholder="samplemail@mail.com">
         <small>Forgot password?</small>
       </div>
       <div class="form-group">
-        <label>Password</label>
-        <input type="password" name="email" class="form-control" placeholder="******************">
+        <label>Your Name</label>
+        <input type="text" name="name" class="form-control" placeholder="Enter your name">
       </div>
-      <input type="submit" value="Sign in" class="btn btn-primary sign-btn">
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" placeholder="******************">
+      </div>
+      <input type="submit" value="Sign up" class="btn btn-primary sign-btn">
       <span class="sign-up-text">
         <span>Dont’ have an account? </span>
-        <a href="mysignin.php">Sign in</a>
+        <a href="/auth/login">Sign in</a>
       </span>
     </form>
 </body>

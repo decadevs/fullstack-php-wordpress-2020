@@ -10,7 +10,7 @@ namespace Wpanalytics\Controllers;
 class HomeController extends BaseController
 {
     public function index() {
-
+        $this->checkLogin();
         $this->loadView('home', ['title' => 'Wpanalytics']);
     }
 
