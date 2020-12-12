@@ -1,0 +1,20 @@
+{
+  "name": "decagon-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tailwind": "postcss tailwind.css -o src/tailwind.generated.css",
+    "watch": "postcss -w tailwind.css -o src/tailwind.generated.css"
+  },
+  "author": "warami eresanara",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
