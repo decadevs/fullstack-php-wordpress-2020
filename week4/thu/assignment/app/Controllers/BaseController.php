@@ -3,26 +3,27 @@
 namespace App\Controllers;
 
 use App\Http\Request;
+use App\Http\Session;
 
-/**
- * Class BaseController
- *
- * @package \App\Controllers
- */
 abstract class BaseController
 {
     protected $request;
+    protected $session;
 
     public function __construct()
     {
         $this->request = new Request();
+        $this->session = Session::getInstance();
     }
 
     public function loadView($name, $data = []) {
 
+        $view = VIEW_PATH . '/'. $name . '.php';
+        if(!file_exists($view)) throw new \Exception($view . 'not found');
+        
         ob_start();
         extract($data);
-        require_once VIEW_PATH . '/'. $name . '.php';
+        require_once $view;
         $content =  ob_get_contents();
         ob_clean();
 
@@ -33,4 +34,14 @@ abstract class BaseController
         header('Location:' . $to);
         exit;
     }
+
+    protected function checkLogin() {
+        $userId = $this->session->get(USER_SESSION_KEY_NAME);
+        if(!$userId) {
+            $this->session->setFlash('info', 'You must be logged in to continue');
+            $this->redirect('/auth/login');
+            exit;
+        }
+    }
 }
+

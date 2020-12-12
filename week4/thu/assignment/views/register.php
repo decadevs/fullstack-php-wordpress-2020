@@ -8,8 +8,7 @@
 <body class="container--signin">
 <form class="my-form" action="/auth/register" method="post">
 
-    <?php include_once 'partials/flash-messages.php'?>
-
+     <?php include_once 'partials/flash-messages.php'?>
     <div class="signin--logo">
         <span>Logo</span>
     </div>

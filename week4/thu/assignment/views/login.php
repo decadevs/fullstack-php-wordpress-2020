@@ -26,7 +26,7 @@
     <input type="submit" value="Sign in" class="btn btn-primary sign-btn">
     <span class="sign-up-text">
         <span>Dont’ have an account? </span>
-        <a href="/auth/register">Sign up</a>
+        <a href="/">Sign up</a>
       </span>
 </form>
 </body>

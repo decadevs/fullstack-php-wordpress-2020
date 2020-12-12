@@ -1,31 +1,35 @@
 <?php
 
-function getCleanURI(): string {
-    $uri = isset($_SERVER['PHP_SELF']) ? trim($_SERVER['PHP_SELF']) : '/';
-    $uri = str_ireplace('index.php', '', $uri);
-    $uri = trim($uri, '/');
-    return $uri;
+if(!function_exists('env')) {
+  function env($key, $default='') {
+   return isset($_ENV[$key])? $_ENV[$key] : $default; 
+  }
 }
 
 
-// function homePage(){
-//   (new App\Greeting())->index('Hello','Warami') . PHP_EOL;
-//   echo "Welcome to my blog";
+function meekrodb_error_handler($params) {
+    if (isset($params['query'])) $out[] = "QUERY: " . $params['query'];
+    if (isset($params['error'])) $out[] = "ERROR: " . $params['error'];
+    $out[] = "";
 
-// }
+    if (php_sapi_name() == 'cli' && empty($_SERVER['REMOTE_ADDR'])) {
+        echo implode("\n", $out);
+    } else {
+        echo implode("<br>\n", $out);
+    }
 
-// function about(){
-//     echo "you can find out about me here";
-// }
+    die;
+}
 
-// function contact(){
-//     echo "contact me here";
-// }
+function meekrodb_debugmode_handler($params) {
+    echo "QUERY: " . $params['query'] . " [" . $params['runtime'] . " ms]";
+    if (php_sapi_name() == 'cli' && empty($_SERVER['REMOTE_ADDR'])) {
+        echo "\n";
+    } else {
+        echo "<br>\n";
+    }
+}
 
-// function notFound(){
-//     echo "404 PAGE NOT FOUND";
-// }
-
-// function blog(){
-//   (new App\Author())->firstWriteUp();
-// }
+function getFlash($key) {
+    return \App\Http\Session::getInstance()->getFlash($key);
+}

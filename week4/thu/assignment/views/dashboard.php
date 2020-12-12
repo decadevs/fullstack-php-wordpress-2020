@@ -26,7 +26,7 @@
         </div>
         <div class="signout">
                 <span class="">
-                    <a href="/auth/logout" class="signout-link">
+                    <a href="/auth/login" class="signout-link">
                         <img src="/images/signout.svg" alt="">
                     </a>
                 </span>
@@ -52,7 +52,7 @@
             <div class="content-wrapper">
                 <div class="title-wrap">
                     <h3 class="page-title">Dashboard</h3>
-
+                    <?php include_once 'partials/flash-messages.php'?>
                 </div>
                 <div class="content-area">
                     <div class="grid-area">

@@ -2,12 +2,6 @@
 
 namespace App;
 
-/**
- * Class Router
- *
- * @package \App
- */
-
 class Router
 {
     protected $serverInfo;
@@ -19,6 +13,7 @@ class Router
     protected static $routes = [];
 
     protected static $allowedHttpMethods = ['get', 'post', 'put', 'patch', 'delete'];
+
 
     public function __construct()
     {
@@ -33,6 +28,8 @@ class Router
         }
         return $url;
     }
+
+
 
     public function executeUrl() {
         $this->requestedUrl =  $this->getRequestedUrl();
@@ -50,6 +47,7 @@ class Router
                 break;
             }
         }
+
 
         if($foundRoute) {
 
@@ -90,5 +88,6 @@ class Router
         }
 
     }
+
 
 }

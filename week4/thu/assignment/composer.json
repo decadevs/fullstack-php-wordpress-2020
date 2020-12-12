@@ -7,12 +7,15 @@
 			"email": "wrmyeresanara@gmail.com"
 		}
 	],
-	"require": {},
+	"require": {
+		"aura/session": "^2.1"
+	},
 	"autoload": {
 		"psr-4": {
 			"App\\": "app/"
 		},
 		"files": [
+			"core/functions.php",
 			"core/config.php",
 			"core/routes.php"
 		]
