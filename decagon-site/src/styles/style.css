@@ -1478,10 +1478,14 @@ small {
 
     .footer-info-mobile h4 {
         margin-bottom: 30px;
+        color: #FFF;
     }
 
     .footer-info-mobile p {
         margin-bottom: 15px;
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 100;
     }
 
     .contact-mobile {
