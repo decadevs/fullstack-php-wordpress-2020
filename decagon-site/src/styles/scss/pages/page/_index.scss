@@ -1,0 +1,430 @@
+*{
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+.container-fluid{
+  font-family: 'Mulish', sans-serif;
+  width: 100%; margin: 0; padding: 0;
+  color: $offblack; background-color: $white;
+}
+
+header{
+  height: 100vh; max-width: 100%; 
+  background-color: rgba(0,0,0,1);
+  background-image: linear-gradient(to left, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1) 100%), url(/images/backgroudImg.svg);
+  background-size: cover; background-position: center; padding-top: 1.25rem;
+}
+
+.navbar{
+  @extend .d-flex;
+  @extend .justify-content-between;
+  width: 80%; margin: auto;
+}
+
+.menu-cover{
+  @extend .d-flex;
+  @extend .justify-content-between;
+  font-weight: 400; 
+  
+}
+
+.menu-tab{
+  height: 2.5rem; width: 7.3rem; 
+  font-size: 0.875rem;
+}
+
+.menu-tab a{
+  text-decoration: none; color: $white;
+  width: 100%; height: 100%;
+  display: block; text-align: center;
+  padding-top: 0.625rem;
+}
+
+.menu-tab.active{background-color: $white;}
+.menu-tab.active a{
+  color: $black;
+}
+
+.menu-tab.active a:hover{
+  background: linear-gradient(96.67deg, #34A853 0%, #B8D344 100%);
+  color: $white;
+}
+
+.title{
+  width: 52.4rem; text-align: center; margin: auto; margin-top: 9.375rem;
+  color: $white; font-weight: 800; font-size: 3.4rem;
+}
+
+.title span{color: $lemongreen;}
+
+.sub-title{
+  width: 45rem; color: $white; font-size: 1.56rem;
+  text-align: center; 
+  margin: auto; margin-top: 1.5rem; margin-bottom: 6rem;
+}
+
+.btn-cover{
+  @extend .d-flex; @extend .justify-content-center;
+  width: 50%; margin: auto;
+}
+
+#btn-team{
+  background: linear-gradient(96.67deg, #34A853 0%, #B8D344 100%); border: none;
+  width: 15.4rem; height: 3.75rem; font-size: 1.25rem; font-weight: 700;
+}
+
+.client-container{
+  width: 100%;
+}
+
+.client-wrapper{
+  @extend .d-flex;
+  @extend .align-items-center; @extend .flex-wrap;
+  width: 80%; margin: auto; padding: 51px 0;
+}
+
+.client-label{
+  flex: 25%; color: #2C3134;
+  text-align: right;
+}
+
+.client{
+  flex: 75%; padding: 0 1.875rem;
+  @extend .d-flex; @extend .justify-content-between;
+  @extend .flex-wrap;
+}
+
+.why-decagon{
+  width: 80%; font-size: 2.25rem; margin: 3.125rem auto;
+  font-weight: 800; color: #2C3134;
+}
+
+.workspace-container{
+  @extend .d-flex; @extend .flex-wrap;
+  width: 80%; margin: auto;
+}
+
+.workspace-img{
+  flex: 50%; height: 38.9rem;
+}
+
+.workspace-img img{height: 100%;}
+
+.workspace-content-wrapper{
+  flex: 50%;
+  @extend .d-flex; @extend .justify-content-between;
+  @extend .flex-wrap; padding-top: 3.75rem;
+}
+
+.workspace-content{
+  flex: 50%;
+}
+
+.workspace-content-wrapper .workspace-content:nth-child(2n){padding-left: 3.44rem;}
+.workspace-content-wrapper .workspace-content:nth-child(2n + 1){padding-right: 1.25rem;}
+
+.workspace-content p{
+  color: $black; opacity: 0.6;
+  font-weight: 400; font-size: 1rem;
+}
+
+.workspace-title{
+  font: 1.5rem; font-weight: 700;
+  color: $black;
+}
+
+.office-location{
+  width: 34.25rem; height: 6.375rem;
+  margin: auto; margin-top: 93px;
+  color: #2C3134; font-size: 24px;
+  text-align: center;
+}
+
+.leaders-section{
+  background: linear-gradient(180deg, #F9FAFB 0%, #F5F9E7 100%);
+  width: 100%; margin-top: 54px; padding-top: 80px; padding-bottom: 33px;
+}
+
+.testimony-container{
+  @extend .d-flex; @extend .flex-wrap;
+  margin: auto; width: 80%; 
+}
+
+.paystack-coo{
+  flex: 45%; background: url(/images/Arinze.svg) no-repeat;
+  background-size: cover; 
+  height: 427px; position: relative;
+}
+
+.paystack-coo img{position: absolute; top: 330px; right: 50px;}
+
+.testimony-cover{
+  flex: 55%
+}
+
+.testimony-cover{padding-left: 65px;}
+
+.testimony{
+  border-top: 0.5px solid rgba(0,0,0,0.2);
+  border-bottom: 0.5px solid rgba(0,0,0,0.2);
+  padding-top: 20px; padding-bottom: 46px
+}
+
+.arrow-container{
+  @extend .d-flex; @extend .justify-content-end;
+}
+
+.arrow{position: relative;}
+.arrow:first-child{padding-right: 20px;}
+#backarrow{
+  position: absolute;
+  top: 11px; left: 8px;
+}
+
+#forwardarrow{
+  position: absolute;
+  top: 11px; left: 8px;
+}
+
+.testimony-content{width: 566px; margin-top: 68px; font-size: 24px;}
+.name-coo{ margin-top: 35px;}
+ .name-coo div:first-child{
+   font-size: 20px; font-weight: bold;
+   color: $black; margin-bottom: 5px;
+  }
+
+  .name-coo div:nth-child(2){
+    font-size: 15px;
+    color: rgba(0,0,0,0.5);
+   }
+
+   .loading-img{
+     @extend .d-flex; @extend .justify-content-end;
+     margin-top: 20px;
+   }
+
+   .leader-header{
+     font-size: 36px; font-weight: 800;
+     color: #2C3134; margin: auto; margin-top: 93px;
+     margin-bottom: 59px;
+     width: 50%; text-align: center;
+   }
+
+   .leadership{
+     @extend .d-flex; @extend .justify-content-between;
+     @extend .flex-wrap; width: 80%; margin: auto;
+   }
+
+   .leader{
+    flex: 30.3%;  background-color: $white; font-size: 1rem;
+     border-radius: 5px; padding-top: 33px; padding-left: 32px;
+     height: 584px; margin-bottom: 34px; position: relative;
+     
+   }
+
+   .leadership .leader:nth-child(2){margin-left: 34px; margin-right: 34px;}
+   .leadership .leader:nth-child(5){margin-left: 34px; margin-right: 34px;}
+
+   .leader .img-holder{
+     margin-bottom: 35px;
+   }
+
+   .leader-name div:first-child{font-size: 24px; font-weight: 600; color: #2C3134; margin-bottom: 8px;}
+   .leader-name div:nth-child(2){font-size: 1rem; color: #2C3134; opacity: 0.5; margin-bottom: 24px;}
+
+   .profile{width: 90%; padding-left: 15px;}
+   .leader ul{list-style: disc !important;}
+
+   .leader ul li{padding-bottom: 14px; color: #2C3134; font-size: 1rem}
+
+   .linkedIn{
+     @extend .d-flex; @extend .align-items-center;
+     @extend .justify-content-between;
+     position: absolute; bottom: 31px; width: 55%;
+    }
+
+    .linkedIn span{font-size: 20px; font-weight: 400; color: #2C3134;}
+
+    .partner-section{width: 100%; padding-top: 57px;}
+
+    .partner-header{
+      width: 50%; margin: auto; margin-bottom: 32px; color: #34A853;
+      font-size: 1rem; font-weight: 700; text-align: center;
+    }
+
+    .partners-logo{
+      @extend .d-flex; @extend .justify-content-between;
+      width: 50%; margin: auto; margin-bottom: 71px;
+    }
+
+    .skilled{
+      background: #35A555; width: 80%; margin: auto;
+      padding-top: 58px; padding-bottom: 60px;
+    }
+
+    .skilled-header{
+      color: $white; font-size: 36px; font-weight: 800;
+      text-align: center; margin-bottom: 15px;
+    }
+
+.skilled-subheader{
+  color: #FFFFFF; opacity: 0.6; text-align: center;
+  font-size: 25px; font-weight: 400; margin-bottom: 68px;
+}
+
+.skills{
+  @extend .d-flex;
+  width: 100%; padding: 0 104px;
+}
+
+.skills-gp{
+  flex: 50%;
+  @extend .d-flex; @extend .justify-content-between;
+}
+.skills .skills-gp:first-child{margin-right: 160px;}
+
+.skill-list ul li{font-size: 1rem; color: $white; line-height: 32px;}
+
+.section-media{margin-top: 89px; width: 100%; padding-top: 70px;}
+
+.media-header{
+  width: 80%; margin: auto; margin-bottom: 34px;
+  @extend .d-flex; @extend .justify-content-between;
+  @extend .align-items-center;
+}
+
+.media-header div:first-child{
+  color: #2C3134; font-size: 36px;
+  font-weight: 800;
+}
+
+.media-header div:nth-child(2){
+  color: #34A853; font-size: 18px;
+  font-weight: 400;
+}
+
+.media-content{
+  width: 80%; margin: auto; margin-bottom: 61px;
+  @extend .d-flex
+}
+
+.media-img{flex: 30%; height: 588px; position: relative;}
+
+.media-content .media-img:first-child{
+  background: linear-gradient(359.8deg, #34A853 0.12%, rgba(52, 168, 83, 0) 99.77%), url(/images/afigbo-archibong-zuckerberg.svg) no-repeat;
+}
+
+.media-content .media-img:nth-child(2){
+  background: linear-gradient(359.8deg, #34A853 0.12%, rgba(52, 168, 83, 0) 99.77%), url(/images/Governor-Godwin-Obaseki-of-Edo-state.svg) no-repeat;
+  margin: 0 33px;
+}
+
+.media-content .media-img:last-child{
+  background: linear-gradient(359.8deg, #34A853 0.12%, rgba(52, 168, 83, 0) 99.77%), url(/images/toptal-blog-image.svg) no-repeat;
+}
+
+.media-img div:first-child{
+  width: 80%; color: $white;
+  font-size: 24px; font-weight: 500;
+  position: absolute; bottom: 85px; left: 30px;
+}
+
+.media-img div:nth-child(2){
+  color: $white; font-size: 1rem;
+  position: absolute; bottom: 40px; left: 30px;
+}
+
+.footer{
+  width: 100%; padding-top: 120px;
+  background: #2C3134; padding-bottom: 141px;
+}
+
+.footer-header{
+  width: 70%; margin: auto; margin-bottom: 88px; text-align: center;
+  color: $white; font-size: 50px; font-weight: 800; 
+}
+
+.footer-contact{
+  @extend .d-flex;
+  width: 80%; padding-top: 57px;
+  border-top: 0.5px solid $white;
+  margin: auto; margin-top: 113px;;
+}
+
+.footer-logo{
+  flex: 20%; 
+}
+
+.footer-socmed{
+  @extend .d-flex; @extend .justify-content-between;
+  margin: 39px 0;
+}
+
+#link{
+  width: 33px; height: 33px; border-radius: 50%;
+  background-color: $white; padding-top: 6px; padding-left: 8px;
+}
+
+.footer-rights{
+  color: #AFB5C0; font-size: 14px;
+}
+
+.footer-rights span{color: #34A853;}
+
+.footer-location{
+  flex: 80%;
+  @extend .d-flex; @extend .justify-content-between;
+  padding-left: 374px;
+}
+
+.info{color: $white;}
+
+.info-header{
+  font-size: 16px; font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.info-content{
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+// Media query for mobile responsiveness
+
+@media screen and (max-width: 900px) {
+
+  .navbar{
+    width: 95%;
+  }
+
+  .title{ margin-top: 250px;}
+  .sub-title{margin-bottom: 50px;}
+  #btn-team{
+    height: 50px; width: 247px;
+  }
+  
+  .client-wrapper{
+    width: 95%;
+  }
+  .client-label{margin-bottom: 20px; flex: 100%; text-align: center};
+  .client{
+    flex: 100%; display: flex; justify-content: space-between;
+    padding: 0;
+  }
+  
+  .why-decagon{width: 90%;}
+  .workspace-container{width: 90%;}
+  .workspace-img{flex: 100%}
+  .workspace-img img{display: block; width: 100%; margin: auto;}
+  .workspace-content-wrapper{flex: 100%}
+
+  .testimony{width: 95%;}
+  .paystack-coo{flex: 100%; height: 500px;}
+  .paystack-coo img{top:420px; right: 90px;}
+  .testimony-cover{flex: 100%;}
+
+}
+
+
+
