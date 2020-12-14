@@ -1,4 +1,4 @@
-/*
+    /*
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
@@ -275,13 +275,16 @@ nav img {
 }
 
 .hero button {
-    padding: 15px 35px;
+
+    width: 200px;
+    height: 50px;
     background: linear-gradient(96.67deg, #34A853 0%, #B8D344 100%);
     border: none;
-    color: #FFF;
-    margin: 35px;
-    font-size: 20px;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 /* =========== HEADER SECTION ENDS ============= */
@@ -344,6 +347,10 @@ nav img {
     font-size: 36px;
     line-height: 42px;
     color: #2C3134;
+}
+
+.why-decagon-image-tablet {
+    display: none;
 }
 
 .why-decagon-middle {
@@ -437,7 +444,6 @@ nav img {
     position: absolute;
     top: 77%;
     right: 8%;
-
 }
 
 .happy-client1-right {
@@ -887,7 +893,7 @@ small {
 /* =========== MEDIA QUERIES STARTS HERE ============= */
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 599px) {
 
     /* Header */
     .header-wrapper {
@@ -992,6 +998,11 @@ small {
 
 
     /* Why Decagon */
+
+    .why-decagon-image-tablet {
+        display: none;
+    }
+
     .section-heading {
         padding: 45px 0;
         font-weight: 700;
@@ -1237,7 +1248,6 @@ small {
 
     .leadership-mobile {
         background: linear-gradient(180deg, #F9FAFB 0%, #F5F9E7 100%);
-        background-color: red !important;
     }
 
     .leadership button {
@@ -1439,18 +1449,24 @@ small {
 
     .footer-wrapper {
         margin: var(--container-mobile);
+        height: 880px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+
 
     .footer-heading {
         text-align: center;
     }
 
     .footer-heading h1 {
-        padding-top: 8%;
+        margin-top: 15%;
         font-weight: 800;
         font-size: 40px;
         margin-bottom: 70px;
         line-height: 55px;
+        padding: 0 10px;
 
     }
 
@@ -1464,7 +1480,7 @@ small {
         line-height: 19px;
         text-align: center;
         color: #FFFFFF;
-        margin-bottom: 65px;
+        margin-bottom: 55px;
     }
 
     .footer-info {
@@ -1476,14 +1492,23 @@ small {
     }
 
     .footer-info-mobile {
+        display: flex;
+        flex-direction: column;
+        margin-top: 45px;
+        padding: 0 15px;
+    }
+
+    .footer-info-mobile-inner {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 35px;
+        grid-template-columns: 50% 50%;
     }
 
     .footer-info-mobile h4 {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         color: #FFF;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 30px;
     }
 
     .footer-info-mobile p {
@@ -1494,13 +1519,25 @@ small {
     }
 
     .contact-mobile {
-        margin-top: 45px;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
     }
 
-    .contact-mobile > div {
+    .contact-mobile div img {
+        margin-right: 10px;
+        max-height: 20px;
+        max-width: 20px;
+    }
+
+    .contact-detail-wrapper {
         display: flex;
-        margin-bottom: 15px;
-        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact-detail {
+        display: flex;
+        margin-bottom: 5px;
     }
 
 
@@ -1509,50 +1546,304 @@ small {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        bottom: 0;
+        padding-bottom: 30px;
+    }
+
+    .copyright-footer small {
+        font-size: 4vw;
+    }
+
+    .custom-icon img {
+        width: 13px;
+        height: 13px;
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+@media screen and (min-width : 600px) and (max-width : 1024px) {
+
+
+    .nav-links ul li {
+        font-size: .8em;
+    }
+
+    .header-wrapper {
+        padding: 47% 0;
+    }
+
+    .hero {
+        width: 80%;
+        left: 10%;
+    
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 35px 12%;
+    }
+
+    /* Clients */
+
+    .clients {
+        display: grid;
+        grid-template-columns: 30% 14% 13% 14% 14% 14% 13%;
+        padding: 20px;
+        justify-content: space-around;
+        align-content: center;
+        width: 85%;
+        top: 50%;
+    }
+
+    .clients img {
+        max-width: 60px;
+    }
+
+    .clients p {
+        font-size: .9em;
+    }
+
+
+    /* Why Decagon */
+
+    .section-heading {
+        font-size: 27px;
+    }
+
+    .why-decagon-image-tablet {
+        display: block;
+        width: 70%;
+        justify-self: center;
+    }
+
+    .why-decagon-image {
+        display: none;
+    }
+
+    .why-decagon-middle {
+        display: block;
+    }
+
+    .why-decagon-inner-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        margin-left: 3vw;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+    }
+
+    .why-decagon-inner-right div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-decagon-inner-right div h4 {
+        font-size: 20px;
+        margin: 30px 0 15px 0;
+    }
+
+    .why-decagon-inner-right div p {
+        font-size: 16px;
+        width: 68%;
+    }
+
+    .why-decagon-locations-desktop p {
+        font-size: 20px;
+    }
+
+
+    /* Testimonials */
+
+    .testimonials {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+    }
+
+    hr {
+        margin: 0 0 1em 0;
+    }
+
+    .pagination hr {
+        margin-bottom: 0;
+    }
+
+    .happy-client1-right {
+        margin-left: 0;
+        display: grid;
+    }
+
+    .happy-client1-comment {
+        margin: 15px 0;
+    }
+    
+    .happy-client1-comment h5 {
+        font-size: 2.2vw;
+    }
+    
+    .happy-client1-comment p:last-of-type {
+        font-size: 13px;
+    }
+    
+    .comment {
+        font-size: 2vw;
+        line-height: 24px;
+        max-width: 85%;
+        margin-bottom: 7%;
+    }
+
+    /* TODO */
+    .play-icon {
+        position: absolute;
+        top: 0;
+        right: 8%;
+    }
+
+    /* Leadership */
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-content-inner1 img {
+        max-width: 90px;
+    }
+
+    .card-content-inner1 h3 {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    .card-content-inner1>p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .card-content-inner1 ul li {
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .card-content-inner2 p {
+        font-size: 15px;
+    }
+
+    .card-content-inner2 p span img {
+        width: 15px;
+    }
+
+
+    /* Partnership */
+
+    .partner-companies img {
+        margin: 0 25px;
+        max-width: 100px;
+    }
+
+    .our-skills-heading h3 {
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .our-skills-heading p {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 0 10px;
+        margin-bottom: 0;
+    }
+
+    .our-skills-list-item p {
+        font-size: 12px;
+        line-height: 26px;
+    }
+
+    /* Media */
+
+    .media-heading a {
+        font-size: 16px;
+    }
+
+    .media-content {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    /* Footer */
+
+    footer {
+        height: 600px;
+    }
+
+    .footer-info {
+        display: grid;
+        grid-template-columns: 35% 20% 20% 25%;
+        margin-top: 45px;
+    }
+
+    .footer-heading h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .footer-info h4 {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .footer-info p {
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 24px;
+        color: #FFF;
+    }
+
+    .socials a div img {
+        height: 11px;
+    }
+
+    .custom-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .copyright img {
+        width: 100px;
+    }
+
+    small {
+        font-size: 13px;
+    }
+
+    .contact-us img {
+        width: 16px;
+        height: 16px;
+    }
+
+
+} /** end */
+
+
+
+
+
+
 
 
 
