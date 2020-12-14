@@ -775,6 +775,10 @@ footer {
     display: none;
 }
 
+.copyright-footer {
+    display: none;
+}
+
 .footer-heading {
     text-align: center;
 }
@@ -1496,6 +1500,15 @@ small {
         display: flex;
         margin-bottom: 15px;
         align-items: center;
+    }
+
+
+    .copyright-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
     }
 
 
