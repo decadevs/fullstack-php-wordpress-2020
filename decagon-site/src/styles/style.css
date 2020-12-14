@@ -182,6 +182,10 @@ select {
     --container: 0 50px;
 }
 
+:root {
+    --container-mobile: 0 30px;
+}
+
 body {
     font-family: 'Mulish', sans-serif;
 }
@@ -297,6 +301,10 @@ nav img {
     align-items: center;
 }
 
+.clients-header-mobile {
+    display: none;
+}
+
 
 .clients {
     display: grid;
@@ -319,6 +327,10 @@ nav img {
     margin: var(--container);
     display: grid;
     grid-template-rows: auto auto auto;
+}
+
+.emoji {
+    display: none;
 }
 
 .why-decagon-heading {
@@ -377,7 +389,7 @@ nav img {
     font-weight: 700;
 }
 
-.why-decagon-locations {
+.why-decagon-locations-desktop {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -385,11 +397,14 @@ nav img {
     padding: 45px 0;
 }
 
-.why-decagon-locations p {
+.why-decagon-locations-desktop p {
     font-size: 24px;
     line-height: 34px;
     color: #2C3134;
+}
 
+.why-decagon-locations-mobile {
+    display: none;
 }
 
 /* =========== WHY DECAGON SECTION ENDS ============= */
@@ -478,6 +493,15 @@ nav img {
 
 .pagination h1:first-of-type {
     color: #7C7C7C;
+}
+
+
+.comment-mobile {
+    display: none;
+}
+
+.testimonials-wrapper-mobile {
+    display: none;
 }
 
 /* =========== TESTIMONIALS END ============= */
@@ -579,6 +603,10 @@ nav img {
     margin: var(--container);
 }
 
+.our-skills-lists-mobile {
+    display: none;
+}
+
 .partnership-heading h3 {
     text-align: center;
     font-weight: bold;
@@ -629,7 +657,7 @@ nav img {
     opacity: 0.6;
 }
 
-.our-skills-lists {
+.our-skills-lists-desktop {
     display: flex;
     justify-content: space-between;
     margin: 45px 10%;
@@ -727,10 +755,6 @@ nav img {
 }
 
 
-/* Media Query this for all screen sizes */
-/* .media-content p {
-    margin-top: 115%;
-} */
 
 /* =========== MEDIA ENDS ============= */
 
@@ -745,6 +769,10 @@ footer {
 
 .footer-wrapper {
     margin: var(--container);
+}
+
+.footer-info-mobile {
+    display: none;
 }
 
 .footer-heading {
@@ -762,8 +790,6 @@ footer {
 .footer-heading button {
     width: 247px;
     height: 60px;
-    left: 597px;
-    top: 5568px;
     background: linear-gradient(96.67deg, #34A853 0%, #B8D344 100%);
     border: none;
     font-weight: bold;
@@ -857,8 +883,9 @@ small {
 /* =========== MEDIA QUERIES STARTS HERE ============= */
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 440px) {
+@media only screen and (max-width: 440px) {
 
+    /* Header */
     .header-wrapper {
         position: relative;
         background-image: url('../mobileimg/background-img.svg');
@@ -898,7 +925,7 @@ small {
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 19px;
         line-height: 27px;
         text-align: center;
     }
@@ -924,54 +951,591 @@ small {
 
 
 
+    /* Clients */
 
-    /* nav img {
+    .clients-wrapper {
+        height: 124px;
+        background: #F9FAFB;
+        opacity: 0.7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clients-header-desktop {
+        display: none;
+    }
+
+    .clients-header-mobile {
+        display: inline;
+    }
+
+    .clients {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        column-gap: 15px;
+        align-content: center;
+        width: 80%;
+        margin: 0 20px;
+        overflow: scroll;
+        white-space: nowrap;
+    }
+
+    .clients img {
+        max-width: 90px;
+    }
+
+
+    /* Why Decagon */
+    .section-heading {
+        padding: 45px 0;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 42px;
+        color: #2C3134;
+    }
+
+    .why-decagon {
+        margin: var(--container-mobile);
+        display: grid;
+    }
+
+    .why-decagon-heading {
+        display: flex;
+        align-items: center;
+    }
+
+    .why-decagon-middle {
+        display: block;
+    }
+
+    .why-decagon-middle img {
+        max-width: 70vw;
+    }
+
+    .why-decagon-inner-right {
+        display: block;
+        margin-left: 0;
+    }
+
+    .why-decagon-inner-right div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-decagon-inner-right div:last-of-type {
+        margin-bottom: 40px;
+    }
+
+    .why-decagon-inner-right div h4 {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    .why-decagon-inner-right div p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        width: 90%;
+        opacity: 0.6;
+    }
+
+    .emoji {
+        display: inline-block;
+    }
+
+    .why-decagon-locations-desktop {
+        display: none;
+    }
+
+    .why-decagon-locations-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 45px 0;
+        background: #F5F9E7;
+    }
+
+    .why-decagon-locations-mobile p {
+        font-size: 18px;
+        line-height: 31px;
+        text-align: center;
+        color: #2C3134;
+        padding: 0 30px;
+    }
+
+
+
+
+    /* Testimonials */
+
+
+    .testimonials {
+        margin: var(--container-mobile);
+        padding: 2em 0 0 0;
+        display: block;
+    }
+
+
+
+    .testimonials-wrapper {
+        display: none;
+    }
+
+    .testimonials-wrapper-mobile {
+        display: block;
+        margin-top: 40px;
+        background: #FFF;
+    }
+
+    .happy-client1-mobile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 0 45px;
+
+    }
+
+    .happy-client1-mobile p {
+        font-size: 18px;
+        line-height: 32px;
+        margin-top: 25px;
+    }
+
+    .play-icon-mobile {
         position: absolute;
-        top: 0;
-    }
-    
-    .logo {
-        margin-left: 50px;
-        margin-top: 20px;
-    } */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-    /* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-    /* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
-    /* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
-    /* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
-    /* Styles */
-}
-
-
-/* @media screen
-and (min-width : 320px)
-and (max-width : 500px) {
-
-    h1 {
-        color: red;
+        max-width: 35px;
+        /* top: 50%;
+        left: -90%; */
     }
 
 
-} */
+    .testimonials-wrapper-gradient {
+        padding: 0 25px;
+    }
+
+    .client-names {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 35px;
+        padding-top: 35px;
+    }
+
+    .client-names div h5 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .client-names div p {
+        margin-top: 10px;
+        font-size: 12px;
+        opacity: 0.5;
+    }
+
+
+
+    /* Leadership */
+
+    .leadership {
+        margin: 0;
+        margin-top: 25px;
+    }
+
+    .section-heading {
+        padding-bottom: 20px;
+    }
+
+    .leadership h1 {
+        text-align: left;
+    }
+
+    .cards {
+        display: block;
+        padding-bottom: 0;
+    }
+
+    .card-content {
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        justify-content: space-between;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .card-content-inner1 {
+        display: flex;
+        flex-direction: column;
+        /* max-width: 100%; */
+    }
+
+    .card-content-inner1 img {
+        max-width: 114px;
+        margin-bottom: 20px;
+    }
+
+    .card-content-inner1 h3 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 10px;
+    }
+
+    .card-content-inner1>p {
+        font-size: 12px;
+        line-height: 15px;
+        color: #2C3134;
+        opacity: 0.5;
+        margin-bottom: 25px;
+    }
+
+    .card-content-inner1 ul li {
+        margin-left: 15px;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 24px;
+        color: #2C3134;
+        margin-bottom: 10px;
+    }
+
+
+
+    .card-content-inner2 {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-content-inner2 img {
+        width: 22px;
+        margin-right: 10px;
+    }
+
+    .card-content-inner2 p {
+        font-size: 15px;
+        line-height: 19px;
+        color: #2C3134;
+    }
+
+    .card-content-inner2 p span img {
+        text-align: center;
+        width: 20px;
+        margin-left: 10px;
+    }
+
+
+    .leadership-mobile {
+        background: linear-gradient(180deg, #F9FAFB 0%, #F5F9E7 100%);
+        background-color: red !important;
+    }
+
+    .leadership button {
+        width: 100%;
+        padding: 15px;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        margin-bottom: 45px;
+        margin-top: 15px;
+        background-color: transparent;
+        border: 2px solid #34A853;
+    }
+
+
+    /* Partnership */
+
+    .partnership {
+        margin: var(--container-mobile);
+    }
+
+    .our-skills-heading {
+        padding: 0 30px;
+        text-align: left;
+    }
+
+    .partnership-heading h3 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        color: #34A853;
+        margin: 45px 0 30px 0;
+
+    }
+
+    .partner-companies {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        width: 100%;
+        overflow: scroll;
+        white-space: nowrap;
+    }
+
+    .partner-companies img {
+        margin: 0 25px;
+        max-width: 100px;
+    }
+
+    .our-skills-wrapper-green {
+        background: #35A555;
+        height: 525px;
+        margin-bottom: 65px
+    }
+
+    .our-skills-heading h3 {
+        margin-bottom: 20px;
+        padding-top: 40px;
+        /*set to 45*/
+        text-align: left;
+        color: #FFFFFF;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 31px;
+
+        width: 75%;
+    }
+
+    .our-skills-heading p {
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+        font-weight: lighter;
+        opacity: 0.6;
+
+        width: 75%;
+    }
+
+
+    .our-skills-lists-desktop {
+        display: none;
+    }
+
+    .our-skills-lists-mobile {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 10%;
+    }
+
+    .our-skills-list-item p {
+        font-weight: 100;
+        font-size: 3vw;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+
+
+    /* Media */
+
+    .media {
+        background: #F9FAFB;
+    }
+
+    .media-wrapper {
+        margin: var(--container-mobile);
+    }
+
+    .visit-blog {
+        display: none;
+    }
+
+    .media-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .media-heading h1 {
+        margin: 45px 0 30px 0;
+        padding: 0;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 42px;
+    }
+
+    .media-heading a {
+        font-size: 18px;
+        line-height: 23px;
+        color: #34A853;
+        text-decoration: none;
+    }
+
+    .media-contents {
+        display: block;
+        justify-content: space-between;
+        padding-bottom: 65px;
+
+    }
+
+
+    .media-content1 {
+        background-image: linear-gradient(359.8deg, #34A853 0.12%, rgba(52, 168, 83, 0) 99.77%), url('../images/archibong-zuck.svg');
+    }
+
+    .media-content2 {
+        background-image: linear-gradient(359.8deg, #34A853 0.12%, rgba(52, 168, 83, 0) 99.77%), url('../images/obaseki.svg');
+    }
+
+    .media-content3 {
+        background-image: linear-gradient(359.8deg, #34A853 0.12%, rgba(52, 168, 83, 0) 99.77%), url('../images/toptal-blog.svg');
+    }
+
+    .media-content {
+        height: 472px;
+        max-width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 20px;
+        background-position: center;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .media-content p {
+        width: 90%;
+        margin-bottom: 25px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .media-content a {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+
+
+    /* Footer */
+
+    footer {
+        background: #2C3134;
+        height: 889px;
+    }
+
+    .footer-wrapper {
+        margin: var(--container-mobile);
+    }
+
+    .footer-heading {
+        text-align: center;
+    }
+
+    .footer-heading h1 {
+        padding-top: 8%;
+        font-weight: 800;
+        font-size: 40px;
+        margin-bottom: 70px;
+        line-height: 55px;
+
+    }
+
+    .footer-heading button {
+        width: 247px;
+        height: 50px;
+        background: linear-gradient(96.67deg, #34A853 0%, #B8D344 100%);
+        border: none;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 65px;
+    }
+
+    .footer-info {
+        display: none;
+    }
+
+    .copyright {
+        display: none;
+    }
+
+    .footer-info-mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 35px;
+    }
+
+    .footer-info-mobile h4 {
+        margin-bottom: 30px;
+    }
+
+    .footer-info-mobile p {
+        margin-bottom: 15px;
+    }
+
+    .contact-mobile {
+        margin-top: 45px;
+    }
+
+    .contact-mobile > div {
+        display: flex;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 
 
 
@@ -981,7 +1545,6 @@ and (max-width : 500px) {
     .happy-client1-right {
         margin-left: 6vw;
     }
-
 
 }
 
