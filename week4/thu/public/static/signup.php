@@ -5,7 +5,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/mysignin.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/styles/scss/main.min.css" />
 </head>
 <body class="container--signin">
     <form class="my-form" action="/auth/reg" method="post">
@@ -14,6 +14,9 @@
       </div>
       <h2 class="signin--form-tile">Sign up</h2>
       <h6 class="signin-subtitle">Please enter your credentials to proceed.</h6>
+      <?php 
+        include_once "partials/flash-messages.php";
+        ?>
       <div class="form-group">
         <label>Email address</label>
         <input type="email" name="email" class="form-control" placeholder="samplemail@mail.com">

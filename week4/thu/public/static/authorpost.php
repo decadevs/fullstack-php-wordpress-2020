@@ -15,22 +15,22 @@
                 
             </span>
             <span class="menu-item">
-                <a href="home.html">
+                <a href="/dashboard">
                     <img src="assets/images/home.svg" alt="home">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="home.html">
+                <a href="/author">
                     <img src="assets/images/people 1.svg" alt="authors">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="settings.html">
+                <a href="/settings">
                     <img src="assets/images/Vector-2.svg" alt="settings">
                 </a>
             </span>
             <span class="menu-item logout">
-                <a href="mysignin.html">
+                <a href="/auth/login">
                     <img src="assets/images/log-out 1.svg" alt="log-out">
                 </a>
             </span>

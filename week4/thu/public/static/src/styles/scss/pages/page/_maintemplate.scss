@@ -382,3 +382,25 @@
 span {
   font-size: 1rem;
 }
+
+.alert { 
+  padding: 10px; 
+  margin-bottom: 5px; 
+  border-radius: 5px; 
+  color: #000; 
+}
+
+.alert-danger { 
+  background-color: #F44336; 
+  color: #FFF; 
+} 
+
+.alert-info { 
+  background-color: #2196F3; 
+  color: #FFF; 
+} 
+
+.alert-success { 
+  background-color: #4CAF50; 
+  color: #FFF;
+}

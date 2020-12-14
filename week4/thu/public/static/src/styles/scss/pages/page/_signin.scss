@@ -19,7 +19,7 @@
 .my-form{
     background-color: $white;
     padding: 3rem;
-    padding-top: 2rem ;
+    padding-top: 2rem;
 }
 
 .form-group{
@@ -83,26 +83,4 @@
     span{
         color:$white;
     }
-}
-
-.alert { 
-    padding: 10px; 
-    margin-bottom: 5px; 
-    border-radius: 5px; 
-    color: #000; 
-}
-
-.alert-danger { 
-    background-color: #F44336; 
-    color: #FFF; 
-} 
-
-.alert-info { 
-    background-color: #2196F3; 
-    color: #FFF; 
-} 
-
-.alert-success { 
-    background-color: #4CAF50; 
-    color: #FFF; 
 }

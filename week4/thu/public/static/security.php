@@ -15,17 +15,17 @@
                 
             </span>
             <span class="menu-item">
-                <a href="home.html">
+                <a href="/dashboard">
                     <img src="assets/images/home.svg" alt="home">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="author.html">
+                <a href="/author">
                     <img src="assets/images/people.svg" alt="authors">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="settings.html">
+                <a href="/settings">
                     <img src="assets/images/settings.svg" alt="settings">
                 </a>
             </span>

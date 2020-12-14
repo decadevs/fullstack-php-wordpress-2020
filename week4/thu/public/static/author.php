@@ -14,23 +14,23 @@
                 
             </span>
             <span class="menu-item">
-                <a href="/week3/tue/home.html">
-                    <img src="assets/images/home.svg" alt="home">
+                <a href="/dashboard">
+                    <img src="/static/assets/images/home.svg" alt="home">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="/week3/tue/author.html">
-                    <img src="assets/images/people 1.svg" alt="authors">
+                <a href="/author">
+                    <img src="/static/assets/images/people 1.svg" alt="authors">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="/week3/tue/settings.html">
-                    <img src="assets/images/Vector-2.svg" alt="settings">
+                <a href="/settings">
+                    <img src="/static/assets/images/Vector-2.svg" alt="settings">
                 </a>
             </span>
             <span class="menu-item logout">
-                <a href="week3/tue/mysignin.html">
-                    <img src="assets/images/log-out 1.svg" alt="log-out">
+                <a href="/auth/login">
+                    <img src="/static/assets/images/log-out 1.svg" alt="log-out">
                 </a>
             </span>
         </div>
@@ -41,7 +41,7 @@
             <div>
                 <input type="text" class="search--area" placeholder="Search for author">
             </div>
-            <img src="assets/images/Oval.svg" alt="User-Image">
+            <img src="/static/assets/images/Oval.svg" alt="User-Image">
         </div>
         <div class="table--container">
             <div class="table--container--header">
@@ -57,15 +57,15 @@
                     <div class="modal-top">
                         <h3>Add Author</h3>
                         <label for="click">
-                            <a class="close"><img src="./assets/images/Path.png" alt="Close-image"></a>
+                            <a class="close"><img src="/static//assets/images/Path.png" alt="Close-image"></a>
                         </label>
                     </div>
                     <div>
                         <form action="">
                             <div class="author-pic">
-                                <img src="./assets/images/Ellipse 1.svg" alt="Image">
+                                <img src="/static//assets/images/Ellipse 1.svg" alt="Image">
                                 <label for="pic">
-                                <img class="add-image" src="./assets/images/Group 7236.svg" alt="add-image"/>
+                                <img class="add-image" src="/static//assets/images/Group 7236.svg" alt="add-image"/>
                                 </label>
                                 <input type="file" id="pic">
                             </div>
@@ -254,14 +254,14 @@
             </div>
             <div class="pagination">
                 <div class="pagination-child">
-                    <a class="arrow-btn"><img src="assets/images/Right Chevron.svg" alt="Left Chevron"></a>
+                    <a class="arrow-btn"><img src="/static/assets/images/Right Chevron.svg" alt="Left Chevron"></a>
                     
                     <a class="btn page-btn"><strong>1</strong></a>
                     <a class="btn selected"><strong>2</strong></a>
                     <a class="btn page-btn"><strong>3</strong></a>
                     <a class="btn page-btn"><strong>4</strong></a>
                     <a class="btn page-btn"><strong>•••</strong></a>
-                    <a class="arrow-btn"><img src="assets/images/Left Chevron.svg" alt="Right Chevron"></a>
+                    <a class="arrow-btn"><img src="/static/assets/images/Left Chevron.svg" alt="Right Chevron"></a>
                 </div> 
             </div>
         </div>

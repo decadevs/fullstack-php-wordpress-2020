@@ -15,17 +15,17 @@
                 
             </span>
             <span class="menu-item">
-                <a href="home.php">
+                <a href="/dashboard">
                     <img src="/static/assets/images/dashboard.svg" alt="home">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="author.php">
+                <a href="/author">
                     <img src="/static/assets/images/people.svg" alt="authors">
                 </a>
             </span>
             <span class="menu-item">
-                <a href="settings.php">
+                <a href="/settings">
                     <img src="/static/assets/images/Vector-2.svg" alt="settings">
                 </a>
             </span>
@@ -50,6 +50,9 @@
                     <h3 class="table-title">
                         Dashboard
                     </h3>
+                    <?php 
+        include_once "partials/flash-messages.php";
+        ?>
                 </div>
                 <div class="dashboard-body">
                     <div class="chart-box">
