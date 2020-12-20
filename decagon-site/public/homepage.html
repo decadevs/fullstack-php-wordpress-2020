@@ -22,11 +22,20 @@
                         <a href="#">Blog</a>
                         <a class="button" href="#">Get started</a>
                     </div>
+                    <button class="hamburger">&#9776;</button>
+                    <button class="cross">&#735;</button>
                 </div>
+                <div class="menu">
+                    <ul>
+                        <a href="#"><li>For Developers</li></a>
+                        <a href="#"><li>Blog</li></a>
+                        <a href="#"><li>Get started</li></a>
+                    </ul>
+                </div> 
             </div>
             <div class="top-section-body">
                 <div>
-                    <span class="pagetitle">Build faster with <p class="vetted">vetted</p> remote software engineering talent.</span>
+                    <span class="pagetitle"><span class="build">Build faster with</span> <span class="vetted">vetted</span> remote <span class="software">software</span> engineering talent.</span>
                     <p class="pagesubtitle">Recruiting, training, HR management and work infrastructure to help you scale quickly and cost effectively.</p>
                     <a class="btn" href="#">Build My Team</a>
                 </div>
@@ -35,12 +44,14 @@
         <div class="top-section-clients">
             <div class="clients-section">
                 <p>Our Engineers have built products for</p>
-                <img src="images/merck.svg" alt="Client-logo" class="clients">
-                <img src="images/nike.svg" alt="Client-logo" class="clients">
-                <img src="images/mastercard.svg" alt="Client-logo" class="clients">
-                <img src="images/vertex.svg" alt="Client-logo" class="clients">
-                <img src="images/budweiser.svg" alt="Client-logo" class="clients">
-                <img src="images/nokia.svg" alt="Client-logo" class="clients">
+                <div>
+                    <img src="images/merck.svg" alt="Client-logo" class="clients">
+                    <img src="images/nike.svg" alt="Client-logo" class="clients">
+                    <img src="images/mastercard.svg" alt="Client-logo" class="clients">
+                    <img src="images/vertex.svg" alt="Client-logo" class="clients">
+                    <img src="images/budweiser.svg" alt="Client-logo" class="clients">
+                    <img src="images/nokia.svg" alt="Client-logo" class="clients">
+                </div>
             </div>
         </div>
     </div>
@@ -80,9 +91,11 @@
     <div class="leadership-section">
         <div class="leadership-container">
             <div class="review">
-                <div class="arinze"></div>
+                <div class="arinze">
+                    <img src="images/arinze.svg" alt="">
+                </div>
                 <div class="review-details">
-                    <div class="border"></div>
+                    <div class="border mobile-remove"></div>
                     <div class="review-navigator">
                         <div>←</div>
                         <div>→</div>
@@ -90,8 +103,10 @@
                     <div class="review-text">
                         <p>“With Decagon, we save an estimated 50 hours per week that used to be spent answering email and attending check-in meetings.”</p>
                         <br>
-                        <span class="reviewer">Arinze Thomason</span>
-                        <span class="reviewer-position">COO Paystack</span>
+                        <span class="rvd">
+                            <span class="reviewer">Arinze Thomason</span>
+                            <span class="reviewer-position">COO Paystack</span>
+                        </span>
                     </div>
                     <div class="border"></div>
                     <div class="review-elipses">
@@ -139,8 +154,10 @@
                             </ul>
                         </div>
                         <div>
-                            <img class="linkedin-logo" src="images/linkedin logo.svg" alt="">
-                            <span>Find on LinkedIn →</span>
+                            <span class="linkedin">
+                                <img class="linkedin-logo" src="images/linkedin logo.svg" alt="">
+                                <span>Find on LinkedIn →</span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -228,33 +245,38 @@
             <img src="images/github.svg" alt="">
         </div>
         <div class="green-section">
-            <span class="title">Skilled in technologies you need</span>
+            <span class="title1">Skilled in stacks you need</span>
+            <span class="title2">Skilled in technologies you need</span>
             <span class="subtitle">Access a pool of skilled engineers to match your product requirements</span>
             <div class="engineers">
-                <div class="column">
-                    <p>Back-end engineer</p>
-                    <p>Front-end engineer</p>
-                    <p>Full-Stack engineer</p>
-                    <p>Mobile Engineer</p>
-                </div>
-                <div class="column">
-                    <p>QA Engineer</p>
-                    <p>React Developer</p>
-                    <p>Android Developer</p>
-                    <p>IOS Developer</p>
-                </div>
-                <div class="column">
-                    <p>React Native Developer</p>
-                    <p>Python Developer</p>
-                    <p>Node.JS Developer</p>
-                    <p>Javascript Developer</p>
-                </div>
-                <div class="column">
-                    <p>Java Developer</p>
-                    <p>C# Developer</p>
-                    <p>Devops Engineer</p>
-                    <p>UI/UX Developer</p>
-                </div>
+                <span>
+                    <div class="column">
+                        <p>Back-end engineer</p>
+                        <p>Front-end engineer</p>
+                        <p>Full-Stack engineer</p>
+                        <p>Mobile Engineer</p>
+                    </div>
+                    <div class="column">
+                        <p>QA Engineer</p>
+                        <p>React Developer</p>
+                        <p>Android Developer</p>
+                        <p>IOS Developer</p>
+                    </div>
+                </span>
+                <span>
+                    <div class="column">
+                        <p>React Native Developer</p>
+                        <p>Python Developer</p>
+                        <p>Node.JS Developer</p>
+                        <p>Javascript Developer</p>
+                    </div>
+                    <div class="column">
+                        <p>Java Developer</p>
+                        <p>C# Developer</p>
+                        <p>Devops Engineer</p>
+                        <p>UI/UX Developer</p>
+                    </div>
+                </span>
             </div>
         </div>
     </div>
@@ -299,16 +321,18 @@
                     <span>All rights reserved. © 2020 <span class="deca-green">Decagon</span></span>
                 </div>
                 <div class="footer-data">
-                    <div class="footer-column">
-                        <span class="title">Information Links</span>
-                        <a href="#">Blog</a>
-                        <a href="#">For Developers</a>
-                    </div>
-                    <div class="footer-column">
-                        <span class="title">Location</span>
-                        <span>Lagos, Nigeria</span>
-                        <span>Austin, Texas</span>
-                        <span>Berlin, Germany</span>
+                    <div class="top">
+                        <div class="footer-column">
+                            <span class="title">Information Links</span>
+                            <a href="#">Blog</a>
+                            <a href="#">For Developers</a>
+                        </div>
+                        <div class="footer-column">
+                            <span class="title">Location</span>
+                            <span>Lagos, Nigeria</span>
+                            <span>Austin, Texas</span>
+                            <span>Berlin, Germany</span>
+                        </div>
                     </div>
                     <div class="footer-column">
                         <span class="title">Contact Us</span>
